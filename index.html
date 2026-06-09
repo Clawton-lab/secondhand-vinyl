@@ -401,6 +401,7 @@ body.locked #lockBadge{display:flex;}
   <footer id="bottomRail" class="rail brushed-h">
     <button class="mbtn toggle on lock-show" id="btnLockMain" onclick="App.toggleLock()" title="Performance lock (tap to unlock)">🔒</button>
     <button class="btn toggle player-btn" id="btnMp3" onclick="App.openMp3()"><span class="ico">♫</span>Player</button>
+    <button class="btn toggle" id="btnLibrary" onclick="App.openLibrary()"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.12em"><rect x="3.4" y="4.5" width="4.3" height="15" rx="1"/><rect x="9.85" y="4.5" width="4.3" height="15" rx="1"/><rect x="16.3" y="4.5" width="4.3" height="15" rx="1"/><line x1="3.4" y1="8.2" x2="7.7" y2="8.2"/><line x1="9.85" y1="8.2" x2="14.15" y2="8.2"/><line x1="16.3" y1="8.2" x2="20.6" y2="8.2"/></svg></span>Library</button>
     <button class="btn" id="btnPrevSong" onclick="App.prevSong()"><span class="ico">⏮</span>Song</button>
     <button class="btn primary wide" id="btnPrev" onclick="App.prev()"><span class="ico">◀</span>Prev</button>
     <button class="btn primary wide" id="btnNext" onclick="App.next()"><span class="ico">▶</span>Next</button>
@@ -411,7 +412,8 @@ body.locked #lockBadge{display:flex;}
 
   <!-- MICRO RAIL (tiny icon controls) -->
   <div id="microRail" class="rail brushed-h">
-    <button class="mbtn toggle on" id="btnFit" onclick="App.cycleFit()" title="Fit width / fit whole page"><span id="fitLbl">FW</span></button>
+    <button class="mbtn" id="btnClear" onclick="App.clearStage()" title="Clear the chart off the screen — blank, ready for the next song">⏏</button>
+    <button class="mbtn toggle" id="btnFit" onclick="App.cycleFit()" title="Fit whole page / fit width"><span id="fitLbl">FP</span></button>
     <button class="mbtn toggle" id="btnHalf" onclick="App.toggleHalf()" title="Half-page mode">▤</button>
     <button class="mbtn toggle" id="btnOrient" onclick="App.toggleOrientation()" title="Lock screen rotation (tap on/off)"><span id="orientIco"></span></button>
     <button class="mbtn toggle" id="btnWake" onclick="App.toggleWake()" title="Keep screen awake">☀</button>
@@ -701,7 +703,7 @@ const App = (() => {
   let DB=null, lib=[], setlists=[], settings=null;
   let cur = { setlistId:null, itemIndex:-1, page:1, songId:null, doc:null, half:0 };
   let editingId=null, addMode=false, armSide=null, locked=false, controlsHidden=false;
-  let wakeSentinel=null, renderToken=0;
+  let wakeSentinel=null, renderToken=0, userWake=false;
   const pageCache = new Map(); // key songId:page:variant -> dataURL canvas
 
   // ---------- IndexedDB ----------
@@ -731,7 +733,7 @@ const App = (() => {
   const DEFAULTS = {
     key:"app",
     pedalMap:{ next:["ArrowRight","PageDown","ArrowDown","Space","Enter"], prev:["ArrowLeft","PageUp","ArrowUp","Backspace"] },
-    fitMode:"width", half:false, invert:false, repeat:false,
+    fitMode:"page", half:false, invert:false, repeat:false,
     cropMargin:0, lastSetlistId:null, lastSongId:null, lastPage:1,
     checklist:{}, tapZones:true, eq:[0,0,0,0,0]
   };
@@ -742,6 +744,8 @@ const App = (() => {
     for(const k in DEFAULTS){ if(settings[k]===undefined) settings[k]=DEFAULTS[k]; }
     // one-time: move existing installs to full-width fit (user can toggle back; choice then sticks)
     if(!settings.fitV2){ settings.fitMode="width"; settings.fitV2=true; await put("settings",settings); }
+    if(!settings.fullPageV3){ settings.half=false; settings.fullPageV3=true; await put("settings",settings); } // charts always render as ONE full page, never split in half
+    if(!settings.fitPageV4){ settings.fitMode="page"; settings.fitPageV4=true; await put("settings",settings); } // whole chart always fits the screen — never cut off behind the toolbar
   }
   const saveSettings=()=>put("settings",settings);
 
@@ -803,20 +807,26 @@ const App = (() => {
     if(added && cur.songId===null){ openLibrary(); }
   }
 
+  function driveDirect(u){ const m=u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?[^]*?id=)([A-Za-z0-9_-]{10,})/)||u.match(/[?&]id=([A-Za-z0-9_-]{10,})/); return m?"https://drive.google.com/uc?export=download&id="+m[1]:null; }
   async function importFromUrl(){
-    const url=prompt("Paste a direct link to a PDF or image:"); if(!url) return;
+    const raw=prompt("Paste a link to a PDF or image (Google Drive share links work too):"); if(!raw) return;
+    const url=raw.trim(); const drive=driveDirect(url);
     showSpinner(true);
     try{
-      const r=await fetch(url.trim(),{mode:"cors"}); if(!r.ok) throw new Error("HTTP "+r.status);
+      const r=await fetch(drive||url,{mode:"cors"}); if(!r.ok) throw new Error("HTTP "+r.status);
       const blob=await r.blob();
-      const name=((url.split("?")[0].split("/").pop())||"download");
+      const name=((url.split("?")[0].split("/").pop())||"chart");
       if(blob.type==="application/pdf"||/\.pdf$/i.test(name)){ await addPdfFile(new File([blob],/\.pdf$/i.test(name)?name:name+".pdf",{type:"application/pdf"})); }
       else if((blob.type&&blob.type.indexOf("image/")===0)||IMG_RE.test(name)){ await addImageSong([blob],name.replace(/\.[^.]+$/,"")||"Image chart"); }
       else throw new Error("not pdf/image");
       showSpinner(false); renderLibrary(); renderAddList(); close("ovImport"); toast("Imported from link");
       if(cur.songId===null) openLibrary();
     }catch(e){ showSpinner(false); console.error(e);
-      alert("Couldn't pull that link directly — most websites block it for security, and there's no server here to fetch it for you.\n\nEasy way: open the link in Chrome, then either download the file or screenshot it, and use Import File or Paste."); }
+      if(drive){ try{ window.open(drive,"_blank"); }catch(_){}
+        alert("Google Drive won't hand a file straight to the app (Google blocks cross-site fetches). I've opened the download in a new tab — once it saves to your tablet, tap Import → File to add it.\n\nFastest for a gig: in the Drive app, ⋮ → Download (or Make available offline) for each chart, then Import → File. Local files always load instantly.");
+      } else {
+        alert("Couldn't pull that link directly — most sites block cross-site fetches, and there's no server here to fetch it.\n\nEasy way: open the link in Chrome, download the file (or screenshot it), then use Import → File or Paste."); }
+    }
   }
 
   async function importFromClipboard(){
@@ -1051,22 +1061,22 @@ const App = (() => {
   function toggleHalf(){ settings.half=!settings.half; cur.half=0; $("btnHalf").classList.toggle("on",settings.half); saveSettings(); render(); }
   function toggleInvert(){ settings.invert=!settings.invert; const bi=$("btnInvert"); if(bi) bi.classList.toggle("on",settings.invert); saveSettings(); render(); }
   function toggleRepeat(){ settings.repeat=!settings.repeat; $("repBtn").textContent="Hold-to-Repeat: "+(settings.repeat?"On":"Off"); saveSettings(); }
+  function clearStage(){ cur.songId=null; cur.itemIndex=-1; cur.doc=null; cur.page=1; cur.half=0; render(); updateNowPlaying(); updateRails(); toast("Screen cleared — pick or import the next chart"); }
 
   // ---------- Wake Lock ----------
-  async function toggleWake(){
-    if(wakeSentinel){ try{await wakeSentinel.release();}catch(e){} wakeSentinel=null; $("btnWake").classList.remove("on"); toast("Wake lock off"); return; }
-    if(!("wakeLock" in navigator)){ toast("Wake Lock unsupported — set screen timeout to Never in Android settings"); return; }
-    try{ wakeSentinel=await navigator.wakeLock.request("screen"); $("btnWake").classList.add("on"); toast("Screen will stay awake");
-      wakeSentinel.addEventListener("release",()=>{ $("btnWake").classList.remove("on"); });
-    }catch(e){ toast("Wake lock denied — set Android screen timeout manually"); }
+  function setWakeBtn(on){ const b=$("btnWake"); if(b) b.classList.toggle("on",on); }
+  async function acquireWake(silent){
+    if(wakeSentinel) return true;
+    if(!("wakeLock" in navigator)){ if(!silent) toast("Wake Lock unsupported — set Android screen timeout to Never"); return false; }
+    try{ wakeSentinel=await navigator.wakeLock.request("screen"); setWakeBtn(true);
+      wakeSentinel.addEventListener("release",()=>{ wakeSentinel=null; if(!(locked||userWake)) setWakeBtn(false); });
+      return true;
+    }catch(e){ if(!silent) toast("Wake lock denied — set Android screen timeout manually"); return false; }
   }
-  document.addEventListener("visibilitychange",async()=>{
-    if(document.visibilityState==="visible"){
-      if($("btnWake").classList.contains("on") && !wakeSentinel && "wakeLock" in navigator){
-        try{ wakeSentinel=await navigator.wakeLock.request("screen"); }catch(e){}
-      }
-    }
-  });
+  async function releaseWake(){ if(wakeSentinel){ try{await wakeSentinel.release();}catch(e){} wakeSentinel=null; } setWakeBtn(false); }
+  async function reconcileWake(silent){ if(locked||userWake) return acquireWake(silent); return releaseWake(); }
+  async function toggleWake(){ userWake=!userWake; await reconcileWake(); toast((locked||userWake)?"Screen will stay awake":"Wake lock off"); }
+  document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") reconcileWake(true); });
 
   // ---------- Fullscreen ----------
   function toggleFullscreen(){
@@ -1081,7 +1091,9 @@ const App = (() => {
   function toggleLock(){
     locked=!locked; document.body.classList.toggle("locked",locked);
     $("btnLock").classList.toggle("on",locked);
-    toast(locked?"Performance lock ON — tap 🔒 (left of Player) or long-press title to exit":"Performance lock off");
+    const bm=$("btnLockMain"); if(bm) bm.classList.toggle("on",locked);
+    reconcileWake(true); // Performance Lock keeps the screen awake automatically — no more worrying about it sleeping mid-song
+    toast(locked?"Performance lock ON — screen stays awake · tap 🔒 or long-press title to exit":"Performance lock off");
   }
   // long-press title / lock badge to exit
   function bindLongPress(el,fn){ let t=null;
@@ -1150,13 +1162,15 @@ const App = (() => {
       const row=document.createElement("div"); row.className="row";
       row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div>'+
         '<div class="acts"><button class="mini" title="Add to setlist">＋</button>'+
-        '<button class="mini" title="Edit">✎</button><button class="mini" title="Play">▶</button></div>';
+        '<button class="mini" title="Edit">✎</button><button class="mini" title="Play">▶</button>'+
+        '<button class="mini danger" title="Delete chart">🗑</button></div>';
       row.querySelector(".t").textContent=s.title;
       row.querySelector(".s").textContent=[s.artist,s.key&&("Key "+s.key),s.bpm&&(s.bpm+" bpm"),s.pageCount+"p"].filter(Boolean).join(" · ");
-      const [bAdd,bEdit,bPlay]=row.querySelectorAll(".mini");
+      const [bAdd,bEdit,bPlay,bDel]=row.querySelectorAll(".mini");
       bAdd.onclick=()=>addSongToSetlist(s.id);
       bEdit.onclick=()=>openEdit(s.id);
       bPlay.onclick=()=>{ close("ovLibrary"); openStandalone(s.id); };
+      bDel.onclick=()=>deleteSongById(s.id);
       box.appendChild(row);
     });
   }
@@ -1165,11 +1179,12 @@ const App = (() => {
     if(!lib.length){ box.innerHTML='<div class="empty-list">No charts to add. Import PDFs first.</div>'; return; }
     lib.slice().sort((a,b)=>a.title.localeCompare(b.title)).forEach(s=>{
       const row=document.createElement("div"); row.className="row";
-      row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div><div class="acts"><button class="mini">＋ Add</button></div>';
+      row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div><div class="acts"><button class="mini add">＋ Add</button><button class="mini danger" title="Delete chart">🗑</button></div>';
       row.querySelector(".t").textContent=s.title;
       row.querySelector(".s").textContent=[s.artist,s.pageCount+"p"].filter(Boolean).join(" · ");
-      row.querySelector(".mini").style.width="auto"; row.querySelector(".mini").style.padding="0 12px";
-      row.querySelector(".mini").onclick=()=>addSongToSetlist(s.id);
+      const bAdd=row.querySelector(".mini.add"); bAdd.style.width="auto"; bAdd.style.padding="0 12px";
+      bAdd.onclick=()=>addSongToSetlist(s.id);
+      row.querySelector(".mini.danger").onclick=()=>deleteSongById(s.id);
       box.appendChild(row);
     });
   }
@@ -1253,13 +1268,15 @@ const App = (() => {
     s.notes=$("eNotes").value;
     await persistSong(s); renderLibrary(); renderActiveItems(); updateNowPlaying(); toast("Saved"); close("ovEdit");
   }
-  async function deleteSong(){ const s=songById(editingId); if(!s) return;
-    if(!confirm("Delete “"+s.title+"” and its PDF? This removes it from all setlists.")) return;
+  async function deleteSongById(id){ const s=songById(id); if(!s) return false;
+    if(!confirm("Delete “"+s.title+"” and its PDF? This removes it from all setlists.")) return false;
     await del("songs",s.id); if(s.pdfId) await del("pdfs",s.pdfId); lib=lib.filter(x=>x.id!==s.id);
     for(const sl of setlists){ const before=sl.items.length; sl.items=sl.items.filter(i=>i.songId!==s.id); if(sl.items.length!==before){sl.items.forEach((i,n)=>i.order=n); await persistSetlist(sl);} }
     if(cur.songId===s.id){ cur.songId=null; cur.doc=null; render(); }
-    renderLibrary(); renderActiveItems(); updateRails(); toast("Deleted"); close("ovEdit");
+    renderLibrary(); renderAddList(); renderActiveItems(); updateRails(); toast("Deleted");
+    return true;
   }
+  async function deleteSong(){ if(await deleteSongById(editingId)) close("ovEdit"); }
   function playSong(){ close("ovEdit"); openStandalone(editingId); }
 
   // ---------- Checklist ----------
@@ -1588,7 +1605,7 @@ const App = (() => {
 
   // public
   return { init, next, prev, nextSong, prevSong, cycleFit, toggleHalf, toggleInvert, toggleWake, toggleLock,
-    toggleFullscreen, toggleRepeat, openImport, pickFiles, takePhoto, pasteImage, fromUrl, openLibrary, openSetlists,
+    toggleFullscreen, toggleRepeat, clearStage, openImport, pickFiles, takePhoto, pasteImage, fromUrl, openLibrary, openSetlists,
     openAddToSetlist, openCalibration, openChecklist, openHelp, close, newSetlist, openEdit, saveSong, deleteSong,
     playSong, arm, resetMap, exportBackup, resetChecklist,
     openMetro, metroToggle, metroTap, metroBpm, metroBeats, metroFromSong, readBpm, toggleOrientation,
