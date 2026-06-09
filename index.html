@@ -411,6 +411,7 @@ body.locked #lockBadge{display:flex;}
 
   <!-- MICRO RAIL (tiny icon controls) -->
   <div id="microRail" class="rail brushed-h">
+    <button class="mbtn toggle on" id="btnFit" onclick="App.cycleFit()" title="Fit width / fit whole page"><span id="fitLbl">FW</span></button>
     <button class="mbtn toggle" id="btnHalf" onclick="App.toggleHalf()" title="Half-page mode">▤</button>
     <button class="mbtn toggle" id="btnOrient" onclick="App.toggleOrientation()" title="Lock screen rotation (tap on/off)"><span id="orientIco"></span></button>
     <button class="mbtn toggle" id="btnWake" onclick="App.toggleWake()" title="Keep screen awake">☀</button>
@@ -730,7 +731,7 @@ const App = (() => {
   const DEFAULTS = {
     key:"app",
     pedalMap:{ next:["ArrowRight","PageDown","ArrowDown","Space","Enter"], prev:["ArrowLeft","PageUp","ArrowUp","Backspace"] },
-    fitMode:"page", half:false, invert:false, repeat:false,
+    fitMode:"width", half:false, invert:false, repeat:false,
     cropMargin:0, lastSetlistId:null, lastSongId:null, lastPage:1,
     checklist:{}, tapZones:true, eq:[0,0,0,0,0]
   };
@@ -739,6 +740,8 @@ const App = (() => {
     if(!settings){ settings = JSON.parse(JSON.stringify(DEFAULTS)); await put("settings",settings); }
     // backfill any new defaults
     for(const k in DEFAULTS){ if(settings[k]===undefined) settings[k]=DEFAULTS[k]; }
+    // one-time: move existing installs to full-width fit (user can toggle back; choice then sticks)
+    if(!settings.fitV2){ settings.fitMode="width"; settings.fitV2=true; await put("settings",settings); }
   }
   const saveSettings=()=>put("settings",settings);
 
@@ -989,9 +992,18 @@ const App = (() => {
         canvas.style.maxHeight="none";
         canvas.style.transform="translateY("+(cur.half===0?0:-(cssH-showH))+"px)";
         wrap.scrollTop=0;
+      }else if(settings.fitMode==="width"){
+        const wrap=$("pdfWrap");
+        wrap.style.overflowX="hidden"; wrap.style.overflowY="auto"; wrap.style.alignItems="flex-start";
+        canvas.style.transform="none";
+        canvas.style.width=cssW+"px"; canvas.style.height=cssH+"px";
+        canvas.style.maxWidth="none"; canvas.style.maxHeight="none";
+        wrap.scrollTop=0;
       }else{
+        const wrap=$("pdfWrap");
+        wrap.style.overflow="hidden"; wrap.style.overflowY=""; wrap.style.alignItems="center";
         canvas.style.transform="none"; canvas.style.width=""; canvas.style.height="";
-        canvas.style.maxHeight="100%";
+        canvas.style.maxWidth="100%"; canvas.style.maxHeight="100%";
       }
       canvas.classList.toggle("invert",!!settings.invert);
       tag.textContent = pageNum+" / "+doc.numPages + (settings.half?(cur.half===0?"  ▲":"  ▼"):"");
@@ -1033,8 +1045,9 @@ const App = (() => {
 
   // ---------- Buttons / toggles ----------
   function flashBtn(id){ const b=$(id); if(!b) return; b.classList.add("pressed"); setTimeout(()=>b.classList.remove("pressed"),140); }
-  function cycleFit(){ const order=["page","width"]; settings.fitMode = settings.fitMode==="page"?"width":"page";
-    $("fitLbl").textContent = settings.fitMode==="page"?"FP":"FW"; $("btnFit").classList.toggle("on",settings.fitMode==="width"); saveSettings(); render(); }
+  function cycleFit(){ settings.fitMode = settings.fitMode==="page"?"width":"page";
+    const l=$("fitLbl"); if(l) l.textContent = settings.fitMode==="page"?"FP":"FW";
+    const b=$("btnFit"); if(b) b.classList.toggle("on",settings.fitMode==="width"); saveSettings(); render(); }
   function toggleHalf(){ settings.half=!settings.half; cur.half=0; $("btnHalf").classList.toggle("on",settings.half); saveSettings(); render(); }
   function toggleInvert(){ settings.invert=!settings.invert; const bi=$("btnInvert"); if(bi) bi.classList.toggle("on",settings.invert); saveSettings(); render(); }
   function toggleRepeat(){ settings.repeat=!settings.repeat; $("repBtn").textContent="Hold-to-Repeat: "+(settings.repeat?"On":"Off"); saveSettings(); }
@@ -1062,8 +1075,7 @@ const App = (() => {
     else { (document.exitFullscreen||document.webkitExitFullscreen||(()=>{})).call(document); }
     setTimeout(syncFsLabel,120);
   }
-  function syncFsLabel(){ const on=!!(document.fullscreenElement||document.webkitFullscreenElement);
-    const l=$("fitLbl"); if(l) l.textContent=on?"RS":"FS"; const b=$("btnFit"); if(b) b.classList.toggle("on",on); }
+  function syncFsLabel(){ /* FS button removed; no-op so it can't clobber the Fit label */ }
 
   // ---------- Performance Lock ----------
   function toggleLock(){
@@ -1527,6 +1539,8 @@ const App = (() => {
     try{ DB=await openDB(); }catch(e){ alert("Storage unavailable: "+e); return; }
     await reloadAll();
     // restore toggles
+    { const fl=$("fitLbl"); if(fl) fl.textContent=settings.fitMode==="page"?"FP":"FW";
+      const fb=$("btnFit"); if(fb) fb.classList.toggle("on",settings.fitMode==="width"); }
     $("btnHalf").classList.toggle("on",settings.half);
     { const bi=$("btnInvert"); if(bi) bi.classList.toggle("on",settings.invert); }
     $("repBtn") && ($("repBtn").textContent="Hold-to-Repeat: "+(settings.repeat?"On":"Off"));
