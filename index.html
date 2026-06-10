@@ -166,6 +166,20 @@ body{position:fixed;inset:0;overscroll-behavior:none;touch-action:none;}
 #pdfCanvas{background:#fff;box-shadow:0 0 0 1px rgba(255,255,255,0.08),0 8px 30px rgba(0,0,0,0.7);max-width:100%;max-height:100%;display:block;}
 #pdfCanvas.invert{filter:invert(1) hue-rotate(180deg);background:#0a0a0a;}
 #emptyStage{text-align:center;color:var(--text-dim);padding:24px;}
+  #chartHost{position:absolute;inset:0;display:none;overflow:auto;padding:3vmin 4.5vw 9vh;color:#f7f7f7;font-family:Helvetica,Arial,sans-serif;font-weight:700;z-index:2;background:#0c0c0e;}
+  #chartHost .chl-title{text-align:center;line-height:1.05;}
+  #chartHost .chl-artist{text-align:center;opacity:.9;}
+  #chartHost .chl-keyline{text-align:center;color:#ffcc1f;}
+  #chartHost .chl-label{color:#ffcc1f;}
+  #chartHost .chl-sec{position:relative;}
+  #chartHost .chl-line{position:relative;}
+  #chartHost .chl-chordrow{position:relative;}
+  #chartHost .chl-chordrow span{position:absolute;white-space:pre;color:#ffcc1f;}
+  #chartHost .chl-lyricrow{white-space:pre;color:#f7f7f7;}
+  #chartHost .chl-inst{color:#ffcc1f;white-space:pre-wrap;}
+  #chartHost .chl-tabblk{margin:9px 0;} #chartHost .chl-tabln{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre;color:#f7f7f7;line-height:1.25;}
+  #chartHost .chl-noteblk{margin:9px 0;overflow:auto;} #chartHost .chl-noteblk svg{display:block;}
+  #chartHost .chl-secimg{max-width:100%;max-height:46vh;border-radius:8px;display:block;margin:4px 0;}
 #emptyStage .big{font-family:var(--display);font-size:clamp(20px,4vh,34px);letter-spacing:2px;text-transform:uppercase;
   background:linear-gradient(180deg,#eef2f7,#878d97);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px;}
 #pageTag{position:absolute;right:12px;bottom:10px;font-family:var(--display);letter-spacing:1px;font-size:clamp(13px,2.2vh,20px);
@@ -390,6 +404,7 @@ body.locked #lockBadge{display:flex;}
           </div>
         </div>
       </div>
+      <div id="chartHost"></div>
       <div id="pageTag" style="display:none">1 / 1</div>
       <div id="spinner"><div class="ring"></div></div>
       <div class="tapzone" id="tapPrev"></div>
@@ -930,7 +945,9 @@ const App = (() => {
     await render(); updateRails(); updateNowPlaying();
   }
 
+  function curIsChart(){ const it=curItem(); const s=it?songById(it.songId):songById(cur.songId); return !!(s&&s.kind==="chart"); }
   function bounds(){ // page range for current position
+    if(curIsChart()) return {start:1,end:(cur.chartPages||1)};
     const it=curItem();
     if(it){ const s=songById(it.songId); return {start:it.startPage||1,end:it.endPage||(s?s.pageCount:1)}; }
     const s=songById(cur.songId); return {start:s?(s.defaultStartPage||1):1,end:s?(s.defaultEndPage||s.pageCount):1};
@@ -939,7 +956,7 @@ const App = (() => {
   async function next(){
     flashBtn("btnNext");
     if(!cur.songId){ return; }
-    if(settings.half && cur.half===0){ cur.half=1; await render(); return; }
+    if(settings.half && cur.half===0 && !curIsChart()){ cur.half=1; await render(); return; }
     const b=bounds();
     if(cur.page < b.end){ cur.page++; cur.half=0; await render(); persistPos(); preload(); return; }
     // advance to next song
@@ -950,7 +967,7 @@ const App = (() => {
   async function prev(){
     flashBtn("btnPrev");
     if(!cur.songId){ return; }
-    if(settings.half && cur.half===1){ cur.half=0; await render(); return; }
+    if(settings.half && cur.half===1 && !curIsChart()){ cur.half=0; await render(); return; }
     const b=bounds();
     if(cur.page > b.start){ cur.page--; cur.half=settings.half?1:0; await render(); persistPos(); preload(); return; }
     const sl=activeSetlist();
@@ -968,11 +985,50 @@ const App = (() => {
 
   // ---------- Rendering ----------
   function showSpinner(on){ $("spinner").style.display=on?"flex":"none"; }
+  // ---------- Smart-chart (template) renderer for the performance stage ----------
+  const Chart=(function(){
+    const cv=document.createElement('canvas').getContext('2d');
+    const W=(s,fs)=>{cv.font='700 '+fs+'px Helvetica,Arial,sans-serif';return cv.measureText(s).width;};
+    const lineH=(ln,fs)=>fs*1.18+(ln.chords&&ln.chords.length?fs*0.82*1.06:0);
+    function secH(sec,fs){let h=sec.label?fs*1.15*1.32+fs*0.28:0;if(sec.type==='image')return h+fs*9;if(sec.type==='instrumental')return h+fs*1.3;return h+(sec.lines||[]).reduce((a,l)=>a+(l.notation!=null?140:l.tab?fs*6.7:lineH(l,fs)),0);}
+    function titleH(s,fs){let h=fs*1.7*1.12;if(s.artist)h+=fs*0.82*1.3;if(s.key)h+=fs*0.78*1.3;return h+fs*0.7;}
+    function fitMono(s,w){cv.font='700 100px ui-monospace,Menlo,Consolas,monospace';const wt=cv.measureText(s||' ').width;return wt>0?w*100/wt:24;}
+    let _sc=[],_fs=28;
+    function layout(song,w,h){
+      const usableW=w-2*(w*0.045),usableH=h-2*(h*0.03);
+      let lo=14,hi=120;
+      for(let k=0;k<26;k++){const m=(lo+hi)/2;let mx=0;for(const s of song.sections)for(const ln of(s.lines||[]))mx=Math.max(mx,W(ln.text||' ',m));if(mx<=usableW)lo=m;else hi=m;}
+      _fs=Math.max(13,Math.floor(lo));
+      const gap=_fs*0.85;_sc=[[]];let pg=0,used=titleH(song,_fs);
+      song.sections.forEach((sec,k)=>{const need=secH(sec,_fs)+(_sc[pg].length?gap:0);if(used+need>usableH&&_sc[pg].length){_sc.push([]);pg++;used=0;}_sc[pg].push(k);used+=secH(sec,_fs)+gap;});
+      return _sc.length;
+    }
+    function addT(p,cls,txt,fs){const d=document.createElement('div');d.className='chl-'+cls;d.textContent=txt;d.style.fontSize=fs+'px';p.appendChild(d);return d;}
+    function rLine(ln,fs){const wrap=document.createElement('div');wrap.className='chl-line';
+      if(ln.chords&&ln.chords.length){const cr=document.createElement('div');cr.className='chl-chordrow';cr.style.height=(fs*0.82*1.06)+'px';ln.chords.forEach(ch=>{const sp=document.createElement('span');sp.style.left=W(ln.text.slice(0,ch.i),fs)+'px';sp.style.fontSize=(fs*0.82)+'px';sp.textContent=ch.c;cr.appendChild(sp);});wrap.appendChild(cr);}
+      const lr=document.createElement('div');lr.className='chl-lyricrow';lr.style.fontSize=fs+'px';lr.style.lineHeight=1.18;lr.textContent=ln.text||' ';wrap.appendChild(lr);return wrap;}
+    function rTab(ln,fs,hw){const wrap=document.createElement('div');wrap.className='chl-tabblk';const uW=Math.max(140,hw*0.9);const lg=ln.tab.reduce((a,s)=>s.length>a.length?s:a,'');const mfs=Math.max(9,Math.min(fs*0.82,fitMono(lg,uW)));ln.tab.forEach(s=>{const d=document.createElement('div');d.className='chl-tabln';d.style.fontSize=mfs+'px';d.textContent=s;wrap.appendChild(d);});return wrap;}
+    function rNote(ln,hw){const wrap=document.createElement('div');wrap.className='chl-noteblk';const host=document.createElement('div');wrap.appendChild(host);try{const VF=Vex.Flow;const width=Math.max(240,Math.min(920,hw*0.92));const r=new VF.Renderer(host,VF.Renderer.Backends.SVG);r.resize(width,120);const ctx=r.getContext();ctx.setFillStyle('#f7f7f7');ctx.setStrokeStyle('#f7f7f7');const st=new VF.Stave(6,6,width-14);st.addClef('treble');st.setContext(ctx);st.draw();const notes=(ln.notation||'').trim().split(/\s+/).filter(Boolean).map(t=>{let[p,d]=t.split('/');d=d||'q';const m=p.match(/^([A-Ga-g])([#b]?)(\d)$/);if(!m)return null;const sn=new VF.StaveNote({clef:'treble',keys:[m[1].toLowerCase()+'/'+m[3]],duration:d});if(m[2]){try{sn.addModifier(new VF.Accidental(m[2]),0);}catch(e){}}return sn;}).filter(Boolean);if(notes.length){const v=new VF.Voice({num_beats:4,beat_value:4}).setStrict(false);v.addTickables(notes);new VF.Formatter().joinVoices([v]).format([v],width-80);v.draw(ctx,st);}host.querySelectorAll('svg *').forEach(el=>{const fl=el.getAttribute('fill');if(fl&&fl!=='none')el.setAttribute('fill','#f7f7f7');const sk=el.getAttribute('stroke');if(sk&&sk!=='none')el.setAttribute('stroke','#f7f7f7');});}catch(e){host.textContent='♪ '+(ln.notation||'');host.style.color='#ffcc1f';}return wrap;}
+    function draw(song,idx,host){host.innerHTML='';const fs=_fs,gap=fs*0.85,hw=host.clientWidth||600;idx=Math.max(0,Math.min(idx,_sc.length-1));
+      if(idx===0){addT(host,'title',song.title,fs*1.7);if(song.artist)addT(host,'artist',song.artist,fs*0.82);if(song.key)addT(host,'keyline','Key of '+song.key,fs*0.78);if(host.lastChild)host.lastChild.style.marginBottom=fs*0.7+'px';}
+      (_sc[idx]||[]).forEach((k,i)=>{const sec=song.sections[k],box=document.createElement('div');box.className='chl-sec';box.style.marginTop=(i||idx>0?gap:0)+'px';
+        if(sec.label){const Lb=document.createElement('div');Lb.className='chl-label';Lb.style.font='800 '+(fs*1.15)+'px Helvetica,Arial,sans-serif';Lb.style.marginBottom=fs*0.28+'px';Lb.textContent=sec.label;box.appendChild(Lb);}
+        if(sec.type==='image'&&sec.src){const im=document.createElement('img');im.className='chl-secimg';im.src=sec.src;box.appendChild(im);}
+        else if(sec.type==='instrumental'){const d=document.createElement('div');d.className='chl-inst';d.style.fontSize=fs+'px';d.textContent=sec.text||'';box.appendChild(d);}
+        else (sec.lines||[]).forEach(ln=>box.appendChild(ln.notation!=null?rNote(ln,hw):ln.tab?rTab(ln,fs,hw):rLine(ln,fs)));
+        host.appendChild(box);});
+    }
+    return {layout,draw};
+  })();
   async function render(){
     const song=songById(cur.songId);
-    const canvas=$("pdfCanvas"); const empty=$("emptyStage"); const tag=$("pageTag");
-    if(!song){ canvas.style.display="none"; empty.style.display="block"; tag.style.display="none"; return; }
-    empty.style.display="none"; canvas.style.display="block"; tag.style.display="block";
+    const canvas=$("pdfCanvas"); const empty=$("emptyStage"); const tag=$("pageTag"); const chost=$("chartHost");
+    if(!song){ canvas.style.display="none"; if(chost)chost.style.display="none"; empty.style.display="block"; tag.style.display="none"; return; }
+    empty.style.display="none";
+    if(song.kind==="chart"){ canvas.style.display="none"; chost.style.display="block"; tag.style.display="block";
+      const st=$("stage"); const n=Chart.layout(song,st.clientWidth,st.clientHeight); const pg=Math.min(Math.max(cur.page,1),n); cur.page=pg; cur.chartPages=n;
+      Chart.draw(song,pg-1,chost); tag.textContent=pg+" / "+n; updatePosMeta(pg,n); showSpinner(false); return; }
+    if(chost)chost.style.display="none"; canvas.style.display="block"; tag.style.display="block";
     const token=++renderToken;
     showSpinner(true);
     try{
@@ -1165,11 +1221,11 @@ const App = (() => {
         '<div class="acts"><button class="mini" title="Add to setlist">＋</button>'+
         '<button class="mini" title="Edit">✎</button><button class="mini" title="Play">▶</button>'+
         '<button class="mini danger" title="Delete chart">🗑</button></div>';
-      row.querySelector(".t").textContent=s.title;
-      row.querySelector(".s").textContent=[s.artist,s.key&&("Key "+s.key),s.bpm&&(s.bpm+" bpm"),s.pageCount+"p"].filter(Boolean).join(" · ");
+      row.querySelector(".t").textContent=(s.kind==="chart"?"♪ ":"")+s.title;
+      row.querySelector(".s").textContent=s.kind==="chart"?["editable template",s.artist,s.key&&("Key "+s.key)].filter(Boolean).join(" · "):[s.artist,s.key&&("Key "+s.key),s.bpm&&(s.bpm+" bpm"),s.pageCount+"p"].filter(Boolean).join(" · ");
       const [bAdd,bEdit,bPlay,bDel]=row.querySelectorAll(".mini");
       bAdd.onclick=()=>addSongToSetlist(s.id);
-      bEdit.onclick=()=>openEdit(s.id);
+      bEdit.onclick=s.kind==="chart"?(()=>location.href='chart-editor.html'):(()=>openEdit(s.id));
       bPlay.onclick=()=>{ close("ovLibrary"); openStandalone(s.id); };
       bDel.onclick=()=>deleteSongById(s.id);
       box.appendChild(row);
@@ -1181,8 +1237,8 @@ const App = (() => {
     lib.slice().sort((a,b)=>a.title.localeCompare(b.title)).forEach(s=>{
       const row=document.createElement("div"); row.className="row";
       row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div><div class="acts"><button class="mini add">＋ Add</button><button class="mini danger" title="Delete chart">🗑</button></div>';
-      row.querySelector(".t").textContent=s.title;
-      row.querySelector(".s").textContent=[s.artist,s.pageCount+"p"].filter(Boolean).join(" · ");
+      row.querySelector(".t").textContent=(s.kind==="chart"?"♪ ":"")+s.title;
+      row.querySelector(".s").textContent=s.kind==="chart"?["template",s.artist].filter(Boolean).join(" · "):[s.artist,s.pageCount+"p"].filter(Boolean).join(" · ");
       const bAdd=row.querySelector(".mini.add"); bAdd.style.width="auto"; bAdd.style.padding="0 12px";
       bAdd.onclick=()=>addSongToSetlist(s.id);
       row.querySelector(".mini.danger").onclick=()=>deleteSongById(s.id);
@@ -1550,7 +1606,7 @@ const App = (() => {
   function tickClock(){ const c=$("clock"); if(!c) return; const d=new Date(); c.textContent=d.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"}); }
 
   // ---------- Init ----------
-  async function reloadAll(){ lib=(await getAll("songs")).filter(s=>s.kind!=="chart"); setlists=await getAll("setlists"); await loadSettings();
+  async function reloadAll(){ lib=await getAll("songs"); setlists=await getAll("setlists"); await loadSettings();
     renderLibrary(); renderSetlists(); renderActiveItems(); updateRails(); }
 
   async function init(){
