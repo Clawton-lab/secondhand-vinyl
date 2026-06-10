@@ -1,0 +1,7788 @@
+[
+ {
+  "title": "Feelin' Alright",
+  "artist": "Joe Cocker  -  words & music by Dave Mason",
+  "key": "C",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Seems I got to have a change of scene",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 22,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Cause every night I have the strangest dreams",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 29,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Imprisoned by the way it could've been",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 18,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Left here on my own or so it seems",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 20,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "I got to leave before I start to scream",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 24,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "But someone's locked the door and took the key",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 25,
+        "c": "F7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Feelin' alright",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Not feelin' too good myself",
+      "chords": [
+       {
+        "i": 16,
+        "c": "C7"
+       },
+       {
+        "i": 21,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Feelin' alright",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Not feelin' too good myself",
+      "chords": [
+       {
+        "i": 16,
+        "c": "C7"
+       },
+       {
+        "i": 21,
+        "c": "F7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Boy you sure took me for one big ride",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 25,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Even now I sit and wonder why",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 19,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "And when I think of you I start to cry",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 24,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "I just can't waste the time I must keep dry",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 28,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Got to stop believin' in all your lies",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 25,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Cause I got too much to do before I die",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 24,
+        "c": "F7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Feelin' alright",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Not feelin' too good myself",
+      "chords": [
+       {
+        "i": 16,
+        "c": "C7"
+       },
+       {
+        "i": 21,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Feelin' alright",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Not feelin' too good myself",
+      "chords": [
+       {
+        "i": 16,
+        "c": "C7"
+       },
+       {
+        "i": 21,
+        "c": "F7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Don't get too lost in all I say",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 22,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "If half the time I really felt that way",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 26,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "That was then and now it's today",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 18,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Can't get off yet and so I'm here to stay",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 29,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Before someone comes along and takes my place",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 31,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "With a different name and yes a different face",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 30,
+        "c": "F7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Feelin' alright",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Not feelin' too good myself",
+      "chords": [
+       {
+        "i": 16,
+        "c": "C7"
+       },
+       {
+        "i": 21,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Feelin' alright",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Not feelin' too good myself",
+      "chords": [
+       {
+        "i": 16,
+        "c": "C7"
+       },
+       {
+        "i": 21,
+        "c": "F7"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "id": "feelin-alright",
+  "draft": false
+ },
+ {
+  "title": "Got to Get You Into My Life",
+  "artist": "The Beatles (1966)  -  Lennon-McCartney",
+  "key": "G",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "G   F   G",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "I was alone I took a ride I didn't know what I would find there",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 53,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Another road where maybe I can see another kind of mind there",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 51,
+        "c": "F"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Pre-Chorus",
+    "lines": [
+     {
+      "text": "Ooh, then I suddenly see you",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 12,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Ooh, did I tell you I need you",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Every single day of my life",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 6,
+        "c": "Am"
+       },
+       {
+        "i": 13,
+        "c": "D"
+       },
+       {
+        "i": 23,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "You didn't run you didn't lie you know I wanted just to hold you",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 56,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "And had you gone you'd knew in time we meet again for I'd had told you",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 62,
+        "c": "F"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Pre-Chorus",
+    "lines": [
+     {
+      "text": "Ooh you were meant to be near me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 13,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Ooh, and I want you hear me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Say we'll be together every day",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 15,
+        "c": "Am"
+       },
+       {
+        "i": 22,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Hook",
+    "lines": [
+     {
+      "text": "Got to get you into my life ",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 15,
+        "c": "G"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       },
+       {
+        "i": 23,
+        "c": "F"
+       },
+       {
+        "i": 28,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "What can I do? What can I be when I'm with you I wanna stay there",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 55,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "If I'm true I'll never leave and if I do I know the way there",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 52,
+        "c": "F"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Pre-Chorus",
+    "lines": [
+     {
+      "text": "Ooh then I suddenly see you",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Ooh did I tell you I need you",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 10,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Every single day of my life",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 6,
+        "c": "Am"
+       },
+       {
+        "i": 13,
+        "c": "D"
+       },
+       {
+        "i": 23,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Hook",
+    "lines": [
+     {
+      "text": "Got to get you into my life ",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 15,
+        "c": "G"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       },
+       {
+        "i": 23,
+        "c": "F"
+       },
+       {
+        "i": 28,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Got to get you into my life",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "I was alone, I took a ride,",
+      "chords": [
+       {
+        "i": 7,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I didn't know what I would find there",
+      "chords": []
+     },
+     {
+      "text": "Another road where maybe I could see another kind of mind there",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 53,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Then suddenly I see you,",
+      "chords": [
+       {
+        "i": 5,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Did I tell you I need you . . .",
+      "chords": [
+       {
+        "i": 6,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "id": "got-to-get-you",
+  "draft": false
+ },
+ {
+  "title": "Stand by Me",
+  "artist": "Ben E. King  -  transposed to G",
+  "key": "G",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "G   Em   C   D",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "When the night has come",
+      "chords": [
+       {
+        "i": 9,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "And the land is dark",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "And the moon is the only light we'll see",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C"
+       },
+       {
+        "i": 20,
+        "c": "D"
+       },
+       {
+        "i": 37,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "No, I won't be afraid",
+      "chords": [
+       {
+        "i": 4,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "No, I won't be afraid",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "Just as long as you stand, stand by me",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C"
+       },
+       {
+        "i": 20,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "So, darling, darling, stand by me",
+      "chords": [
+       {
+        "i": 22,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Oh, stand by me",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "Oh, stand, stand by me",
+      "chords": [
+       {
+        "i": 4,
+        "c": "C"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       },
+       {
+        "i": 20,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Stand by me",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "If the sky that we look upon",
+      "chords": [
+       {
+        "i": 7,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Should tumble and fall",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "Or the mountain should crumble to the sea",
+      "chords": [
+       {
+        "i": 7,
+        "c": "C"
+       },
+       {
+        "i": 23,
+        "c": "D"
+       },
+       {
+        "i": 38,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I won't cry, I won't cry",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "No, I won't shed a tear",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "Just as long as you stand, stand by me",
+      "chords": [
+       {
+        "i": 8,
+        "c": "C"
+       },
+       {
+        "i": 20,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "And darling, darling, stand by me",
+      "chords": [
+       {
+        "i": 22,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Oh, stand by me",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "Oh, stand now, stand by me",
+      "chords": [
+       {
+        "i": 4,
+        "c": "C"
+       },
+       {
+        "i": 15,
+        "c": "D"
+       },
+       {
+        "i": 24,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Stand by me",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "G   Em   C   D   G      (x2)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "So, darling, darling, stand by me",
+      "chords": [
+       {
+        "i": 22,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Oh, stand by me",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "Oh, stand now, stand by me",
+      "chords": [
+       {
+        "i": 4,
+        "c": "C"
+       },
+       {
+        "i": 15,
+        "c": "D"
+       },
+       {
+        "i": 24,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Stand by me",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "Whenever you're in trouble won't you stand by me, oh, stand by me",
+      "chords": [
+       {
+        "i": 37,
+        "c": "G"
+       },
+       {
+        "i": 54,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "Oh, stand now, oh, stand, stand by me",
+      "chords": [
+       {
+        "i": 4,
+        "c": "C"
+       },
+       {
+        "i": 15,
+        "c": "D"
+       },
+       {
+        "i": 35,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "(fade out)",
+      "chords": []
+     }
+    ]
+   }
+  ],
+  "id": "stand-by-me",
+  "draft": false
+ },
+ {
+  "title": "Chain Of Fools",
+  "artist": "Aretha Franklin",
+  "key": "Cm",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "Cm",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 14,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain of fools",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 9,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "For five long years, I thought you were my man",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "But I found out, (yeah), I'm just a link in your chain",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "You got me where you want me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "I ain't nothing but your fool",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "You treated me mean, (ohh), you treated me cruel",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 14,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain of fools",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 9,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Every chain, has got a weak link",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "I might be weak (child), but I'll give you strength (No music)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "You tell me to leave you alone  (oop, oop, oop, oop)",
+      "chords": []
+     },
+     {
+      "text": "(No music)",
+      "chords": []
+     },
+     {
+      "text": "My father said, Come on home     (oop, oop, oop, oop)",
+      "chords": []
+     },
+     {
+      "text": "(No music)",
+      "chords": []
+     },
+     {
+      "text": "My doctor said, Take it easy    (oop, oop, oop, oop)",
+      "chords": []
+     },
+     {
+      "text": "(No music)",
+      "chords": []
+     },
+     {
+      "text": "Oh, but your lovin' is much too strong  (oop, oop, oop, oop)",
+      "chords": []
+     },
+     {
+      "text": "I'm added to your",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 14,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain of fools",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 9,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge",
+    "lines": [
+     {
+      "text": "One of these mornings, the chain is gonna break",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "But up until then, I'm gonna take all I can take (Oh yeah)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 14,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain   (Chain, chain, chain)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain of fools",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 9,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro/Chorus",
+    "lines": [
+     {
+      "text": "Chain, chain, chain",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 14,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "Chain, chain, chain",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       },
+       {
+        "i": 14,
+        "c": "Cm7"
+       }
+      ]
+     },
+     {
+      "text": "Chain of fools",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm7"
+       },
+       {
+        "i": 9,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "id": "chain-of-fools",
+  "draft": true
+ },
+ {
+  "title": "Creep",
+  "artist": "Radiohead",
+  "key": "G",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "G   B   C   Cm",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "When you were here before, couldn't look you in the eyes",
+      "chords": [
+       {
+        "i": 19,
+        "c": "G"
+       },
+       {
+        "i": 52,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "You're just like an angel, your skin makes me cry",
+      "chords": [
+       {
+        "i": 20,
+        "c": "C"
+       },
+       {
+        "i": 46,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "You float like a feather in a beautiful world",
+      "chords": [
+       {
+        "i": 17,
+        "c": "G"
+       },
+       {
+        "i": 40,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "I wish I was special, you're so fucking special",
+      "chords": [
+       {
+        "i": 13,
+        "c": "C"
+       },
+       {
+        "i": 40,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus (play loud)",
+    "lines": [
+     {
+      "text": "(x3, very short)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "But I'm a creep, I'm a weirdo",
+      "chords": [
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "What the hell am I doing here? I don't belong here",
+      "chords": [
+       {
+        "i": 25,
+        "c": "C"
+       },
+       {
+        "i": 39,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "I don't care if it hurts, I wanna have control",
+      "chords": [
+       {
+        "i": 19,
+        "c": "G"
+       },
+       {
+        "i": 39,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "I want a perfect body, I want a perfect soul",
+      "chords": [
+       {
+        "i": 17,
+        "c": "C"
+       },
+       {
+        "i": 40,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "I want you to notice when I'm not around",
+      "chords": [
+       {
+        "i": 14,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "You're so fucking special, I wish I was special",
+      "chords": [
+       {
+        "i": 18,
+        "c": "C"
+       },
+       {
+        "i": 40,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus (play loud)",
+    "lines": [
+     {
+      "text": "(x3, very short)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "But I'm a creep, I'm a weirdo",
+      "chords": [
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "What the hell am I doing here? I don't belong here",
+      "chords": [
+       {
+        "i": 25,
+        "c": "C"
+       },
+       {
+        "i": 39,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge (play loud)",
+    "lines": [
+     {
+      "text": "Oooh, oooh, she's running out the door...",
+      "chords": [
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "She's running out, she run, run, run...",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 23,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "Ruuuuuuuun...",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 6,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "Ruuuuuuuuuuun...",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 6,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 3 (play soft until the end)",
+    "lines": [
+     {
+      "text": "Whatever makes you happy, whatever you want",
+      "chords": [
+       {
+        "i": 19,
+        "c": "G"
+       },
+       {
+        "i": 39,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "You're so fucking special, I wish I was special",
+      "chords": [
+       {
+        "i": 18,
+        "c": "C"
+       },
+       {
+        "i": 40,
+        "c": "Cm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "But I'm a creep, I'm a weirdo",
+      "chords": [
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "B"
+       }
+      ]
+     },
+     {
+      "text": "What the hell am I doing here? I don't belong here",
+      "chords": [
+       {
+        "i": 25,
+        "c": "C"
+       },
+       {
+        "i": 39,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "I don't belong here",
+      "chords": [
+       {
+        "i": 8,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "id": "creep",
+  "draft": true
+ },
+ {
+  "title": "Do You Love Me",
+  "artist": "The Contours",
+  "key": "F",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "You broke my heart",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "'Cause I couldn't dance",
+      "chords": [
+       {
+        "i": 7,
+        "c": "Bb"
+       }
+      ]
+     },
+     {
+      "text": "You didn't even want me around",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 24,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "And now I'm back, to let you know",
+      "chords": [
+       {
+        "i": 12,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "I can really shake 'em down",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Do you love me? (I can really move)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "F"
+       },
+       {
+        "i": 23,
+        "c": "Bb"
+       },
+       {
+        "i": 30,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Do you love me? (I'm in the groove)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "F"
+       },
+       {
+        "i": 21,
+        "c": "Bb"
+       },
+       {
+        "i": 28,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Ah do you love? (Do you love me)",
+      "chords": [
+       {
+        "i": 10,
+        "c": "F"
+       },
+       {
+        "i": 17,
+        "c": "Bb"
+       },
+       {
+        "i": 24,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Now that I can dance (dance)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bb"
+       },
+       {
+        "i": 9,
+        "c": "Bbm"
+       },
+       {
+        "i": 22,
+        "c": "C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Work-Up",
+    "lines": [
+     {
+      "text": "Watch me now, oh (work, work)",
+      "chords": [
+       {
+        "i": 18,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Ah, work it all baby (work, work)",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Bb"
+       },
+       {
+        "i": 16,
+        "c": "C"
+       },
+       {
+        "i": 22,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Well, you're drivin' me crazy (work, work)",
+      "chords": [
+       {
+        "i": 13,
+        "c": "Bb"
+       },
+       {
+        "i": 24,
+        "c": "C"
+       },
+       {
+        "i": 31,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "With a little bit of soul now (work)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "Bb"
+       },
+       {
+        "i": 21,
+        "c": "C"
+       },
+       {
+        "i": 31,
+        "c": "F"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Mash-Potato",
+    "lines": [
+     {
+      "text": "I can mash-potato (I can mash-potato)",
+      "chords": [
+       {
+        "i": 6,
+        "c": "F"
+       },
+       {
+        "i": 25,
+        "c": "Bb"
+       },
+       {
+        "i": 32,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "And I can do the twist (I can do the twist)",
+      "chords": [
+       {
+        "i": 10,
+        "c": "F"
+       },
+       {
+        "i": 30,
+        "c": "Bb"
+       },
+       {
+        "i": 37,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Now tell me baby (tell me baby)",
+      "chords": [
+       {
+        "i": 4,
+        "c": "F"
+       },
+       {
+        "i": 18,
+        "c": "Bb"
+       },
+       {
+        "i": 26,
+        "c": "C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Tag",
+    "lines": [
+     {
+      "text": "Mmm, do you like it like this (do you like it like this)",
+      "chords": []
+     },
+     {
+      "text": "Tell me (tell me)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 9,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Tell me",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Do you love me? (I can really move)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "F"
+       },
+       {
+        "i": 23,
+        "c": "Bb"
+       },
+       {
+        "i": 30,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Do you love me? (I'm in the groove)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "F"
+       },
+       {
+        "i": 21,
+        "c": "Bb"
+       },
+       {
+        "i": 28,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Ah do you love? (Do you love me)",
+      "chords": [
+       {
+        "i": 10,
+        "c": "F"
+       },
+       {
+        "i": 17,
+        "c": "Bb"
+       },
+       {
+        "i": 24,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Now that I can dance (dance)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bb"
+       },
+       {
+        "i": 9,
+        "c": "Bbm"
+       },
+       {
+        "i": 22,
+        "c": "C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Work-Up",
+    "lines": [
+     {
+      "text": "Watch me now, oh (work, work)",
+      "chords": [
+       {
+        "i": 18,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Ah, work it all baby (work, work)",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Bb"
+       },
+       {
+        "i": 16,
+        "c": "C"
+       },
+       {
+        "i": 22,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Well, you're drivin' me crazy (work, work)",
+      "chords": [
+       {
+        "i": 13,
+        "c": "Bb"
+       },
+       {
+        "i": 24,
+        "c": "C"
+       },
+       {
+        "i": 31,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "With a little bit of soul now (work)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "Bb"
+       },
+       {
+        "i": 21,
+        "c": "C"
+       },
+       {
+        "i": 31,
+        "c": "F"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Work-Up (cont.)",
+    "lines": [
+     {
+      "text": "Ah, shake it, shake it baby (work, work)",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Bb"
+       },
+       {
+        "i": 23,
+        "c": "C"
+       },
+       {
+        "i": 29,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Ah, you're driving me crazy (work, work)",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Bb"
+       },
+       {
+        "i": 22,
+        "c": "C"
+       },
+       {
+        "i": 29,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Ah, don't get lazy (work)",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Bb"
+       },
+       {
+        "i": 14,
+        "c": "C"
+       },
+       {
+        "i": 20,
+        "c": "F"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Mash-Potato",
+    "lines": [
+     {
+      "text": "I can mash-potato (I can mash-potato)",
+      "chords": [
+       {
+        "i": 6,
+        "c": "F"
+       },
+       {
+        "i": 25,
+        "c": "Bb"
+       },
+       {
+        "i": 32,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "And I can do the twist (I can do the twist)",
+      "chords": [
+       {
+        "i": 10,
+        "c": "F"
+       },
+       {
+        "i": 30,
+        "c": "Bb"
+       },
+       {
+        "i": 37,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Now tell me baby (tell me baby)",
+      "chords": [
+       {
+        "i": 4,
+        "c": "F"
+       },
+       {
+        "i": 18,
+        "c": "Bb"
+       },
+       {
+        "i": 26,
+        "c": "C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Tag",
+    "lines": [
+     {
+      "text": "Mmm, do you like it like this (do you like it like this)",
+      "chords": []
+     },
+     {
+      "text": "Tell me (tell me)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 9,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Tell me",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Do you love me? (I can really move)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "F"
+       },
+       {
+        "i": 23,
+        "c": "Bb"
+       },
+       {
+        "i": 30,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Do you love me? (I'm in the groove)",
+      "chords": [
+       {
+        "i": 7,
+        "c": "F"
+       },
+       {
+        "i": 21,
+        "c": "Bb"
+       },
+       {
+        "i": 28,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Ah do you love? (Do you love me)",
+      "chords": [
+       {
+        "i": 10,
+        "c": "F"
+       },
+       {
+        "i": 17,
+        "c": "Bb"
+       },
+       {
+        "i": 24,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Now that I can dance (dance)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bb"
+       },
+       {
+        "i": 9,
+        "c": "Bbm"
+       },
+       {
+        "i": 22,
+        "c": "C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Work-Up (Outro)",
+    "lines": [
+     {
+      "text": "Watch me now, oh (work, work)",
+      "chords": [
+       {
+        "i": 18,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Ah, work it all baby (work, work)",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Bb"
+       },
+       {
+        "i": 16,
+        "c": "C"
+       },
+       {
+        "i": 22,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Well, you're drivin' me crazy (work, work)",
+      "chords": [
+       {
+        "i": 13,
+        "c": "Bb"
+       },
+       {
+        "i": 24,
+        "c": "C"
+       },
+       {
+        "i": 31,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "With a little bit of soul now (work) 2x",
+      "chords": [
+       {
+        "i": 7,
+        "c": "Bb"
+       },
+       {
+        "i": 21,
+        "c": "C"
+       },
+       {
+        "i": 31,
+        "c": "F"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "id": "do-you-love-me",
+  "draft": true
+ },
+ {
+  "title": "Here Comes The Sun",
+  "artist": "The Beatles",
+  "key": "A",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "| D | % | G | A7 |",
+      "chords": []
+     },
+     {
+      "text": "| D | % | G | A7 |",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Here comes the sun. Here comes the sun.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 20,
+        "c": "Gmaj7*"
+       },
+       {
+        "i": 35,
+        "c": "E7"
+       }
+      ]
+     },
+     {
+      "text": "And I say \"It's alright.\"",
+      "chords": [
+       {
+        "i": 10,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "| G6  Dadd9  G6 | Dadd9  A7 |",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Little darling, it's been a long, cold lonely winter",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "G6"
+       },
+       {
+        "i": 46,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "Little darling, it feels like years since it's been here.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 30,
+        "c": "Gmaj7"
+       },
+       {
+        "i": 52,
+        "c": "A7"
+       },
+       {
+        "i": 56,
+        "c": "A7sus"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Here comes the sun. Here comes the sun.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 20,
+        "c": "Gmaj7*"
+       },
+       {
+        "i": 35,
+        "c": "E7"
+       }
+      ]
+     },
+     {
+      "text": "And I say \"It's alright.\"",
+      "chords": [
+       {
+        "i": 10,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "| G6  Dadd9  G6 | Dadd9  A7 |",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Little darling, the smiles returning to their faces.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 27,
+        "c": "G6"
+       },
+       {
+        "i": 46,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "Little darling, it seems like years since it's been here.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 30,
+        "c": "Gmaj7"
+       },
+       {
+        "i": 52,
+        "c": "A7"
+       },
+       {
+        "i": 56,
+        "c": "A7sus"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Here comes the sun. Here comes the sun.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 20,
+        "c": "Gmaj7*"
+       },
+       {
+        "i": 35,
+        "c": "E7"
+       }
+      ]
+     },
+     {
+      "text": "And I say \"It's alright.\"",
+      "chords": [
+       {
+        "i": 10,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "| G6  Dadd9  G6 | Dadd9  A7 |",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Middle Section",
+    "lines": [
+     {
+      "text": "F  C  G  D  A7",
+      "chords": []
+     },
+     {
+      "text": "Sun, sun, sun, here it comes.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "Sun, sun, sun, here it comes.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "Sun, sun, sun, here it comes.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "Sun, sun, sun, here it comes.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "Sun, sun, sun, here it comes.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "A7  A7sus  A7  A7",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Little darling, I feel that ice is slowly melting.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 28,
+        "c": "G6"
+       },
+       {
+        "i": 42,
+        "c": "A7"
+       }
+      ]
+     },
+     {
+      "text": "Little darling, it seems like years since it's been clear.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 30,
+        "c": "Gmaj7"
+       },
+       {
+        "i": 52,
+        "c": "A7"
+       },
+       {
+        "i": 57,
+        "c": "A7sus"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Here comes the sun. Here comes the sun.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 20,
+        "c": "Gmaj7*"
+       },
+       {
+        "i": 35,
+        "c": "E7"
+       }
+      ]
+     },
+     {
+      "text": "And I say \"It's alright.\"",
+      "chords": [
+       {
+        "i": 10,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "| G6  Dadd9  G6 | Dadd9  A7 |",
+      "chords": []
+     },
+     {
+      "text": "\"It's alright.\"",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "| G6  Dadd9  G6 | Dadd9  A7 | F  C  G  D",
+      "chords": []
+     }
+    ]
+   }
+  ],
+  "id": "here-comes-the-sun",
+  "draft": true
+ },
+ {
+  "title": "I Shot The Sheriff",
+  "artist": "Bob Marley",
+  "key": "Gm",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Chorus 1",
+    "lines": [
+     {
+      "text": " I shot the sheriff,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I didn't shoot no deputy, oh no! Oh!",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " I shot the sheriff,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I didn't shoot no deputy. Ooh, ooh, oo-ooh.",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": " All a-round in my home town,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Eb"
+       },
+       {
+        "i": 7,
+        "c": "Dm7"
+       },
+       {
+        "i": 19,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "They're tryin' to track me down;",
+      "chords": [
+       {
+        "i": 8,
+        "c": "Eb"
+       },
+       {
+        "i": 18,
+        "c": "Dm7"
+       },
+       {
+        "i": 27,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " They say they want to bring me in guilty,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Eb"
+       },
+       {
+        "i": 15,
+        "c": "Dm7"
+       },
+       {
+        "i": 35,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "For the killing of a depu-ty,",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Eb"
+       },
+       {
+        "i": 21,
+        "c": "Dm7"
+       },
+       {
+        "i": 26,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "For the life of a dep-uty. But I say...",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Eb"
+       },
+       {
+        "i": 18,
+        "c": "Dm7"
+       },
+       {
+        "i": 22,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Riff",
+    "lines": [
+     {
+      "text": "e|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "B|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "G|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "D|--5-3-------------------|",
+      "chords": []
+     },
+     {
+      "text": "A|-------5-3-----5-3------|",
+      "chords": []
+     },
+     {
+      "text": "E|-----------6-------6-3--|",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus 2",
+    "lines": [
+     {
+      "text": " I shot the sheriff,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I swear it was in self-defence. (Oh, no! Yeah!)",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "I say; I shot the sheriff, oh Lord!",
+      "chords": [
+       {
+        "i": 2,
+        "c": "Gm"
+       },
+       {
+        "i": 18,
+        "c": "Cm"
+       }
+      ]
+     },
+     {
+      "text": "And they say it is a capital offence. Yeah!",
+      "chords": [
+       {
+        "i": 21,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": " Sheriff John Brown always hated me,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Eb"
+       },
+       {
+        "i": 9,
+        "c": "Dm7"
+       },
+       {
+        "i": 27,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "For what... I don't know.",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Eb"
+       },
+       {
+        "i": 8,
+        "c": "Dm7"
+       },
+       {
+        "i": 12,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "Every time I plant a seed,",
+      "chords": [
+       {
+        "i": 6,
+        "c": "Eb"
+       },
+       {
+        "i": 13,
+        "c": "Dm7"
+       },
+       {
+        "i": 21,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "He said kill it be-fore it grow,",
+      "chords": [
+       {
+        "i": 8,
+        "c": "Eb"
+       },
+       {
+        "i": 16,
+        "c": "Dm7"
+       },
+       {
+        "i": 27,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "He said kill them be-fore they grow. And so, and so...",
+      "chords": [
+       {
+        "i": 8,
+        "c": "Eb"
+       },
+       {
+        "i": 18,
+        "c": "Dm7"
+       },
+       {
+        "i": 31,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Riff",
+    "lines": [
+     {
+      "text": "e|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "B|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "G|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "D|--5-3-------------------|",
+      "chords": []
+     },
+     {
+      "text": "A|-------5-3-----5-3------|",
+      "chords": []
+     },
+     {
+      "text": "E|-----------6-------6-3--|",
+      "chords": []
+     },
+     {
+      "text": "(Read it in the news!)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus 3",
+    "lines": [
+     {
+      "text": " I shot the sheriff,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I swear it was in self-defence. I say;",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " I shot the sheriff,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I swear it was in self-defence. (Yeah!)",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": " Freedom came my way one day,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Eb"
+       },
+       {
+        "i": 21,
+        "c": "Dm7"
+       },
+       {
+        "i": 25,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "And I started, out of town, yeah!",
+      "chords": [
+       {
+        "i": 6,
+        "c": "Eb"
+       },
+       {
+        "i": 15,
+        "c": "Dm7"
+       },
+       {
+        "i": 22,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " All of a sudden I saw Sheriff John Brown,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Eb"
+       },
+       {
+        "i": 10,
+        "c": "Dm7"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " Aiming to shoot me down,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Eb"
+       },
+       {
+        "i": 11,
+        "c": "Dm7"
+       },
+       {
+        "i": 20,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "So I shot, I shot, I shot him down. And I say...",
+      "chords": [
+       {
+        "i": 5,
+        "c": "Eb"
+       },
+       {
+        "i": 13,
+        "c": "Dm7"
+       },
+       {
+        "i": 30,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Riff",
+    "lines": [
+     {
+      "text": "e|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "B|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "G|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "D|--5-3-------------------|",
+      "chords": []
+     },
+     {
+      "text": "A|-------5-3-----5-3------|",
+      "chords": []
+     },
+     {
+      "text": "E|-----------6-------6-3--|",
+      "chords": []
+     },
+     {
+      "text": "(If I am guilty, I will pay)...",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus 4",
+    "lines": [
+     {
+      "text": " I shot the sheriff,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I didn't shoot no deputy, oh no! Oh!",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " I shot the sheriff,",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I didn't shoot no deputy. Ooh, ooh, oo-ooh.",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 4",
+    "lines": [
+     {
+      "text": "Re-flexes had the better of me,",
+      "chords": [
+       {
+        "i": 3,
+        "c": "Eb"
+       },
+       {
+        "i": 18,
+        "c": "Dm7"
+       },
+       {
+        "i": 28,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "And what is to be must be.",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Eb"
+       },
+       {
+        "i": 15,
+        "c": "Dm7"
+       },
+       {
+        "i": 18,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "Every day, the bucket a-go a-well,",
+      "chords": [
+       {
+        "i": 6,
+        "c": "Eb"
+       },
+       {
+        "i": 15,
+        "c": "Dm7"
+       },
+       {
+        "i": 27,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " One day the bottom a-go drop out,",
+      "chords": [
+       {
+        "i": 9,
+        "c": "Eb"
+       },
+       {
+        "i": 13,
+        "c": "Dm7"
+       },
+       {
+        "i": 25,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " One day the bottom a-go drop out.",
+      "chords": [
+       {
+        "i": 9,
+        "c": "Eb"
+       },
+       {
+        "i": 13,
+        "c": "Dm7"
+       },
+       {
+        "i": 25,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Riff",
+    "lines": [
+     {
+      "text": "e|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "B|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "G|------------------------|",
+      "chords": []
+     },
+     {
+      "text": "D|--5-3-------------------|",
+      "chords": []
+     },
+     {
+      "text": "A|-------5-3-----5-3------|",
+      "chords": []
+     },
+     {
+      "text": "E|-----------6-------6-3--|",
+      "chords": []
+     },
+     {
+      "text": "(I say)...",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus 5",
+    "lines": [
+     {
+      "text": "I-I-I, I shot the sheriff,",
+      "chords": [
+       {
+        "i": 9,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " Lord, I didn't shot the depu-ty. No!",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 25,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": "I-I...(shot the sheriff),",
+      "chords": [
+       {
+        "i": 7,
+        "c": "Gm"
+       }
+      ]
+     },
+     {
+      "text": " But I didn't shoot no deputy. Yeah! So, yeah!",
+      "chords": [
+       {
+        "i": 1,
+        "c": "Cm"
+       },
+       {
+        "i": 23,
+        "c": "Gm"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Coda",
+    "lines": [
+     {
+      "text": "Gm   Cm",
+      "chords": []
+     },
+     {
+      "text": "Gm",
+      "chords": []
+     },
+     {
+      "text": "(Repeat to Fade)",
+      "chords": []
+     }
+    ]
+   }
+  ],
+  "id": "i-shot-the-sheriff",
+  "draft": true
+ },
+ {
+  "title": "Kiss",
+  "artist": "Prince",
+  "key": "A",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "E7sus2   A5   A5   A5",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "U don't have 2 be beautiful 2 turn me on",
+      "chords": [
+       {
+        "i": 18,
+        "c": "A5"
+       }
+      ]
+     },
+     {
+      "text": "I just need your body, baby, from dusk till dawn",
+      "chords": []
+     },
+     {
+      "text": "U don't need experience 2 turn me out",
+      "chords": [
+       {
+        "i": 13,
+        "c": "D5"
+       }
+      ]
+     },
+     {
+      "text": "U just leave it all up 2 me, I'm gonna show U what it's all about",
+      "chords": [
+       {
+        "i": 20,
+        "c": "A5"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "U don't have 2 be rich 2 be my girl",
+      "chords": [
+       {
+        "i": 18,
+        "c": "E5"
+       }
+      ]
+     },
+     {
+      "text": "U don't have 2 be cool 2 rule my world",
+      "chords": [
+       {
+        "i": 18,
+        "c": "D5"
+       }
+      ]
+     },
+     {
+      "text": "Ain't no particular sign I'm more compatible with",
+      "chords": [
+       {
+        "i": 20,
+        "c": "E5"
+       }
+      ]
+     },
+     {
+      "text": "I just want your extra time and your",
+      "chords": [
+       {
+        "i": 17,
+        "c": "D5"
+       }
+      ]
+     },
+     {
+      "text": "Kiss",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A5"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "U got 2 not talk dirty, baby, if U wanna impress me",
+      "chords": [
+       {
+        "i": 17,
+        "c": "A5"
+       }
+      ]
+     },
+     {
+      "text": "U can't be 2 flirty, mama, I know how 2 undress me",
+      "chords": []
+     },
+     {
+      "text": "I want 2 be your fantasy, maybe U could be mine",
+      "chords": [
+       {
+        "i": 17,
+        "c": "D5"
+       }
+      ]
+     },
+     {
+      "text": "U just leave it all up 2 me, we could have a good time",
+      "chords": [
+       {
+        "i": 20,
+        "c": "A5"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "U don't have 2 be rich 2 be my girl",
+      "chords": [
+       {
+        "i": 18,
+        "c": "E5"
+       }
+      ]
+     },
+     {
+      "text": "U don't have 2 be cool 2 rule my world",
+      "chords": [
+       {
+        "i": 18,
+        "c": "D5"
+       }
+      ]
+     },
+     {
+      "text": "Ain't no particular sign I'm more compatible with",
+      "chords": [
+       {
+        "i": 20,
+        "c": "E5"
+       }
+      ]
+     },
+     {
+      "text": "I just want your extra time and your",
+      "chords": [
+       {
+        "i": 17,
+        "c": "D5"
+       }
+      ]
+     },
+     {
+      "text": "Kiss",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A5"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge",
+    "lines": [
+     {
+      "text": "e|-15-15-15-15-15-15-15-15-|-15-14---14-x-x-x-x-|",
+      "chords": []
+     },
+     {
+      "text": "B|-13-13-13-13-13-13-13-13-|-13-13---13-x-x-x-x-|",
+      "chords": []
+     },
+     {
+      "text": "G|-12-12-12-12-12-12-12-12-|-12-12---12-x-x-x-x-|",
+      "chords": []
+     },
+     {
+      "text": "D|-------------------------|--------------------|",
+      "chords": []
+     },
+     {
+      "text": "A|-------------------------|--------------------|",
+      "chords": []
+     },
+     {
+      "text": "E|-------------------------|--------------------|",
+      "chords": []
+     },
+     {
+      "text": "e|-15-14---14-x-x-x-x-|-15-14---14-x-x-x-x-|",
+      "chords": []
+     },
+     {
+      "text": "B|-13-13---13-x-x-x-x-|-13-13---13-x-x-x-x-|",
+      "chords": []
+     },
+     {
+      "text": "G|-12-12---12-x-x-x-x-|-12-12---12-x-x-x-x-|",
+      "chords": []
+     },
+     {
+      "text": "D|--------------------|--------------------|",
+      "chords": []
+     },
+     {
+      "text": "A|--------------------|--------------------|",
+      "chords": []
+     },
+     {
+      "text": "E|--------------------|--------------------|",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Women, not girls, rule my world, I said they rule my world",
+      "chords": [
+       {
+        "i": 11,
+        "c": "A5"
+       }
+      ]
+     },
+     {
+      "text": "Act your age, mama, not your shoe size, maybe we could do the twirl",
+      "chords": []
+     },
+     {
+      "text": "U don't have 2 watch Dynasty 2 have an attitude, uh",
+      "chords": [
+       {
+        "i": 21,
+        "c": "D5"
+       }
+      ]
+     },
+     {
+      "text": "U just leave it all up 2 me, my love will be your food",
+      "chords": [
+       {
+        "i": 20,
+        "c": "A5"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "U don't have 2 be rich 2 be my girl",
+      "chords": [
+       {
+        "i": 18,
+        "c": "E7sus2"
+       }
+      ]
+     },
+     {
+      "text": "U don't have 2 be cool 2 rule my world",
+      "chords": [
+       {
+        "i": 18,
+        "c": "D7sus2"
+       }
+      ]
+     },
+     {
+      "text": "Ain't no particular sign I'm more compatible with",
+      "chords": [
+       {
+        "i": 20,
+        "c": "E7sus2"
+       }
+      ]
+     },
+     {
+      "text": "I just want your extra time and your",
+      "chords": [
+       {
+        "i": 17,
+        "c": "D7sus2"
+       },
+       {
+        "i": 32,
+        "c": "E7sus2"
+       }
+      ]
+     },
+     {
+      "text": "Kiss",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A5"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "id": "kiss",
+  "draft": true
+ },
+ {
+  "title": "Mary Jane's Last Dance",
+  "artist": "Tom Petty and the Heartbreakers",
+  "key": "Am",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "Am   G   Dsus2   Am   (x4)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "She grew up in an Indiana town",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 18,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Had a good-lookin' mama who never was around",
+      "chords": [
+       {
+        "i": 6,
+        "c": "Dsus2"
+       },
+       {
+        "i": 28,
+        "c": "Am"
+       }
+      ]
+     },
+     {
+      "text": "But she grew up tall and she grew up right",
+      "chords": [
+       {
+        "i": 8,
+        "c": "Am"
+       },
+       {
+        "i": 29,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "With them Indiana boys on an Indiana night",
+      "chords": [
+       {
+        "i": 10,
+        "c": "Dsus2"
+       },
+       {
+        "i": 29,
+        "c": "Am"
+       }
+      ]
+     },
+     {
+      "text": "Am   G   Dsus2   Am   (x2) w/harmonica",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Well, she moved down here at the age of eighteen",
+      "chords": [
+       {
+        "i": 10,
+        "c": "Am"
+       },
+       {
+        "i": 40,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "She blew the boys away, was more than they'd seen",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Dsus2"
+       },
+       {
+        "i": 28,
+        "c": "Am"
+       }
+      ]
+     },
+     {
+      "text": "I was introduced and we both started groovin'",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 24,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "on, keep movin' on",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dsus2"
+       }
+      ]
+     },
+     {
+      "text": "Am   G   Dsus2   Am",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Last dance with Mary Jane",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       }
+      ]
+     },
+     {
+      "text": "One more time to kill the pain",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       },
+       {
+        "i": 26,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I feel summer creepin' in and I'm",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       }
+      ]
+     },
+     {
+      "text": "Tired of this town again",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       },
+       {
+        "i": 19,
+        "c": "A"
+       },
+       {
+        "i": 23,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Am   G   Dsus2   Am   (x2) w/harmonica",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Well, I don't know, but I've been told",
+      "chords": [
+       {
+        "i": 6,
+        "c": "Am"
+       },
+       {
+        "i": 29,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "You never slow down, you never grow old",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Dsus2"
+       },
+       {
+        "i": 25,
+        "c": "Am"
+       }
+      ]
+     },
+     {
+      "text": "I'm tired of screwing up, I'm tired of going down",
+      "chords": [
+       {
+        "i": 4,
+        "c": "Am"
+       },
+       {
+        "i": 39,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Tired of myself, tired of this town",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dsus2"
+       },
+       {
+        "i": 17,
+        "c": "Am"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge",
+    "lines": [
+     {
+      "text": "Oh my my, oh hell yes",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Honey, put on that party dress",
+      "chords": [
+       {
+        "i": 7,
+        "c": "Dsus2"
+       },
+       {
+        "i": 19,
+        "c": "Am"
+       }
+      ]
+     },
+     {
+      "text": "Buy me a drink, sing me a song,",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 16,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Take me as I come 'cause I can't stay long",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dsus2"
+       },
+       {
+        "i": 27,
+        "c": "Am"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Last dance with Mary Jane",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       }
+      ]
+     },
+     {
+      "text": "One more time to kill the pain",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       },
+       {
+        "i": 26,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I feel summer creepin' in and I'm",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       }
+      ]
+     },
+     {
+      "text": "Tired of this town again",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       },
+       {
+        "i": 19,
+        "c": "A"
+       },
+       {
+        "i": 23,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Solo",
+    "lines": [
+     {
+      "text": "Am   G   Dsus2   Am   (x4)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 4",
+    "lines": [
+     {
+      "text": "There's pigeons down on Market Square",
+      "chords": [
+       {
+        "i": 8,
+        "c": "Am"
+       },
+       {
+        "i": 24,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "She's standin' in her underwear",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dsus2"
+       },
+       {
+        "i": 22,
+        "c": "Am"
+       }
+      ]
+     },
+     {
+      "text": "Lookin' down from a hotel room",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 20,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Nightfall will be comin' soon",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dsus2"
+       },
+       {
+        "i": 18,
+        "c": "Am"
+       }
+      ]
+     },
+     {
+      "text": "Oh my my, oh hell yes",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "You got to put on that party dress",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dsus2"
+       },
+       {
+        "i": 23,
+        "c": "Am"
+       },
+       {
+        "i": 29,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "It was too cold to cry when I woke up alone",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Am"
+       },
+       {
+        "i": 30,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I hit my last number and walked to the road",
+      "chords": [
+       {
+        "i": 2,
+        "c": "Dsus2"
+       },
+       {
+        "i": 25,
+        "c": "Am"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Last dance with Mary Jane",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       }
+      ]
+     },
+     {
+      "text": "One more time to kill the pain",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       },
+       {
+        "i": 26,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I feel summer creepin' in and I'm",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       }
+      ]
+     },
+     {
+      "text": "Tired of this town again",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em7"
+       },
+       {
+        "i": 19,
+        "c": "A"
+       },
+       {
+        "i": 23,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "Am   G   Dsus2   Am",
+      "chords": []
+     },
+     {
+      "text": "(Play over and over till out, with solo guitar and harmonica)",
+      "chords": []
+     }
+    ]
+   }
+  ],
+  "id": "mary-jane-s-last-dance",
+  "draft": true
+ },
+ {
+  "title": "Shine",
+  "artist": "Mondo Cozmo",
+  "key": "F#",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "F# Eadd9  B F#",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Stick with me Jesus through the coming storm",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F#"
+       },
+       {
+        "i": 32,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "I've come to you in search of something I've lost",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 40,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Shine down a light on me and show a path",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F#"
+       },
+       {
+        "i": 29,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "I promise you I will return if you take me back",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 35,
+        "c": "F#"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 11,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 11,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "F# Eadd9  B F# x2",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "My friends are so alone and it breaks my heart",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F#"
+       },
+       {
+        "i": 31,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "My friends don't understand we are all lost",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 39,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Shine down a light on them and show a path",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F#"
+       },
+       {
+        "i": 31,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "I promise you they will return if you take em back",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 38,
+        "c": "F#"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 11,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 11,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge",
+    "lines": [
+     {
+      "text": "(different strumming pattern here, listen to the song to pick it up.)",
+      "chords": []
+     },
+     {
+      "text": "F# B Eadd9   Eadd9 B F#",
+      "chords": []
+     },
+     {
+      "text": "F# B Eadd9   Eadd9 B F#",
+      "chords": []
+     },
+     {
+      "text": "F# B Eadd9   Eadd9 B F#",
+      "chords": []
+     },
+     {
+      "text": "F# B Eadd9   Eadd9 B F#",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Come with me Mary through these modern lines",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F#"
+       },
+       {
+        "i": 32,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Stick with me Jesus til the end of time",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 28,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Shine down a light on me and let me know",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F#"
+       },
+       {
+        "i": 29,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "And take me in your arms an never let me go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 11,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 11,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 11,
+        "c": "F#"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Eadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "B"
+       },
+       {
+        "i": 34,
+        "c": "F#"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "F# B Eadd9   Eadd9 B F#",
+      "chords": []
+     }
+    ]
+   }
+  ],
+  "id": "shine",
+  "draft": true
+ },
+ {
+  "title": "Superstition",
+  "artist": "Stevie Wonder",
+  "key": "Ebm",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "Riff 1",
+      "chords": []
+     },
+     {
+      "text": "B7   C7   Bb7   A7",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Very superstitious, writing's on the wall",
+      "chords": []
+     },
+     {
+      "text": "Very superstitious, ladders 'bout to fall",
+      "chords": []
+     },
+     {
+      "text": "Thirteen month old baby, broke the lookin' glass",
+      "chords": []
+     },
+     {
+      "text": "Seven years of bad luck, the good things in your past",
+      "chords": []
+     },
+     {
+      "text": "When you believe in things that you don't understand",
+      "chords": [
+       {
+        "i": 9,
+        "c": "B7"
+       },
+       {
+        "i": 20,
+        "c": "C7"
+       },
+       {
+        "i": 36,
+        "c": "B7"
+       },
+       {
+        "i": 42,
+        "c": "Bb7"
+       }
+      ]
+     },
+     {
+      "text": "Then you suffer, superstition ain't the way",
+      "chords": [
+       {
+        "i": 11,
+        "c": "A7"
+       },
+       {
+        "i": 14,
+        "c": "B7"
+       },
+       {
+        "i": 17,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Rid me of the problem, do all that you can",
+      "chords": []
+     },
+     {
+      "text": "Keep me in a daydream, keep me goin' strong",
+      "chords": []
+     },
+     {
+      "text": "You don't wanna save me, sad is my song",
+      "chords": []
+     },
+     {
+      "text": "When you believe in things that you don't understand",
+      "chords": [
+       {
+        "i": 9,
+        "c": "B7"
+       },
+       {
+        "i": 20,
+        "c": "C7"
+       },
+       {
+        "i": 36,
+        "c": "B7"
+       },
+       {
+        "i": 42,
+        "c": "Bb7"
+       }
+      ]
+     },
+     {
+      "text": "Then you suffer, superstition ain't the way",
+      "chords": [
+       {
+        "i": 11,
+        "c": "A7"
+       },
+       {
+        "i": 14,
+        "c": "B7"
+       },
+       {
+        "i": 17,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "B7   C7   B7   Bb7   A7   B7",
+      "chords": []
+     },
+     {
+      "text": "Ahhhhhhhhhhh",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Very superstitious, nothin' more to say",
+      "chords": []
+     },
+     {
+      "text": "Very superstitious, the devil's on his way",
+      "chords": []
+     },
+     {
+      "text": "Thirteen month old baby, broke the lookin' glass",
+      "chords": []
+     },
+     {
+      "text": "Seven years of bad luck, good things in your past",
+      "chords": []
+     },
+     {
+      "text": "When you believe in things that you don't understand",
+      "chords": [
+       {
+        "i": 9,
+        "c": "B7"
+       },
+       {
+        "i": 20,
+        "c": "C7"
+       },
+       {
+        "i": 36,
+        "c": "B7"
+       },
+       {
+        "i": 42,
+        "c": "Bb7"
+       }
+      ]
+     },
+     {
+      "text": "Then you suffer, superstition ain't the way, no no no",
+      "chords": [
+       {
+        "i": 11,
+        "c": "A7"
+       },
+       {
+        "i": 14,
+        "c": "B7"
+       },
+       {
+        "i": 17,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "Repeat Riff 1 and fade",
+      "chords": []
+     }
+    ]
+   }
+  ],
+  "id": "superstition",
+  "draft": true
+ },
+ {
+  "id": "last-kiss",
+  "title": "Last Kiss",
+  "artist": "Pearl Jam",
+  "key": "G",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "draft": true,
+  "sections": [
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Oh where, oh where can my baby be? The Lord took her away from me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "Em"
+       },
+       {
+        "i": 35,
+        "c": "C"
+       },
+       {
+        "i": 53,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "She's gone to heaven, so I got to be good, so I can see my baby when I leave this",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "Em"
+       },
+       {
+        "i": 48,
+        "c": "C"
+       },
+       {
+        "i": 56,
+        "c": "D"
+       },
+       {
+        "i": 71,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "world",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "We were out on a date in my daddy's car, we hadn't driven very far",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 28,
+        "c": "Em"
+       },
+       {
+        "i": 44,
+        "c": "C"
+       },
+       {
+        "i": 51,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "There in the road, straight ahead, a car was stalled, the engine was dead",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 19,
+        "c": "Em"
+       },
+       {
+        "i": 45,
+        "c": "C"
+       },
+       {
+        "i": 58,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "I couldn't stop, so I swerved to the right, I'll never forget the sound that night",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 22,
+        "c": "Em"
+       },
+       {
+        "i": 49,
+        "c": "C"
+       },
+       {
+        "i": 66,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "The screaming tires, the bustin' glass, the painful scream that I heard last",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 25,
+        "c": "Em"
+       },
+       {
+        "i": 44,
+        "c": "C"
+       },
+       {
+        "i": 66,
+        "c": "D"
+       },
+       {
+        "i": 72,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Oh where, oh where can my baby be? The Lord took her away from me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "Em"
+       },
+       {
+        "i": 35,
+        "c": "C"
+       },
+       {
+        "i": 53,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "She's gone to heaven, so I got to be good, so I can see my baby when I leave this",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "Em"
+       },
+       {
+        "i": 48,
+        "c": "C"
+       },
+       {
+        "i": 56,
+        "c": "D"
+       },
+       {
+        "i": 71,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "world",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "When I woke up, the rain was pouring down, there were people standing all around",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 20,
+        "c": "Em"
+       },
+       {
+        "i": 29,
+        "c": "C"
+       },
+       {
+        "i": 61,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Something warm flowin' through my eyes, but somehow I found my baby that night",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "Em"
+       },
+       {
+        "i": 44,
+        "c": "C"
+       },
+       {
+        "i": 54,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "I lifted her head, she looked at me and said: Hold me darling just a little while",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "Em"
+       },
+       {
+        "i": 40,
+        "c": "C"
+       },
+       {
+        "i": 54,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "I held her close, I kissed her our last kiss, I'd found the love that I knew I had missed",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 20,
+        "c": "Em"
+       },
+       {
+        "i": 50,
+        "c": "C"
+       },
+       {
+        "i": 72,
+        "c": "D"
+       },
+       {
+        "i": 83,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Well, now she's gone, even though I hold her tight, I lost my love my life that night",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "Em"
+       },
+       {
+        "i": 54,
+        "c": "C"
+       },
+       {
+        "i": 70,
+        "c": "D"
+       },
+       {
+        "i": 80,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Oh where, oh where can my baby be? The Lord took her away from me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 23,
+        "c": "Em"
+       },
+       {
+        "i": 35,
+        "c": "C"
+       },
+       {
+        "i": 53,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "She's gone to heaven, so I got to be good, so I can see my baby when I leave this",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "Em"
+       },
+       {
+        "i": 48,
+        "c": "C"
+       },
+       {
+        "i": 56,
+        "c": "D"
+       },
+       {
+        "i": 71,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "world",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "Ooo-o-o-o-oooh, ooo-o-o-o-o-o-oh",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 4,
+        "c": "Em"
+       },
+       {
+        "i": 10,
+        "c": "C"
+       },
+       {
+        "i": 16,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Ooo-o-o-o-oooh, ooo-o-o-o-o-o-oh",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 4,
+        "c": "Em"
+       },
+       {
+        "i": 10,
+        "c": "C"
+       },
+       {
+        "i": 16,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Ooo-o-o-o-oooh, ooo-o-o-o-o-o-oh",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 4,
+        "c": "Em"
+       },
+       {
+        "i": 10,
+        "c": "C"
+       },
+       {
+        "i": 16,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Ooo-o-o-o-oooh, ooo-o-o-o-o-o-oh",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 4,
+        "c": "Em"
+       },
+       {
+        "i": 10,
+        "c": "C"
+       },
+       {
+        "i": 16,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "(end on G)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "come-together",
+  "title": "Come Together",
+  "artist": "The Beatles",
+  "key": "Dm",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "draft": true,
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "(Dm7 - intro bass riff x4)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Here come old flat top, he come grooving up slowly",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He got Joo Joo eyeball, he one holy roller",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He got hair down to his knee",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "Got to be a joker, he just do what he please",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "Dm7   (Intro Riff x4)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "He wear no shoe shine, he got toe jam football",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He got monkey finger, he shoot coca cola",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He say, I know you, you know me.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "One thing I can tell you is you got to be free",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 32,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Come together, right now,",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 15,
+        "c": "Bm/A"
+       },
+       {
+        "i": 21,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "Dm7   (Intro Riff x4)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "He bag production, he got walrus gumboot",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He got Ono sideboard, he one spinal cracker",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He got feet down below his knee",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "Hold you in his armchair, you can feel his disease",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Come together, right now,",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 15,
+        "c": "Bm/A"
+       },
+       {
+        "i": 21,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "over me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A"
+       },
+       {
+        "i": 5,
+        "c": "N.C."
+       }
+      ]
+     },
+     {
+      "text": "over me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A"
+       },
+       {
+        "i": 5,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "Dm7   (Intro Riff x2)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Solo",
+    "lines": [
+     {
+      "text": "| Dm | A | Dm | A |",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "Dm7   (Intro Riff x2)",
+      "chords": []
+     },
+     {
+      "text": "| Dm | A | Dm | A |",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 4",
+    "lines": [
+     {
+      "text": "He roller coaster, he got early warning",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He got muddy water, he one moo filter",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm"
+       }
+      ]
+     },
+     {
+      "text": "He say, One and one and one is three.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "Got to be good looking 'cause he so hard to see",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 36,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Come together, right now,",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Bm"
+       },
+       {
+        "i": 15,
+        "c": "Bm/A"
+       },
+       {
+        "i": 21,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "Dm7   (Intro Riff x4)",
+      "chords": []
+     },
+     {
+      "text": "over me",
+      "chords": [
+       {
+        "i": 0,
+        "c": "A"
+       },
+       {
+        "i": 5,
+        "c": "N.C."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "| Dm | Dm | Dm | Dm |   (repeat to fade out)",
+      "chords": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "shine-mondo-cozmo",
+  "title": "Shine (Capo 4)",
+  "artist": "Mondo Cozmo",
+  "key": "D",
+  "credit": "Personal performance copy - not for sale or distribution  -  Capo 4",
+  "draft": true,
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "D   Cadd9   G   D",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Stick with me Jesus through the coming storm",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 20,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "I've come to you in search of something I've lost",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 30,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Shine down a light on me and show a path",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 25,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "I promise you I will return if you take me back",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 35,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Instrumental",
+    "lines": [
+     {
+      "text": "D   Cadd9   G   D   (x2)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "My friends are so alone and it breaks my heart",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 24,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "My friends don't understand we are all lost",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 28,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Shine down a light on them and show a path",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 27,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "I promise you they will return if you take em back",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 38,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge",
+    "lines": [
+     {
+      "text": "(different strumming here - listen to the song)",
+      "chords": []
+     },
+     {
+      "text": "D  G  Cadd9",
+      "chords": []
+     },
+     {
+      "text": "Cadd9  G  D",
+      "chords": []
+     },
+     {
+      "text": "D  G  Cadd9",
+      "chords": []
+     },
+     {
+      "text": "D  G  Cadd9",
+      "chords": []
+     },
+     {
+      "text": "D  G  Cadd9",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Cadd9  G  D    Cadd9  G  D    Cadd9  G  D",
+      "chords": []
+     },
+     {
+      "text": "Come with me Mary through these modern lines",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Stick with me Jesus til the end of time",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 20,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Shine down a light on me and let me know",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       },
+       {
+        "i": 25,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "And take me in your arms an never let me go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 28,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get high",
+      "chords": [
+       {
+        "i": 0,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Let em get stoned",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Cadd9"
+       }
+      ]
+     },
+     {
+      "text": "Everything will be alright if you let it go",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       },
+       {
+        "i": 34,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "D  G  Cadd9      Cadd9  G  D",
+      "chords": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "moondance",
+  "title": "Moondance",
+  "artist": "Van Morrison",
+  "key": "Am",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "draft": true,
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "text": "Am   Am   Bm11/E   Bm11/E",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Well, it's a marvelous night for a moon dance with the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 13,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 23,
+        "c": "Am7"
+       },
+       {
+        "i": 40,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Stars up above in your eyes",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 9,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 18,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "A fantabulous night to make romance 'neath the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 2,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 23,
+        "c": "Am7"
+       },
+       {
+        "i": 28,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Color of October skies",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 9,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 17,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "All the leaves on the trees are falling to the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 8,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 22,
+        "c": "Am7"
+       },
+       {
+        "i": 32,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Sounds of the breezes that blow",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 14,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 27,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "And I'm trying to place to the calling of your",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 8,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 18,
+        "c": "Am7"
+       },
+       {
+        "i": 31,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Heartstrings that play soft and low",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 18,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 32,
+        "c": "Am7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Pre-Chorus",
+    "lines": [
+     {
+      "text": "You know the night's magic seems to",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 4,
+        "c": "G"
+       },
+       {
+        "i": 21,
+        "c": "Am7"
+       },
+       {
+        "i": 27,
+        "c": "G13"
+       }
+      ]
+     },
+     {
+      "text": "Whisper and hush you know the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 21,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "So-ft moonlight seems to shine",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 6,
+        "c": "G"
+       },
+       {
+        "i": 16,
+        "c": "Am7"
+       },
+       {
+        "i": 25,
+        "c": "G13"
+       }
+      ]
+     },
+     {
+      "text": "In your blush",
+      "chords": [
+       {
+        "i": 0,
+        "c": "E7#9"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Can I just have one more moon dance with",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 11,
+        "c": "Dm7"
+       },
+       {
+        "i": 20,
+        "c": "Am"
+       },
+       {
+        "i": 30,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "You . . . my love",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "Can I just make some more romance with",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 11,
+        "c": "Dm7"
+       },
+       {
+        "i": 21,
+        "c": "Am"
+       },
+       {
+        "i": 26,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "You . . . my love",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Dm7"
+       },
+       {
+        "i": 13,
+        "c": "E7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Well, I want to make love to you tonight",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 8,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 21,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "I can't wait til the morning has come",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 8,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 21,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "And I know now the time is just right",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 6,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 32,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "And straight into my arms you will run",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 4,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 35,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "When you come my heart will be waiting",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 9,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 31,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "To make sure that you're never alone",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 8,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 31,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "There and then all my dreams will come true dear",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 22,
+        "c": "Bm7"
+       },
+       {
+        "i": 39,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "There and then I will make you my own",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 34,
+        "c": "Am7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Pre-Chorus",
+    "lines": [
+     {
+      "text": "And every time I touch you, you just",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 17,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "Tremble inside",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 8,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "Then I know how much you want me, that",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 25,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "You can't hide",
+      "chords": [
+       {
+        "i": 0,
+        "c": "E7#9"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Can I just have one more moon dance with",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 11,
+        "c": "Dm7"
+       },
+       {
+        "i": 20,
+        "c": "Am"
+       },
+       {
+        "i": 30,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "You . . . my love",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "Can I just make some more romance with",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 11,
+        "c": "Dm7"
+       },
+       {
+        "i": 21,
+        "c": "Am"
+       },
+       {
+        "i": 26,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "You . . . my love",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Dm7"
+       },
+       {
+        "i": 13,
+        "c": "E7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Solo",
+    "lines": [
+     {
+      "text": "Am x4   Dm7 x4   Am x4   Bm11/E x8   G x3",
+      "chords": []
+     },
+     {
+      "text": "Dm7 x4   Am7 x12   E7#9   Am x4   Bm7 x8   G13 x3   E7   Dm7 x3   E7",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Well, it's a marvelous night for a moon dance with the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 13,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 23,
+        "c": "Am7"
+       },
+       {
+        "i": 40,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Stars up above in your eyes",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 9,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 18,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "A fantabulous night to make romance 'neath the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 2,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 23,
+        "c": "Am7"
+       },
+       {
+        "i": 28,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Color of October skies",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 9,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 17,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "All the leaves on the trees are falling to the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 8,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 22,
+        "c": "Am7"
+       },
+       {
+        "i": 32,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Sounds of the breezes that blow",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 14,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 27,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "And I'm trying to place to the calling of your",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 8,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 18,
+        "c": "Am7"
+       },
+       {
+        "i": 31,
+        "c": "Bm7"
+       }
+      ]
+     },
+     {
+      "text": "Heartstrings that play soft and low",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 18,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 32,
+        "c": "Am7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Pre-Chorus",
+    "lines": [
+     {
+      "text": "You know the night's magic seems to",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 4,
+        "c": "G"
+       },
+       {
+        "i": 21,
+        "c": "Am7"
+       },
+       {
+        "i": 27,
+        "c": "G13"
+       }
+      ]
+     },
+     {
+      "text": "Whisper and hush you know the",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 21,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "So-ft moonlight seems to shine",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Dm7"
+       },
+       {
+        "i": 6,
+        "c": "G"
+       },
+       {
+        "i": 16,
+        "c": "Am7"
+       },
+       {
+        "i": 25,
+        "c": "G13"
+       }
+      ]
+     },
+     {
+      "text": "In your blush",
+      "chords": [
+       {
+        "i": 0,
+        "c": "E7#9"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Can I just have one more moon dance with",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 11,
+        "c": "Dm7"
+       },
+       {
+        "i": 20,
+        "c": "Am"
+       },
+       {
+        "i": 30,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "You . . . my love",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "Can I just make some more romance with",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 11,
+        "c": "Dm7"
+       },
+       {
+        "i": 21,
+        "c": "Am"
+       },
+       {
+        "i": 26,
+        "c": "Dm7"
+       }
+      ]
+     },
+     {
+      "text": "You . . . my love",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 10,
+        "c": "Dm7"
+       },
+       {
+        "i": 13,
+        "c": "E7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "One more moon dance with you",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 4,
+        "c": "Bm11/E"
+       },
+       {
+        "i": 20,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "In the moonlight",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 7,
+        "c": "Bm11/E"
+       }
+      ]
+     },
+     {
+      "text": "On a magic night",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 5,
+        "c": "Bm11/E"
+       }
+      ]
+     },
+     {
+      "text": "La la la la la la",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 3,
+        "c": "Bm11/E"
+       }
+      ]
+     },
+     {
+      "text": "In the moonlight",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 7,
+        "c": "Bm11/E"
+       }
+      ]
+     },
+     {
+      "text": "On a magic night",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am"
+       },
+       {
+        "i": 5,
+        "c": "Bm11/E"
+       }
+      ]
+     },
+     {
+      "text": "Am7 ...  Bm7 ...  G13  F13  Em  Dm (open)",
+      "chords": []
+     },
+     {
+      "text": "Can I... just have... one more... moon dance with you...",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am7"
+       }
+      ]
+     },
+     {
+      "text": "My love",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Am7"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]
