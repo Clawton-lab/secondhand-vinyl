@@ -281,8 +281,10 @@ function insStrip(k,li,ln){const d=document.createElement('div');d.className='in
   const mk=(t,fn)=>{const b=document.createElement('button');b.className='b';b.textContent=t;b.onclick=fn;return b;};
   d.append(mk('+ tab here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{tab:DEFAULT_TAB()});render();}),
            mk('+ notation here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{notation:DEFAULT_NOTATION});render();}));
-  if(ln&&ln.text!=null&&!ln.tab&&ln.notation==null)
+  if(ln&&ln.text!=null&&!ln.tab&&ln.notation==null){
+    d.append(mk('✎ words',()=>{const v=prompt('Edit the words of this line (fix a typo or remove a word):',ln.text);if(v!=null){ln.text=v;(ln.chords||[]).forEach(c=>{if(c.i>v.length)c.i=v.length;});if(ln.chords)ln.chords.sort((a,b)=>a.i-b.i);render();}}));
     d.append(mk('✕ line',()=>{if(!confirm('Delete this line?'))return;const sec=SONGS[si].sections[k];sec.lines.splice(li,1);if(!sec.lines.length&&sec.type!=='image'&&sec.type!=='instrumental')SONGS[si].sections.splice(k,1);render();}));
+  }
   return d;}
 function renderNotation(ln,k,li){
   const wrap=document.createElement('div');wrap.className='noteblk';const host=document.createElement('div');wrap.appendChild(host);
