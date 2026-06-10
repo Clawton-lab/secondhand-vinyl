@@ -448,6 +448,7 @@ body.locked #lockBadge{display:flex;}
     <div class="panel-body">
       <div class="btn-row">
         <button class="btn-lg primary" onclick="App.newSetlist()">＋ New Setlist</button>
+        <button class="btn-lg" onclick="App.openTrash()" style="margin-left:8px">🗑 Trash</button>
       </div>
       <div class="section-h">Your Setlists</div>
       <div id="setlistList"></div>
@@ -463,8 +464,19 @@ body.locked #lockBadge{display:flex;}
   <div class="panel brushed">
     <div class="panel-head"><h2>Song Library</h2><button class="x" onclick="App.close('ovLibrary')">✕</button></div>
     <div class="panel-body">
-      <div class="btn-row"><button class="btn-lg primary" onclick="App.openImport()">＋ Add Charts</button><button class="btn-lg" onclick="location.href='chart-editor.html'" style="margin-left:8px">✎ Editable Charts</button></div>
+      <div class="btn-row"><button class="btn-lg primary" onclick="App.openImport()">＋ Add Charts</button><button class="btn-lg" onclick="location.href='chart-editor.html'" style="margin-left:8px">✎ Editable Charts</button><button class="btn-lg" onclick="App.openTrash()" style="margin-left:8px">🗑 Trash</button></div>
       <div id="libraryList" style="margin-top:14px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TRASH OVERLAY ===== -->
+<div class="overlay" id="ovTrash">
+  <div class="panel brushed">
+    <div class="panel-head"><h2>🗑 Trash</h2><button class="x" onclick="App.close('ovTrash')">✕</button></div>
+    <div class="panel-body">
+      <p style="opacity:.7;font-size:13px;margin:0 0 10px">Deleted songs and setlists land here. <b>Restore</b> them, or delete forever.</p>
+      <div id="trashList"></div>
     </div>
   </div>
 </div>
@@ -864,7 +876,7 @@ const App = (() => {
 
   // ---------- Setlists ----------
   const setlistById=id=>setlists.find(x=>x.id===id);
-  function activeSetlist(){ return setlistById(cur.setlistId)||setlistById(settings.lastSetlistId)||setlists[0]||null; }
+  function activeSetlist(){ let sl=setlistById(cur.setlistId)||setlistById(settings.lastSetlistId); if(sl&&sl.trashed) sl=null; return sl||setlists.find(s=>!s.trashed)||null; }
   async function newSetlist(){
     const name=prompt("Setlist name:","Set "+(setlists.length+1)); if(name===null) return;
     const sl={id:uid(),name:name||"Untitled Set",date:new Date().toISOString().slice(0,10),notes:"",items:[]};
@@ -884,6 +896,23 @@ const App = (() => {
     const sl=activeSetlist(); if(!sl) return;
     sl.items=sl.items.filter(i=>i.id!==itemId); sl.items.forEach((i,n)=>i.order=n);
     await persistSetlist(sl); renderActiveItems(); updateRails();
+  }
+  // Edit a template's SET-ONLY copy: forks it (Library master untouched), files it under Library > Setlist Edits, opens the editor on it
+  async function forkAndEdit(itemId){
+    const sl=activeSetlist(); if(!sl) return;
+    const it=sl.items.find(i=>i.id===itemId); if(!it) return;
+    let song=songById(it.songId);
+    if(!song||song.kind!=="chart"){ toast("Only template songs are editable here"); return; }
+    if(!song.setlistFork){
+      const fork=JSON.parse(JSON.stringify(song));
+      fork.id=uid(); fork.kind="chart"; fork.setlistFork=true; fork.baseId=song.id;
+      fork.fromSet=sl.name||""; fork.title=((sl.name?sl.name+" ":"")+song.title);
+      fork.createdAt=Date.now(); fork.updatedAt=Date.now();
+      await put("songs",fork); lib.push(fork);
+      it.songId=fork.id; await persistSetlist(sl);
+      song=fork;
+    }
+    location.href='chart-editor.html?edit='+encodeURIComponent(song.id);
   }
   async function dupItem(itemId){
     const sl=activeSetlist(); if(!sl) return;
@@ -1212,29 +1241,36 @@ const App = (() => {
   }
 
   // ---------- List renderers ----------
+  function songRow(s){
+    const row=document.createElement("div"); row.className="row";
+    row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div>'+
+      '<div class="acts"><button class="mini" title="Add to setlist">＋</button>'+
+      '<button class="mini" title="Edit">✎</button><button class="mini" title="Play">▶</button>'+
+      '<button class="mini danger" title="Delete chart">🗑</button></div>';
+    row.querySelector(".t").textContent=(s.kind==="chart"?"♪ ":"")+s.title;
+    row.querySelector(".s").textContent = s.setlistFork ? ["set edit",s.fromSet&&("from "+s.fromSet),s.key&&("Key "+s.key)].filter(Boolean).join(" · ")
+      : s.kind==="chart" ? ["editable template",s.artist,s.key&&("Key "+s.key)].filter(Boolean).join(" · ")
+      : [s.artist,s.key&&("Key "+s.key),s.bpm&&(s.bpm+" bpm"),s.pageCount+"p"].filter(Boolean).join(" · ");
+    const [bAdd,bEdit,bPlay,bDel]=row.querySelectorAll(".mini");
+    bAdd.onclick=()=>addSongToSetlist(s.id);
+    bEdit.onclick=s.kind==="chart"?(()=>location.href='chart-editor.html?edit='+encodeURIComponent(s.id)):(()=>openEdit(s.id));
+    bPlay.onclick=()=>{ close("ovLibrary"); openStandalone(s.id); };
+    bDel.onclick=()=>deleteSongById(s.id);
+    return row;
+  }
   function renderLibrary(){
     const box=$("libraryList"); box.innerHTML="";
-    if(!lib.length){ box.innerHTML='<div class="empty-list">No charts yet. Import some PDFs to begin.</div>'; return; }
-    lib.slice().sort((a,b)=>a.title.localeCompare(b.title)).forEach(s=>{
-      const row=document.createElement("div"); row.className="row";
-      row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div>'+
-        '<div class="acts"><button class="mini" title="Add to setlist">＋</button>'+
-        '<button class="mini" title="Edit">✎</button><button class="mini" title="Play">▶</button>'+
-        '<button class="mini danger" title="Delete chart">🗑</button></div>';
-      row.querySelector(".t").textContent=(s.kind==="chart"?"♪ ":"")+s.title;
-      row.querySelector(".s").textContent=s.kind==="chart"?["editable template",s.artist,s.key&&("Key "+s.key)].filter(Boolean).join(" · "):[s.artist,s.key&&("Key "+s.key),s.bpm&&(s.bpm+" bpm"),s.pageCount+"p"].filter(Boolean).join(" · ");
-      const [bAdd,bEdit,bPlay,bDel]=row.querySelectorAll(".mini");
-      bAdd.onclick=()=>addSongToSetlist(s.id);
-      bEdit.onclick=s.kind==="chart"?(()=>location.href='chart-editor.html'):(()=>openEdit(s.id));
-      bPlay.onclick=()=>{ close("ovLibrary"); openStandalone(s.id); };
-      bDel.onclick=()=>deleteSongById(s.id);
-      box.appendChild(row);
-    });
+    const masters=lib.filter(s=>!s.setlistFork&&!s.trashed).slice().sort((a,b)=>a.title.localeCompare(b.title));
+    const forks=lib.filter(s=>s.setlistFork&&!s.trashed).slice().sort((a,b)=>a.title.localeCompare(b.title));
+    if(!masters.length&&!forks.length){ box.innerHTML='<div class="empty-list">No charts yet. Import some PDFs to begin.</div>'; return; }
+    masters.forEach(s=>box.appendChild(songRow(s)));
+    if(forks.length){ const h=document.createElement('div'); h.className='section-h'; h.style.marginTop='16px'; h.textContent='🎚 Setlist Edits ('+forks.length+')'; box.appendChild(h); forks.forEach(s=>box.appendChild(songRow(s))); }
   }
   function renderAddList(){
     const box=$("addList"); box.innerHTML="";
-    if(!lib.length){ box.innerHTML='<div class="empty-list">No charts to add. Import PDFs first.</div>'; return; }
-    lib.slice().sort((a,b)=>a.title.localeCompare(b.title)).forEach(s=>{
+    const addable=lib.filter(s=>!s.setlistFork&&!s.trashed);
+    if(!addable.length){ box.innerHTML='<div class="empty-list">No charts to add. Import PDFs first.</div>'; return; }
+    addable.slice().sort((a,b)=>a.title.localeCompare(b.title)).forEach(s=>{
       const row=document.createElement("div"); row.className="row";
       row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div><div class="acts"><button class="mini add">＋ Add</button><button class="mini danger" title="Delete chart">🗑</button></div>';
       row.querySelector(".t").textContent=(s.kind==="chart"?"♪ ":"")+s.title;
@@ -1247,8 +1283,9 @@ const App = (() => {
   }
   function renderSetlists(){
     const box=$("setlistList"); box.innerHTML="";
-    if(!setlists.length){ box.innerHTML='<div class="empty-list">No setlists yet.</div>'; return; }
-    setlists.forEach(sl=>{
+    const live=setlists.filter(sl=>!sl.trashed);
+    if(!live.length){ box.innerHTML='<div class="empty-list">No setlists yet.</div>'; return; }
+    live.forEach(sl=>{
       const row=document.createElement("div"); row.className="row"+(sl.id===cur.setlistId?" active":"");
       row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div>'+
         '<div class="acts"><button class="mini" title="Load">▶</button><button class="mini" title="Rename">✎</button><button class="mini danger" title="Delete">🗑</button></div>';
@@ -1258,10 +1295,31 @@ const App = (() => {
       bLoad.onclick=async()=>{ cur.setlistId=sl.id; settings.lastSetlistId=sl.id; await saveSettings(); renderSetlists(); renderActiveItems(); updateRails();
         if(sl.items.length) jumpToItem(0); toast("Loaded "+sl.name); };
       bRen.onclick=async()=>{ const n=prompt("Rename setlist:",sl.name); if(n){ sl.name=n; await persistSetlist(sl); renderSetlists(); updateRails(); } };
-      bDel.onclick=async()=>{ if(confirm("Delete setlist “"+sl.name+"”? (songs stay in library)")){ await del("setlists",sl.id); setlists=setlists.filter(x=>x.id!==sl.id); if(cur.setlistId===sl.id){cur.setlistId=null;cur.itemIndex=-1;} renderSetlists(); renderActiveItems(); updateRails(); } };
+      bDel.onclick=async()=>{ if(confirm("Move setlist “"+sl.name+"” to Trash?  (restorable from 🗑 Trash)")){ sl.trashed=true; sl.trashedAt=Date.now(); await persistSetlist(sl); if(cur.setlistId===sl.id){cur.setlistId=null;cur.itemIndex=-1;} renderSetlists(); renderActiveItems(); updateRails(); toast("Setlist moved to Trash"); } };
       box.appendChild(row);
     });
   }
+  function trashRow(name,sub,onR,onP){
+    const row=document.createElement("div"); row.className="row";
+    row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div><div class="acts"><button class="mini" title="Restore">↩ Restore</button><button class="mini danger" title="Delete forever">🗑</button></div>';
+    row.querySelector(".t").textContent=name; row.querySelector(".s").textContent=sub;
+    const bR=row.querySelector('[title="Restore"]'), bP=row.querySelector('[title="Delete forever"]');
+    bR.style.width="auto"; bR.style.padding="0 10px"; bR.onclick=onR; bP.onclick=onP;
+    return row;
+  }
+  function renderTrash(){
+    const box=$("trashList"); if(!box) return; box.innerHTML="";
+    const ts=lib.filter(s=>s.trashed).sort((a,b)=>(b.trashedAt||0)-(a.trashedAt||0));
+    const tl=setlists.filter(sl=>sl.trashed).sort((a,b)=>(b.trashedAt||0)-(a.trashedAt||0));
+    if(!ts.length&&!tl.length){ box.innerHTML='<div class="empty-list">Trash is empty.</div>'; return; }
+    if(ts.length){ const h=document.createElement('div');h.className='section-h';h.textContent='Songs ('+ts.length+')';box.appendChild(h);
+      ts.forEach(s=>box.appendChild(trashRow((s.kind==="chart"?"♪ ":"")+s.title,[s.artist,s.setlistFork?"set edit":""].filter(Boolean).join(" · "),()=>restoreSong(s.id),()=>purgeSong(s.id)))); }
+    if(tl.length){ const h=document.createElement('div');h.className='section-h';h.style.marginTop='14px';h.textContent='Setlists ('+tl.length+')';box.appendChild(h);
+      tl.forEach(sl=>box.appendChild(trashRow(sl.name,(sl.items?sl.items.length:0)+" songs",()=>restoreSetlist(sl.id),()=>purgeSetlist(sl.id)))); }
+  }
+  async function restoreSetlist(id){ const sl=setlistById(id); if(!sl) return; sl.trashed=false; delete sl.trashedAt; await persistSetlist(sl); renderTrash(); renderSetlists(); updateRails(); toast("Setlist restored"); }
+  async function purgeSetlist(id){ const sl=setlistById(id); if(!sl) return; if(!confirm("Permanently delete setlist “"+sl.name+"”? Cannot be undone.")) return; await del("setlists",id); setlists=setlists.filter(x=>x.id!==id); renderTrash(); toast("Deleted permanently"); }
+  function openTrash(){ renderTrash(); open("ovTrash"); }
   function renderActiveItems(){
     const box=$("activeItems"); box.innerHTML=""; const sl=activeSetlist();
     if(!sl){ box.innerHTML='<div class="empty-list">No active setlist.</div>'; return; }
@@ -1272,13 +1330,16 @@ const App = (() => {
       row.draggable=true; row.dataset.id=it.id; row.dataset.idx=idx;
       row.innerHTML='<div class="grip">⋮⋮</div><div class="info"><div class="t"></div><div class="s"></div></div>'+
         '<div class="acts"><button class="mini" title="Up">▲</button><button class="mini" title="Down">▼</button>'+
+        (s.kind==="chart"?'<button class="mini" title="Edit set copy">✎</button>':'')+
         '<button class="mini" title="Duplicate">⧉</button><button class="mini" title="Remove">✕</button><button class="mini" title="Jump">▶</button></div>';
       row.querySelector(".t").textContent=(idx+1)+". "+s.title;
-      row.querySelector(".s").textContent=[s.artist,"pp "+(it.startPage||1)+"-"+(it.endPage||s.pageCount)].filter(Boolean).join(" · ");
-      const [bUp,bDown,bDup,bRem,bJump]=row.querySelectorAll(".mini");
-      bUp.onclick=()=>moveItem(it.id,-1); bDown.onclick=()=>moveItem(it.id,1);
-      bDup.onclick=()=>dupItem(it.id); bRem.onclick=()=>{ if(confirm("Remove “"+s.title+"” from set?")) removeItem(it.id); };
-      bJump.onclick=()=>{ close("ovSetlists"); jumpToItem(idx); };
+      row.querySelector(".s").textContent=[s.artist, s.setlistFork?"set edit":(s.kind==="chart"?"template":("pp "+(it.startPage||1)+"-"+(it.endPage||s.pageCount)))].filter(Boolean).join(" · ");
+      row.querySelector('[title="Up"]').onclick=()=>moveItem(it.id,-1);
+      row.querySelector('[title="Down"]').onclick=()=>moveItem(it.id,1);
+      row.querySelector('[title="Duplicate"]').onclick=()=>dupItem(it.id);
+      row.querySelector('[title="Remove"]').onclick=()=>{ if(confirm("Remove “"+s.title+"” from this set?")) removeItem(it.id); };
+      row.querySelector('[title="Jump"]').onclick=()=>{ close("ovSetlists"); jumpToItem(idx); };
+      const bE=row.querySelector('[title="Edit set copy"]'); if(bE) bE.onclick=()=>forkAndEdit(it.id);
       // HTML5 drag (works on desktop; touch uses up/down + pointer fallback below)
       row.addEventListener("dragstart",e=>{ row.classList.add("dragging"); e.dataTransfer.setData("text/plain",it.id); });
       row.addEventListener("dragend",()=>row.classList.remove("dragging"));
@@ -1326,13 +1387,15 @@ const App = (() => {
     await persistSong(s); renderLibrary(); renderActiveItems(); updateNowPlaying(); toast("Saved"); close("ovEdit");
   }
   async function deleteSongById(id){ const s=songById(id); if(!s) return false;
-    if(!confirm("Delete “"+s.title+"” and its PDF? This removes it from all setlists.")) return false;
-    await del("songs",s.id); if(s.pdfId) await del("pdfs",s.pdfId); lib=lib.filter(x=>x.id!==s.id);
+    if(!confirm("Move “"+s.title+"” to Trash?  (you can restore it from 🗑 Trash)")) return false;
+    s.trashed=true; s.trashedAt=Date.now(); await put("songs",s);
     for(const sl of setlists){ const before=sl.items.length; sl.items=sl.items.filter(i=>i.songId!==s.id); if(sl.items.length!==before){sl.items.forEach((i,n)=>i.order=n); await persistSetlist(sl);} }
     if(cur.songId===s.id){ cur.songId=null; cur.doc=null; render(); }
-    renderLibrary(); renderAddList(); renderActiveItems(); updateRails(); toast("Deleted");
+    renderLibrary(); renderAddList(); renderActiveItems(); updateRails(); toast("Moved to Trash");
     return true;
   }
+  async function restoreSong(id){ const s=lib.find(x=>x.id===id); if(!s) return; s.trashed=false; delete s.trashedAt; await put("songs",s); renderTrash(); renderLibrary(); renderAddList(); toast("Restored to Library"); }
+  async function purgeSong(id){ const s=lib.find(x=>x.id===id); if(!s) return; if(!confirm("Permanently delete “"+s.title+"”? This cannot be undone.")) return; await del("songs",s.id); if(s.pdfId) await del("pdfs",s.pdfId); lib=lib.filter(x=>x.id!==id); renderTrash(); toast("Deleted permanently"); }
   async function deleteSong(){ if(await deleteSongById(editingId)) close("ovEdit"); }
   function playSong(){ close("ovEdit"); openStandalone(editingId); }
 
@@ -1666,7 +1729,7 @@ const App = (() => {
     openAddToSetlist, openCalibration, openChecklist, openHelp, close, newSetlist, openEdit, saveSong, deleteSong,
     playSong, arm, resetMap, exportBackup, resetChecklist,
     openMetro, metroToggle, metroTap, metroBpm, metroBeats, metroFromSong, readBpm, toggleOrientation,
-    openMp3, mp3Toggle, mp3Pick, mp3Loop, mp3Skip, mp3Detach, openEq, eqFlat };
+    openMp3, mp3Toggle, mp3Pick, mp3Loop, mp3Skip, mp3Detach, openEq, eqFlat, openTrash };
 })();
 window.addEventListener("DOMContentLoaded",()=>App.init());
 </script>

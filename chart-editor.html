@@ -170,6 +170,7 @@ async function init(){
   document.getElementById('imgFile').onchange=addImage;
   document.getElementById('addLine').onclick=addLineToLast;
   document.getElementById('exportBtn').onclick=exportSong;
+  { const _ep=new URLSearchParams(location.search).get('edit'); if(_ep){ const _i=SONGS.findIndex(s=>s.id===_ep); if(_i>=0){ si=_i; fillSongs(); if(!EDIT) toggleEdit(); } } }
   layout(); updateKey(); updateDraft();
 }
 function showErr(m){const x=document.getElementById('err');x.hidden=false;x.textContent=m+'  (open this through the app/server, not as a file:// page).';}
