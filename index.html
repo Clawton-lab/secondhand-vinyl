@@ -1550,7 +1550,7 @@ const App = (() => {
   function tickClock(){ const c=$("clock"); if(!c) return; const d=new Date(); c.textContent=d.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"}); }
 
   // ---------- Init ----------
-  async function reloadAll(){ lib=await getAll("songs"); setlists=await getAll("setlists"); await loadSettings();
+  async function reloadAll(){ lib=(await getAll("songs")).filter(s=>s.kind!=="chart"); setlists=await getAll("setlists"); await loadSettings();
     renderLibrary(); renderSetlists(); renderActiveItems(); updateRails(); }
 
   async function init(){

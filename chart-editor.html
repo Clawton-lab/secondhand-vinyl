@@ -122,7 +122,7 @@ const dbDel=(s,k)=>new Promise((res,rej)=>{const q=dbStore(s,"readwrite").delete
 const dbAll=s=>new Promise((res,rej)=>{const q=dbStore(s,"readonly").getAll();q.onsuccess=()=>res(q.result||[]);q.onerror=()=>rej(q.error);});
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,8);
 async function loadCharts(){const all=await dbAll("songs");return all.filter(s=>s.kind==="chart").sort((a,b)=>(a.ord||0)-(b.ord||0));}
-async function seedCharts(arr){const out=[];for(let i=0;i<arr.length;i++){const s=JSON.parse(JSON.stringify(arr[i]));s.kind="chart";s.id=s.id||uid();s.ord=i;s.createdAt=Date.now();s.updatedAt=Date.now();await dbPut("songs",s);out.push(s);}return out;}
+async function seedCharts(arr,ord0){ord0=ord0||0;const out=[];for(let i=0;i<arr.length;i++){const s=JSON.parse(JSON.stringify(arr[i]));s.kind="chart";s.id=s.id||uid();s.ord=ord0+i;s.createdAt=Date.now();s.updatedAt=Date.now();await dbPut("songs",s);out.push(s);}return out;}
 function blankSong(){return {id:uid(),title:"New Song",artist:"",key:"C",credit:"",sections:[{label:"Verse 1",lines:[{text:"(tap to add words, then tap to drop chords)",chords:[]}]}]};}
 
 let _svt=null;
@@ -134,11 +134,15 @@ async function init(){
   THEMES=THEMES_DATA;
   try{ DB=await openDB(); }catch(e){ return showErr('Storage unavailable — '+e); }
   try{ SONGS=await loadCharts(); }catch(e){ SONGS=[]; }
-  if(!SONGS.length){
-    let seed;
-    try{ seed=await fetch('charts-seed.json').then(r=>r.json()); }catch(e){ seed=[blankSong()]; }
-    try{ SONGS=await seedCharts(seed); }catch(e){ return showErr('Could not seed songs — '+e); }
-  }
+  // merge in any NEW songs from the seed file (never overwrites your edits — adds missing ids only)
+  let seed=[];
+  try{ seed=await fetch('charts-seed.json').then(r=>r.json()); }catch(e){}
+  try{
+    const have=new Set(SONGS.map(s=>s.id));
+    const missing=(seed||[]).filter(s=>s&&s.id&&!have.has(s.id));
+    if(missing.length){ const added=await seedCharts(missing,SONGS.length); SONGS=SONGS.concat(added); }
+    if(!SONGS.length) SONGS=await seedCharts([blankSong()]);
+  }catch(e){ if(!SONGS.length) return showErr('Could not seed songs — '+e); }
   const sel=document.getElementById('song');
   fillSongs();
   sel.onchange=()=>{si=+sel.value;screen=0;offset=0;selCh=null;closeChordPop();layout();updateKey();updateDraft();};
