@@ -1022,14 +1022,17 @@ const App = (() => {
     function secH(sec,fs){let h=sec.label?fs*1.15*1.32+fs*0.28:0;if(sec.type==='image')return h+fs*9;if(sec.type==='instrumental')return h+fs*1.3;return h+(sec.lines||[]).reduce((a,l)=>a+(l.notation!=null?140:l.tab?fs*6.7:lineH(l,fs)),0);}
     function titleH(s,fs){let h=fs*1.7*1.12;if(s.artist)h+=fs*0.82*1.3;if(s.key)h+=fs*0.78*1.3;return h+fs*0.7;}
     function fitMono(s,w){cv.font='700 100px ui-monospace,Menlo,Consolas,monospace';const wt=cv.measureText(s||' ').width;return wt>0?w*100/wt:24;}
-    let _sc=[],_fs=28;
+    let _sc=[],_fs=28,_blocks=[];
+    function buildBlocks(song){const out=[];(song.sections||[]).forEach(sec=>{if(sec.type==='image'||sec.type==='instrumental'){out.push({label:sec.label||'',type:sec.type,sec:sec,lines:[]});return;}let cur={label:sec.label||'',lines:[],brk:false};(sec.lines||[]).forEach(ln=>{if(ln.pageBreak){if(cur.lines.length||cur.label)out.push(cur);cur={label:'',lines:[],brk:true};}else cur.lines.push(ln);});if(cur.lines.length||cur.label||!out.length)out.push(cur);});return out;}
+    function blockH(b,fs){let h=b.label?fs*1.15*1.32+fs*0.28:0;if(b.type==='image')return h+fs*9;if(b.type==='instrumental')return h+fs*1.3;return h+(b.lines||[]).reduce((a,l)=>a+(l.notation!=null?140:l.tab?fs*6.7:lineH(l,fs)),0);}
     function layout(song,w,h){
       const usableW=w-2*(w*0.045),usableH=h-2*(h*0.03);
       let lo=14,hi=120;
       for(let k=0;k<26;k++){const m=(lo+hi)/2;let mx=0;for(const s of song.sections)for(const ln of(s.lines||[]))mx=Math.max(mx,W(ln.text||' ',m));if(mx<=usableW)lo=m;else hi=m;}
       _fs=Math.max(13,Math.floor(lo));
-      const gap=_fs*0.85;_sc=[[]];let pg=0,used=titleH(song,_fs);
-      song.sections.forEach((sec,k)=>{const need=secH(sec,_fs)+(_sc[pg].length?gap:0);if(used+need>usableH&&_sc[pg].length){_sc.push([]);pg++;used=0;}_sc[pg].push(k);used+=secH(sec,_fs)+gap;});
+      _blocks=buildBlocks(song);
+      const gap=_fs*1.28;_sc=[[]];let pg=0,used=titleH(song,_fs);
+      _blocks.forEach((b,bi)=>{if(b.brk&&_sc[pg].length){_sc.push([]);pg++;used=0;}const need=blockH(b,_fs)+(_sc[pg].length?gap:0);if(used+need>usableH&&_sc[pg].length){_sc.push([]);pg++;used=0;}_sc[pg].push(bi);used+=blockH(b,_fs)+gap;});
       return _sc.length;
     }
     function addT(p,cls,txt,fs){const d=document.createElement('div');d.className='chl-'+cls;d.textContent=txt;d.style.fontSize=fs+'px';p.appendChild(d);return d;}
@@ -1038,13 +1041,13 @@ const App = (() => {
       const lr=document.createElement('div');lr.className='chl-lyricrow';lr.style.fontSize=fs+'px';lr.style.lineHeight=1.18;lr.textContent=ln.text||' ';wrap.appendChild(lr);return wrap;}
     function rTab(ln,fs,hw){const wrap=document.createElement('div');wrap.className='chl-tabblk';const uW=Math.max(140,hw*0.9);const lg=ln.tab.reduce((a,s)=>s.length>a.length?s:a,'');const mfs=Math.max(9,Math.min(fs*0.82,fitMono(lg,uW)));ln.tab.forEach(s=>{const d=document.createElement('div');d.className='chl-tabln';d.style.fontSize=mfs+'px';d.textContent=s;wrap.appendChild(d);});return wrap;}
     function rNote(ln,hw){const wrap=document.createElement('div');wrap.className='chl-noteblk';const host=document.createElement('div');wrap.appendChild(host);try{const VF=Vex.Flow;const width=Math.max(240,Math.min(920,hw*0.92));const r=new VF.Renderer(host,VF.Renderer.Backends.SVG);r.resize(width,120);const ctx=r.getContext();ctx.setFillStyle('#f7f7f7');ctx.setStrokeStyle('#f7f7f7');const st=new VF.Stave(6,6,width-14);st.addClef('treble');st.setContext(ctx);st.draw();const notes=(ln.notation||'').trim().split(/\s+/).filter(Boolean).map(t=>{let[p,d]=t.split('/');d=d||'q';const m=p.match(/^([A-Ga-g])([#b]?)(\d)$/);if(!m)return null;const sn=new VF.StaveNote({clef:'treble',keys:[m[1].toLowerCase()+'/'+m[3]],duration:d});if(m[2]){try{sn.addModifier(new VF.Accidental(m[2]),0);}catch(e){}}return sn;}).filter(Boolean);if(notes.length){const v=new VF.Voice({num_beats:4,beat_value:4}).setStrict(false);v.addTickables(notes);new VF.Formatter().joinVoices([v]).format([v],width-80);v.draw(ctx,st);}host.querySelectorAll('svg *').forEach(el=>{const fl=el.getAttribute('fill');if(fl&&fl!=='none')el.setAttribute('fill','#f7f7f7');const sk=el.getAttribute('stroke');if(sk&&sk!=='none')el.setAttribute('stroke','#f7f7f7');});}catch(e){host.textContent='♪ '+(ln.notation||'');host.style.color='#ffcc1f';}return wrap;}
-    function draw(song,idx,host){host.innerHTML='';const fs=_fs,gap=fs*0.85,hw=host.clientWidth||600;idx=Math.max(0,Math.min(idx,_sc.length-1));
+    function draw(song,idx,host){host.innerHTML='';const fs=_fs,gap=fs*1.28,hw=host.clientWidth||600;idx=Math.max(0,Math.min(idx,_sc.length-1));
       if(idx===0){addT(host,'title',song.title,fs*1.7);if(song.artist)addT(host,'artist',song.artist,fs*0.82);if(song.key)addT(host,'keyline','Key of '+song.key,fs*0.78);if(host.lastChild)host.lastChild.style.marginBottom=fs*0.7+'px';}
-      (_sc[idx]||[]).forEach((k,i)=>{const sec=song.sections[k],box=document.createElement('div');box.className='chl-sec';box.style.marginTop=(i||idx>0?gap:0)+'px';
-        if(sec.label){const Lb=document.createElement('div');Lb.className='chl-label';Lb.style.font='800 '+(fs*1.15)+'px Helvetica,Arial,sans-serif';Lb.style.marginBottom=fs*0.28+'px';Lb.textContent=sec.label;box.appendChild(Lb);}
-        if(sec.type==='image'&&sec.src){const im=document.createElement('img');im.className='chl-secimg';im.src=sec.src;box.appendChild(im);}
-        else if(sec.type==='instrumental'){const d=document.createElement('div');d.className='chl-inst';d.style.fontSize=fs+'px';d.textContent=sec.text||'';box.appendChild(d);}
-        else (sec.lines||[]).forEach(ln=>box.appendChild(ln.notation!=null?rNote(ln,hw):ln.tab?rTab(ln,fs,hw):rLine(ln,fs)));
+      (_sc[idx]||[]).forEach((bi,i)=>{const b=_blocks[bi];if(!b)return;const box=document.createElement('div');box.className='chl-sec';box.style.marginTop=(i?gap:0)+'px';
+        if(b.label){const Lb=document.createElement('div');Lb.className='chl-label';Lb.style.font='800 '+(fs*1.15)+'px Helvetica,Arial,sans-serif';Lb.style.marginBottom=fs*0.28+'px';Lb.textContent=b.label;box.appendChild(Lb);}
+        if(b.type==='image'&&b.sec&&b.sec.src){const im=document.createElement('img');im.className='chl-secimg';im.src=b.sec.src;box.appendChild(im);}
+        else if(b.type==='instrumental'){const d=document.createElement('div');d.className='chl-inst';d.style.fontSize=fs+'px';d.textContent=b.sec.text||'';box.appendChild(d);}
+        else (b.lines||[]).forEach(ln=>box.appendChild(ln.notation!=null?rNote(ln,hw):ln.tab?rTab(ln,fs,hw):rLine(ln,fs)));
         host.appendChild(box);});
     }
     return {layout,draw};

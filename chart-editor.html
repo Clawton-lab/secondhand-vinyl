@@ -35,6 +35,9 @@
   .tabblk{margin:9px 0;} .tabln{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre;color:var(--lyric);line-height:1.25;}
   .noteblk{margin:9px 0;overflow:auto;} .noteblk svg{display:block;}
   .ins{display:none;} .edit .ins{display:block;text-align:left;margin:2px 0 6px;} .ins button{font-size:11px;height:22px;opacity:.65;padding:0 7px;}
+  .ins button.del{opacity:1;color:#ff6b6b;border-color:rgba(255,107,107,.6);font-weight:800;}
+  .pbrk{text-align:center;color:var(--label);opacity:.7;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-top:1px dashed var(--label);border-bottom:1px dashed var(--label);padding:5px 0;margin:8px 0;}
+  .line.delhi,.tabblk.delhi,.noteblk.delhi{outline:2px solid #ff6b6b;outline-offset:2px;border-radius:5px;background:rgba(255,107,107,.08);}
   .edit .sec{border:1px dashed rgba(127,127,127,.35);border-radius:10px;padding:8px 10px;margin:10px 0;}
   .secctl{position:absolute;top:6px;right:6px;display:flex;gap:4px;}
   .secctl button{width:26px;height:24px;font-size:12px;}
@@ -45,40 +48,74 @@
   .chordpop button{font:inherit;font-weight:800;cursor:pointer;border-radius:6px;border:1px solid rgba(127,127,127,.45);background:rgba(127,127,127,.2);color:var(--lyric);width:32px;height:30px;font-size:14px;}
   .chordrow span.selch{outline:2px solid var(--lyric);border-radius:4px;}
   .blkctl{display:flex;gap:5px;margin-top:3px;} .blkctl button{font:inherit;cursor:pointer;font-size:11px;height:22px;opacity:.85;padding:0 8px;border-radius:6px;border:1px solid rgba(127,127,127,.4);background:rgba(127,127,127,.15);color:var(--lyric);}
+  /* ---- redesigned menubar ---- */
+  #bar{padding:0 10px;min-height:52px;gap:6px;background:linear-gradient(rgba(127,127,127,.17),rgba(127,127,127,.09));border-bottom:1px solid rgba(127,127,127,.22);}
+  .navback{font:inherit;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:3px;border:1px solid rgba(127,127,127,.4);background:rgba(127,127,127,.16);color:inherit;border-radius:9px;height:36px;padding:0 14px 0 11px;font-size:14.5px;text-decoration:none;}
+  .navback:hover{background:rgba(127,127,127,.3);}
+  .brand{font-weight:800;font-size:15px;letter-spacing:.01em;opacity:.92;display:flex;align-items:center;gap:6px;padding:0 6px 0 2px;}
+  .brand .brandico{color:var(--chord);font-size:18px;}
+  #bar select{height:36px;}
+  .spring{flex:1 1 auto;min-width:6px;}
+  .tgrp{display:flex;gap:5px;align-items:center;flex-wrap:wrap;}
+  .tbtn{font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:5px;border:1px solid rgba(127,127,127,.34);background:rgba(127,127,127,.12);color:inherit;border-radius:9px;height:36px;padding:0 12px;font-size:13px;white-space:nowrap;}
+  .tbtn:hover{background:rgba(127,127,127,.26);}
+  .tbtn .ic{font-size:14px;opacity:.95;} .tbtn .ca{font-size:9px;opacity:.55;margin-left:-1px;}
+  .tbtn b{color:var(--chord);font-weight:800;margin-left:3px;}
+  .tbtn.primary{border-color:var(--chord);} .tbtn.primary.on{background:var(--chord);color:#111;}
+  .tbtn.primary.on .ic{color:#111;} .tbtn.ghost{opacity:.82;}
+  .tbtn.ready{outline:2px solid var(--chord);box-shadow:0 0 0 3px rgba(255,204,31,.18);}
+  .tbtn.save{background:rgba(61,220,132,.16);border-color:#3ddc84;color:#daffe9;font-weight:800;}
+  .tbtn.save:hover{background:rgba(61,220,132,.32);} .tbtn.save .ic{color:#3ddc84;}
+  #toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,18px);background:#1f9d57;color:#fff;font-weight:800;font-size:15px;padding:13px 22px;border-radius:13px;box-shadow:0 10px 34px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:.25s;z-index:95;max-width:90vw;text-align:center;}
+  #toast.show{opacity:1;transform:translate(-50%,0);}
+  #pager{display:flex;align-items:center;gap:8px;margin-left:4px;}
+  /* popovers */
+  #scrim{position:fixed;inset:0;z-index:60;background:transparent;}
+  .menu{position:fixed;z-index:70;min-width:236px;max-width:min(92vw,372px);max-height:80vh;overflow:auto;
+    background:#15151a;color:#f4f4f4;border:1px solid rgba(127,127,127,.4);border-radius:13px;padding:6px;
+    box-shadow:0 16px 44px rgba(0,0,0,.6);font-weight:600;}
+  .menu .mhint{font-size:11.5px;opacity:.62;padding:7px 9px 5px;line-height:1.4;}
+  .mi{display:flex;align-items:flex-start;gap:10px;width:100%;text-align:left;cursor:pointer;border:0;background:transparent;color:inherit;border-radius:9px;padding:10px 9px;font:inherit;}
+  .mi:hover{background:rgba(127,127,127,.2);}
+  .mi .mic{width:20px;text-align:center;font-size:15px;flex:0 0 auto;opacity:.95;line-height:1.4;}
+  .mi .mtx{display:flex;flex-direction:column;gap:1px;}
+  .mi .mtx b{font-size:13.5px;font-weight:800;} .mi .mtx small{font-size:11px;opacity:.6;font-weight:600;}
+  .mi.danger .mtx b{color:#ff7676;} .mi.off{opacity:.4;cursor:default;}
+  .swlab{font-size:11px;opacity:.55;text-transform:uppercase;letter-spacing:.05em;padding:8px 8px 3px;}
+  .swatchbox{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:2px;}
+  .swatch{cursor:pointer;border:1px solid rgba(127,127,127,.4);border-radius:10px;height:44px;display:flex;align-items:center;gap:7px;padding:0 10px;font:inherit;font-weight:800;font-size:12px;}
+  .swatch.active{outline:2px solid var(--chord);} .swatch .dot{width:13px;height:13px;border-radius:50%;flex:0 0 auto;border:1px solid rgba(127,127,127,.5);}
+  .krow{display:flex;align-items:center;gap:8px;padding:6px;}
+  .kbtn{flex:1;cursor:pointer;border:1px solid rgba(127,127,127,.4);background:rgba(127,127,127,.15);color:inherit;border-radius:9px;height:40px;font:inherit;font-weight:800;}
+  .kbtn:hover{background:rgba(127,127,127,.28);} .know{min-width:78px;text-align:center;font-weight:800;color:var(--chord);font-size:15px;}
+  .menu.help{min-width:304px;max-width:min(94vw,448px);}
+  .hrow{display:flex;flex-direction:column;gap:2px;padding:8px 9px;border-bottom:1px solid rgba(127,127,127,.14);}
+  .hrow b{font-size:13px;color:var(--chord);} .hrow span{font-size:12px;opacity:.85;font-weight:600;line-height:1.4;}
+  #stage.edit .sec.caret{outline:2px solid var(--chord);outline-offset:4px;}
+  #stage.edit .sec.caret::after{content:"▸ cursor · Add inserts here";position:absolute;left:8px;bottom:-8px;font-size:10px;font-weight:800;color:#111;background:var(--chord);padding:1px 6px;border-radius:6px;letter-spacing:.02em;}
 </style>
 </head>
 <body>
   <div id="bar">
-    <a href="index.html" class="b" style="text-decoration:none;display:inline-flex;align-items:center" title="back to the player">← App</a>
-    <b style="opacity:.85">✎ Chart Editor</b>
-    <select id="song"></select>
-    <span id="draftBadge" style="display:none" title="rough transcription from your scan — verify the chords, then tap to mark checked">DRAFT · verify</span>
-    <button class="b" id="newSong" title="create a new blank song">+ New</button>
-    <button class="b" id="rmSong" title="delete this song">✕</button>
-    <span id="saveInd">saved</span>
-    <span class="grp">black</span><span class="chips" id="chipsBlack"></span>
-    <span class="grp">white</span><span class="chips" id="chipsWhite"></span>
-    <span id="tx"><span class="grp">key</span><button class="b" id="tdn" title="down a semitone">♭</button><span id="keyout">–</span><button class="b" id="tup" title="up a semitone">♯</button></span>
-    <button class="b" id="editBtn" title="edit the arrangement">✎ Edit</button>
-    <span id="pager"><button class="b" id="prev">‹</button><span id="pgn">1 / 1</span><button class="b" id="next">›</button></span>
+    <a href="index.html" class="navback" id="backApp" title="Back to the song player">‹ Songs</a>
+    <span class="brand"><span class="brandico">♪</span>Chart Editor</span>
+    <select id="song" title="pick a chart to view or edit"></select>
+    <span id="draftBadge" style="display:none" title="rough transcription — verify the chords, then tap to mark it checked">DRAFT</span>
+    <span id="saveInd">auto-saved</span>
+    <span class="spring"></span>
+    <span class="tgrp">
+      <button class="tbtn save" id="btnSaveSet" title="Add this chart to one of your setlists"><span class="ic">♬</span>Save to Setlist</button>
+      <button class="tbtn" id="btnFile" title="New, duplicate, export, delete"><span class="ic">🗂</span>File<i class="ca">▾</i></button>
+      <button class="tbtn" id="btnAdd" title="Insert a section where your cursor is"><span class="ic">＋</span>Add<i class="ca">▾</i></button>
+      <button class="tbtn" id="btnKey" title="Key &amp; transpose"><span class="ic">♪</span>Key<b id="keyout">–</b></button>
+      <button class="tbtn" id="btnTheme" title="Stage colors &amp; theme"><span class="ic">🎨</span>Theme<i class="ca">▾</i></button>
+      <button class="tbtn primary" id="editBtn" title="Switch between reading and editing"><span class="ic">✎</span><span id="editLbl">Edit</span></button>
+      <button class="tbtn ghost" id="btnHelp" title="What every button does"><span class="ic">?</span>Help</button>
+    </span>
+    <span id="pager"><button class="b" id="prev" title="previous page">‹</button><span id="pgn">1 / 1</span><button class="b" id="next" title="next page">›</button></span>
   </div>
-  <div id="etools">
-    <span class="grp">add</span>
-    <button class="b" data-add="Verse">+ Verse</button>
-    <button class="b" data-add="Chorus">+ Chorus</button>
-    <button class="b" data-add="Bridge">+ Bridge</button>
-    <button class="b" data-add="Intro">+ Intro</button>
-    <button class="b" data-add="Break" data-inst="1">+ Break</button>
-    <button class="b" data-add="Interlude" data-inst="1">+ Interlude</button>
-    <button class="b" data-add="Solo" data-inst="1">+ Solo</button>
-    <button class="b" id="addImg">+ Image</button>
-    <button class="b" id="addTab">+ Tab</button>
-    <button class="b" id="addNote">+ Notation</button>
-    <span class="grp">then</span>
-    <button class="b" id="addLine">+ line to last</button>
-    <button class="b" id="exportBtn">⤓ Export</button>
-    <span style="opacity:.6">· tap the title to edit name/key · tap a lyric to add a chord · tap a chord → ◀ ▶ move · ✎ rename · ✕ delete (or drag it) · ✕ on any block/section to remove</span>
-  </div>
+  <div id="scrim" hidden></div>
+  <div id="menu" class="menu" hidden></div>
   <input type="file" id="imgFile" accept="image/*" hidden>
   <div id="stage"><div id="chart"></div><div id="hint">← / → or the pedal turns pages · tap a swatch to re-theme · ✎ Edit to rearrange — changes save automatically</div></div>
   <div id="err" hidden></div>
@@ -86,7 +123,7 @@
 <script src="vexflow.js"></script>
 <script>
 const cv=document.createElement('canvas').getContext('2d');
-let SONGS=[],THEMES=[],si=0,ti=0,screen=0,screens=[[]],FS=28,offset=0,EDIT=false,selCh=null,DB=null;
+let SONGS=[],THEMES=[],si=0,ti=0,screen=0,screens=[[]],FS=28,offset=0,EDIT=false,selCh=null,DB=null,BLOCKS=[],caret=-1,_imgAt=-1;
 const EDITFS=26;
 const THEMES_DATA=[
   {id:"black-gold",name:"Black & Gold",group:"black",bg:"#0f0f12",lyric:"#f7f7f7",chord:"#ffcc1f",label:"#ffcc1f"},
@@ -128,7 +165,7 @@ function blankSong(){return {id:uid(),title:"New Song",artist:"",key:"C",credit:
 let _svt=null;
 function scheduleSave(){clearTimeout(_svt);_svt=setTimeout(saveCurrent,400);}
 async function saveCurrent(){const s=SONGS[si];if(!s||!DB)return;s.kind="chart";s.updatedAt=Date.now();try{await dbPut("songs",s);savedFlash();}catch(e){console.error(e);}}
-function savedFlash(){const el=document.getElementById('saveInd');if(!el)return;el.textContent='✓ saved';el.style.opacity='1';clearTimeout(el._t);el._t=setTimeout(()=>{el.style.opacity='.35';el.textContent='saved';},1200);}
+function savedFlash(){const el=document.getElementById('saveInd');if(!el)return;el.textContent='✓ saved';el.style.opacity='1';clearTimeout(el._t);el._t=setTimeout(()=>{el.style.opacity='.35';el.textContent='auto-saved';},1200);}
 
 async function init(){
   THEMES=THEMES_DATA;
@@ -142,34 +179,31 @@ async function init(){
     const missing=(seed||[]).filter(s=>s&&s.id&&!have.has(s.id));
     if(missing.length){ const added=await seedCharts(missing,SONGS.length); SONGS=SONGS.concat(added); }
     if(!SONGS.length) SONGS=await seedCharts([blankSong()]);
+    // self-heal: if a previously-seeded template imported as junk but the seed now has a clean version, replace it
+    const seedById=new Map((seed||[]).filter(s=>s&&s.id).map(s=>[s.id,s]));
+    const isJunk=s=>(s.sections||[]).some(sec=>(sec.lines||[]).some(l=>/\bLINE \d|�|this tab is|chords?\s+by|^\s*(SONG|ARTIST|KEY|TUNING|DIFFICULTY|CAPO)\s*:|\d+\s*bpm|basic pattern|muted pattern/i.test((l&&l.text)||'')));
+    for(let i=0;i<SONGS.length;i++){ const cur=SONGS[i],sd=seedById.get(cur.id); if(!sd||cur.userEdited) continue;
+      if(isJunk(cur)&&!isJunk(sd)){ const fx=JSON.parse(JSON.stringify(sd)); fx.kind="chart"; fx.id=cur.id; fx.ord=cur.ord; fx.createdAt=cur.createdAt||Date.now(); fx.updatedAt=Date.now(); await dbPut("songs",fx); SONGS[i]=fx; } }
   }catch(e){ if(!SONGS.length) return showErr('Could not seed songs — '+e); }
   const sel=document.getElementById('song');
   fillSongs();
-  sel.onchange=()=>{si=+sel.value;screen=0;offset=0;selCh=null;closeChordPop();layout();updateKey();updateDraft();};
-  document.getElementById('newSong').onclick=newSong;
-  document.getElementById('rmSong').onclick=async()=>{
-    if(!SONGS.length)return;
-    if(!confirm('Delete "'+SONGS[si].title+'" from your charts? This is permanent.'))return;
-    await dbDel("songs",SONGS[si].id);
-    SONGS.splice(si,1); si=Math.max(0,Math.min(si,SONGS.length-1)); screen=0; offset=0;
-    fillSongs(); layout(); updateKey();
-  };
+  sel.onchange=()=>{si=+sel.value;screen=0;offset=0;caret=-1;selCh=null;closeChordPop();layout();updateKey();updateDraft();};
+  applyTheme(ti);
   document.getElementById('draftBadge').onclick=()=>{const s=SONGS[si];if(!s)return;s.draft=false;saveCurrent();fillSongs();updateDraft();};
-  buildChips(); applyTheme(0);
-  document.getElementById('tup').onclick=()=>{offset++;render();updateKey();};
-  document.getElementById('tdn').onclick=()=>{offset--;render();updateKey();};
-  document.getElementById('keyout').onclick=()=>{offset=0;render();updateKey();};
+  document.getElementById('btnFile').onclick=fileMenu;
+  document.getElementById('btnAdd').onclick=addMenu;
+  document.getElementById('btnKey').onclick=keyMenu;
+  document.getElementById('btnTheme').onclick=themeMenu;
+  document.getElementById('btnHelp').onclick=helpMenu;
+  document.getElementById('btnSaveSet').onclick=saveToSetlistMenu;
+  document.getElementById('editBtn').onclick=toggleEdit;
   document.getElementById('prev').onclick=()=>turn(-1);
   document.getElementById('next').onclick=()=>turn(1);
-  document.getElementById('editBtn').onclick=toggleEdit;
-  document.getElementById('stage').addEventListener('pointerdown',ev=>{if(!EDIT||!selCh)return;if(ev.target.closest&&(ev.target.closest('.chordrow span')||ev.target.closest('#chordPop')))return;selCh=null;closeChordPop();document.querySelectorAll('.chordrow span.selch').forEach(e=>e.classList.remove('selch'));});
-  document.querySelectorAll('#etools [data-add]').forEach(b=>b.onclick=()=>addSection(b.dataset.add,b.dataset.inst==='1'));
-  document.getElementById('addImg').onclick=()=>document.getElementById('imgFile').click();
-  document.getElementById('addTab').onclick=()=>{SONGS[si].sections.push({label:'Tab',lines:[{tab:DEFAULT_TAB()}]});if(!EDIT)toggleEdit();else render();stageScrollBottom();};
-  document.getElementById('addNote').onclick=()=>{SONGS[si].sections.push({label:'Notation',lines:[{notation:DEFAULT_NOTATION}]});if(!EDIT)toggleEdit();else render();stageScrollBottom();};
+  document.getElementById('scrim').onclick=closeMenu;
   document.getElementById('imgFile').onchange=addImage;
-  document.getElementById('addLine').onclick=addLineToLast;
-  document.getElementById('exportBtn').onclick=exportSong;
+  document.getElementById('stage').addEventListener('pointerdown',ev=>{if(!EDIT||!selCh)return;if(ev.target.closest&&(ev.target.closest('.chordrow span')||ev.target.closest('#chordPop')))return;selCh=null;closeChordPop();document.querySelectorAll('.chordrow span.selch').forEach(e=>e.classList.remove('selch'));});
+  // cursor: tapping a section in Edit mode sets the insertion point for Add
+  document.getElementById('chart').addEventListener('click',ev=>{ if(!EDIT)return; if(ev.target.closest('.secctl, .ins, #chordPop'))return; const box=ev.target.closest('#chart .sec'); if(!box)return; const idx=[...document.querySelectorAll('#chart .sec')].indexOf(box); if(idx>=0)setCaret(idx); });
   { const _ep=new URLSearchParams(location.search).get('edit'); if(_ep){ const _i=SONGS.findIndex(s=>s.id===_ep); if(_i>=0){ si=_i; fillSongs(); if(!EDIT) toggleEdit(); } } }
   layout(); updateKey(); updateDraft();
 }
@@ -183,6 +217,15 @@ const W=(s,fs)=>{cv.font='700 '+fs+'px Helvetica, Arial, sans-serif';return cv.m
 const lineH=(ln,fs)=>fs*1.18+(ln.chords&&ln.chords.length?fs*0.82*1.06:0);
 function secH(sec,fs){let h=sec.label?fs*1.15*1.32+fs*0.28:0;if(sec.type==='image')return h+fs*9;if(sec.type==='instrumental')return h+fs*1.3;return h+(sec.lines||[]).reduce((a,l)=>a+(l.notation!=null?140:l.tab?fs*6.7:lineH(l,fs)),0);}
 function titleH(s,fs){let h=fs*1.7*1.12;if(s.artist)h+=fs*0.82*1.3;if(s.key)h+=fs*0.78*1.3;if(s.credit)h+=fs*0.5*1.5;return h+fs*0.7;}
+// split sections at manual page-break lines into render-blocks
+function buildBlocks(song){const out=[];(song.sections||[]).forEach(sec=>{
+  if(sec.type==='image'||sec.type==='instrumental'){out.push({label:sec.label||'',type:sec.type,sec:sec,lines:[]});return;}
+  let cur={label:sec.label||'',lines:[],brk:false};
+  (sec.lines||[]).forEach(ln=>{ if(ln.pageBreak){ if(cur.lines.length||cur.label)out.push(cur); cur={label:'',lines:[],brk:true}; } else cur.lines.push(ln); });
+  if(cur.lines.length||cur.label||!out.length)out.push(cur);
+}); return out;}
+function blockH(b,fs){let h=b.label?fs*1.15*1.32+fs*0.28:0;if(b.type==='image')return h+fs*9;if(b.type==='instrumental')return h+fs*1.3;return h+(b.lines||[]).reduce((a,l)=>a+(l.notation!=null?140:l.tab?fs*6.7:lineH(l,fs)),0);}
+function pageBreakEl(){const d=document.createElement('div');d.className='pbrk';d.textContent='⎯⎯  page break  ⎯⎯';return d;}
 
 function layout(){
   const song=SONGS[si],st=document.getElementById('stage');
@@ -192,34 +235,44 @@ function layout(){
   let lo=14,hi=120;
   for(let k=0;k<26;k++){const m=(lo+hi)/2;let mx=0;for(const s of song.sections)for(const ln of (s.lines||[]))mx=Math.max(mx,W(ln.text||' ',m));if(mx<=usableW)lo=m;else hi=m;}
   FS=Math.floor(lo);
-  const gap=FS*0.85;screens=[[]];let pg=0,used=titleH(song,FS);
-  song.sections.forEach((sec,k)=>{const need=secH(sec,FS)+(screens[pg].length?gap:0);if(used+need>usableH&&screens[pg].length){screens.push([]);pg++;used=0;}screens[pg].push(k);used+=secH(sec,FS)+gap;});
+  BLOCKS=buildBlocks(song);
+  const gap=FS*1.28;screens=[[]];let pg=0,used=titleH(song,FS);
+  BLOCKS.forEach((b,bi)=>{if(b.brk&&screens[pg].length){screens.push([]);pg++;used=0;}const need=blockH(b,FS)+(screens[pg].length?gap:0);if(used+need>usableH&&screens[pg].length){screens.push([]);pg++;used=0;}screens[pg].push(bi);used+=blockH(b,FS)+gap;});
   if(screen>=screens.length)screen=screens.length-1; render();
 }
 
 function render(){
   const song=SONGS[si],chart=document.getElementById('chart');chart.innerHTML='';
-  const fs=EDIT?EDITFS:FS,gap=fs*0.85;
-  const list=EDIT?song.sections.map((_,k)=>k):screens[screen];
-  if(!EDIT&&screen===0){
-    addT(chart,'title',song.title,fs*1.7); if(song.artist)addT(chart,'artist',song.artist,fs*0.82);
-    if(song.key)addT(chart,'keyline','Key of '+song.key,fs*0.78); if(song.credit)addT(chart,'credit',song.credit,fs*0.5);
-    chart.lastChild.style.marginBottom=fs*0.7+'px';
+  const fs=EDIT?EDITFS:FS,gap=fs*1.28;
+  if(!EDIT){
+    if(screen===0){
+      addT(chart,'title',song.title,fs*1.7); if(song.artist)addT(chart,'artist',song.artist,fs*0.82);
+      if(song.key)addT(chart,'keyline','Key of '+song.key,fs*0.78); if(song.credit)addT(chart,'credit',song.credit,fs*0.5);
+      chart.lastChild.style.marginBottom=fs*0.7+'px';
+    }
+    (screens[screen]||[]).forEach((bi,idx)=>{
+      const b=BLOCKS[bi]; if(!b)return; const box=document.createElement('div');box.className='sec';box.style.marginTop=(idx?gap:0)+'px';
+      if(b.label){const L=document.createElement('div');L.className='label';L.style.font='800 '+(fs*1.15)+'px Helvetica,Arial,sans-serif';L.style.marginBottom=fs*0.28+'px';L.textContent=b.label;box.appendChild(L);}
+      if(b.type==='image'&&b.sec&&b.sec.src){const im=document.createElement('img');im.className='secimg';im.src=b.sec.src;box.appendChild(im);}
+      else if(b.type==='instrumental'){const d=document.createElement('div');d.className='inst';d.style.fontSize=fs+'px';d.textContent=txText(b.sec.text||'');box.appendChild(d);}
+      else (b.lines||[]).forEach(ln=>box.appendChild(ln.notation!=null?renderNotation(ln):ln.tab?renderTab(ln,fs):renderLine(ln,fs)));
+      chart.appendChild(box);
+    });
+    document.getElementById('pgn').textContent=(screen+1)+' / '+screens.length;
+    return;
   }
-  if(EDIT){const t=addT(chart,'title',song.title,fs*1.5);t.style.cursor='pointer';t.title='tap to edit title / artist / key';t.onclick=editSongInfo;}
-  list.forEach((k,idx)=>{
-    const sec=song.sections[k],box=document.createElement('div');box.className='sec';
-    if(!EDIT)box.style.marginTop=(idx||screen>0?gap:0)+'px';
+  {const t=addT(chart,'title',song.title,fs*1.5);t.style.cursor='pointer';t.title='tap to edit title / artist / key';t.onclick=editSongInfo;}
+  song.sections.forEach((sec,k)=>{
+    const box=document.createElement('div');box.className='sec';
     if(sec.label){const L=document.createElement('div');L.className='label';L.style.font='800 '+(fs*1.15)+'px Helvetica,Arial,sans-serif';L.style.marginBottom=fs*0.28+'px';L.textContent=sec.label;box.appendChild(L);}
     if(sec.type==='image'&&sec.src){const im=document.createElement('img');im.className='secimg';im.src=sec.src;box.appendChild(im);}
-    else if(sec.type==='instrumental'){const d=document.createElement('div');d.className='inst';d.style.fontSize=fs+'px';d.textContent=txText(sec.text||'');if(EDIT)d.onclick=()=>editInstrumental(k);box.appendChild(d);}
-    else (sec.lines||[]).forEach((ln,li)=>{box.appendChild(ln.notation!=null?renderNotation(ln,k,li):ln.tab?renderTab(ln,fs,k,li):renderLine(ln,fs,k,li));if(EDIT)box.appendChild(insStrip(k,li,ln));});
-    if(EDIT)box.appendChild(secControls(k));
+    else if(sec.type==='instrumental'){const d=document.createElement('div');d.className='inst';d.style.fontSize=fs+'px';d.textContent=txText(sec.text||'');d.onclick=()=>editInstrumental(k);box.appendChild(d);}
+    else (sec.lines||[]).forEach((ln,li)=>{ box.appendChild(ln.pageBreak?pageBreakEl():(ln.notation!=null?renderNotation(ln,k,li):ln.tab?renderTab(ln,fs,k,li):renderLine(ln,fs,k,li))); box.appendChild(insStrip(k,li,ln)); });
+    box.appendChild(secControls(k));
     chart.appendChild(box);
   });
-  if(!EDIT)document.getElementById('pgn').textContent=(screen+1)+' / '+screens.length;
-  if(EDIT&&selCh){const sp=chart.querySelector('.chordrow span.selch');if(sp)openChordPop(sp);else{selCh=null;closeChordPop();}}
-  if(EDIT)scheduleSave();
+  if(selCh){const sp=chart.querySelector('.chordrow span.selch');if(sp)openChordPop(sp);else{selCh=null;closeChordPop();}}
+  scheduleSave();
 }
 function addT(p,cls,txt,fs){const d=document.createElement('div');d.className=cls;d.textContent=txt;d.style.fontSize=fs+'px';p.appendChild(d);return d;}
 function closeChordPop(){const p=document.getElementById('chordPop');if(p)p.remove();}
@@ -279,13 +332,17 @@ function renderTab(ln,fs,k,li){
   if(EDIT&&k!=null)wrap.appendChild(blkCtl('tab',k,li));
   return wrap;}
 function insStrip(k,li,ln){const d=document.createElement('div');d.className='ins';
-  const mk=(t,fn)=>{const b=document.createElement('button');b.className='b';b.textContent=t;b.onclick=fn;return b;};
+  const mk=(t,fn,cls)=>{const b=document.createElement('button');b.className='b'+(cls?' '+cls:'');b.textContent=t;b.onclick=fn;return b;};
+  const delLine=()=>{if(!confirm('Delete this line?'))return;const sec=SONGS[si].sections[k];sec.lines.splice(li,1);if(!sec.lines.length&&sec.type!=='image'&&sec.type!=='instrumental')SONGS[si].sections.splice(k,1);render();};
   d.append(mk('+ tab here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{tab:DEFAULT_TAB()});render();}),
-           mk('+ notation here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{notation:DEFAULT_NOTATION});render();}));
-  if(ln&&ln.text!=null&&!ln.tab&&ln.notation==null){
+           mk('+ notation here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{notation:DEFAULT_NOTATION});render();}),
+           mk('↓ page break',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{pageBreak:true});render();}));
+  if(ln&&ln.text!=null&&!ln.tab&&ln.notation==null)
     d.append(mk('✎ words',()=>{const v=prompt('Edit the words of this line (fix a typo or remove a word):',ln.text);if(v!=null){ln.text=v;(ln.chords||[]).forEach(c=>{if(c.i>v.length)c.i=v.length;});if(ln.chords)ln.chords.sort((a,b)=>a.i-b.i);render();}}));
-    d.append(mk('✕ line',()=>{if(!confirm('Delete this line?'))return;const sec=SONGS[si].sections[k];sec.lines.splice(li,1);if(!sec.lines.length&&sec.type!=='image'&&sec.type!=='instrumental')SONGS[si].sections.splice(k,1);render();}));
-  }
+  const db=mk('🗑 delete this line',delLine,'del');
+  db.onmouseenter=()=>{if(d.previousElementSibling)d.previousElementSibling.classList.add('delhi');};
+  db.onmouseleave=()=>{if(d.previousElementSibling)d.previousElementSibling.classList.remove('delhi');};
+  d.append(db);
   return d;}
 function renderNotation(ln,k,li){
   const wrap=document.createElement('div');wrap.className='noteblk';const host=document.createElement('div');wrap.appendChild(host);
@@ -317,11 +374,128 @@ function addSection(label,inst){const sec=inst?{type:'instrumental',label,text:'
 function addLineToLast(){const s=SONGS[si].sections;if(!s.length)return;const sec=s[s.length-1];if(sec.type==='instrumental'||sec.type==='image')return alert('Add lines to a verse/chorus section.');const t=prompt('New line text:','');if(t!=null){(sec.lines=sec.lines||[]).push({text:t,chords:[]});render();stageScrollBottom();}}
 function editInstrumental(k){const sec=SONGS[si].sections[k];const t=prompt('Bars / chords (e.g.  | C7 | F7 | C7 | F7 | ):',sec.text||'');if(t!=null){sec.text=t;render();}}
 function editSongInfo(){const s=SONGS[si];const t=prompt('Song title:',s.title);if(t!=null)s.title=t.trim()||s.title;const a=prompt('Artist:',s.artist||'');if(a!=null)s.artist=a;const k=prompt('Key (e.g. C, G, Am) — sets the transpose anchor:',s.key||'C');if(k!=null)s.key=(k.trim()||s.key);fillSongs();render();updateKey();}
-function addImage(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const lbl=prompt('Label for this image (optional):','');SONGS[si].sections.push({type:'image',label:lbl||'',src:r.result});if(!EDIT)toggleEdit();else render();stageScrollBottom();};r.readAsDataURL(f);ev.target.value='';}
+function addImage(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const lbl=prompt('Label for this image (optional):','');const secs=SONGS[si].sections,at=(_imgAt>=0&&_imgAt<=secs.length)?_imgAt:secs.length;secs.splice(at,0,{type:'image',label:lbl||'',src:r.result});_imgAt=-1;if(!EDIT)toggleEdit();else render();stageScrollBottom();};r.readAsDataURL(f);ev.target.value='';}
 function exportSong(){const blob=new Blob([JSON.stringify(SONGS[si],null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(SONGS[si].id||'song')+'.json';a.click();}
 function stageScrollBottom(){const st=document.getElementById('stage');if(EDIT)st.scrollTop=st.scrollHeight;}
 
-function toggleEdit(){EDIT=!EDIT;selCh=null;closeChordPop();document.getElementById('etools').classList.toggle('show',EDIT);document.getElementById('stage').classList.toggle('edit',EDIT);document.getElementById('editBtn').classList.toggle('on',EDIT);document.getElementById('pager').style.visibility=EDIT?'hidden':'visible';if(!EDIT){screen=0;saveCurrent();}layout();}
+/* ---------- menubar popovers ---------- */
+function closeMenu(){const m=document.getElementById('menu'),s=document.getElementById('scrim');if(m)m.hidden=true;if(s)s.hidden=true;}
+function openMenu(anchor,build,cls){const m=document.getElementById('menu');m.className='menu'+(cls?' '+cls:'');m.innerHTML='';build(m);m.hidden=false;document.getElementById('scrim').hidden=false;
+  const r=anchor.getBoundingClientRect();m.style.top=(r.bottom+6)+'px';m.style.left='0px';
+  const mw=m.offsetWidth;let left=Math.min(r.left,window.innerWidth-mw-8);m.style.left=Math.max(8,left)+'px';
+  if(m.getBoundingClientRect().bottom>window.innerHeight-8)m.style.maxHeight=(window.innerHeight-r.bottom-16)+'px';}
+function mItem(p,o){const b=document.createElement('button');b.className='mi'+(o.danger?' danger':'')+(o.disabled?' off':'');
+  const ic=document.createElement('span');ic.className='mic';ic.textContent=o.icon||'';
+  const tx=document.createElement('span');tx.className='mtx';const bb=document.createElement('b');bb.textContent=o.label;tx.appendChild(bb);
+  if(o.desc){const sm=document.createElement('small');sm.textContent=o.desc;tx.appendChild(sm);}
+  b.append(ic,tx);if(!o.disabled)b.onclick=()=>{closeMenu();o.onclick();};p.appendChild(b);return b;}
+function mHint(p,t){const d=document.createElement('div');d.className='mhint';d.textContent=t;p.appendChild(d);return d;}
+
+function fileMenu(){openMenu(document.getElementById('btnFile'),m=>{
+  mItem(m,{icon:'✛',label:'New blank song',desc:'Start a fresh, empty chart',onclick:newSong});
+  mItem(m,{icon:'⧉',label:'Duplicate this song',desc:'Make an editable copy of '+(SONGS[si]?'“'+SONGS[si].title+'”':'this'),onclick:duplicateSong});
+  mItem(m,{icon:'⤓',label:'Export backup (.json)',desc:'Download a file of this chart',onclick:exportSong});
+  mItem(m,{icon:'🗑',label:'Delete this song',desc:'Remove it permanently',danger:true,onclick:deleteCurrent});
+});}
+function addMenu(){openMenu(document.getElementById('btnAdd'),m=>{
+  if(!EDIT){mHint(m,'You’re in reading mode. Turn on Edit to add parts.');mItem(m,{icon:'✎',label:'Turn on Edit',onclick:toggleEdit});return;}
+  const secs=SONGS[si].sections;
+  mHint(m,caret>=0?('Inserting right after “'+(secs[caret].label||'this block')+'”'):'Tip: tap a section in the chart to choose where it lands — otherwise it’s added at the end.');
+  ['Verse','Chorus','Bridge','Pre-Chorus','Intro','Outro'].forEach(l=>mItem(m,{icon:'¶',label:l,onclick:()=>addAtCaret('lyrics',l)}));
+  mItem(m,{icon:'♫',label:'Instrumental / Lead',desc:'Bars or chords, no words',onclick:()=>addAtCaret('instrumental','Instrumental')});
+  mItem(m,{icon:'≡',label:'Tab (riff / lead)',desc:'Six-string tab block',onclick:()=>addAtCaret('tab','Tab')});
+  mItem(m,{icon:'¶',label:'Line of lyrics',desc:'One blank line in the cursor section',onclick:addLineAtCaret});
+  mItem(m,{icon:'🖼',label:'Image of a chart',desc:'Drop in a photo',onclick:()=>addAtCaret('image','')});
+});}
+function keyMenu(){openMenu(document.getElementById('btnKey'),m=>{
+  mHint(m,'Transpose the chart (your original key stays the anchor).');
+  const row=document.createElement('div');row.className='krow';
+  const dn=document.createElement('button');dn.className='kbtn';dn.textContent='♭ −1';
+  const now=document.createElement('div');now.className='know';now.textContent=document.getElementById('keyout').textContent;
+  const up=document.createElement('button');up.className='kbtn';up.textContent='+1 ♯';
+  dn.onclick=()=>{offset--;render();updateKey();now.textContent=document.getElementById('keyout').textContent;};
+  up.onclick=()=>{offset++;render();updateKey();now.textContent=document.getElementById('keyout').textContent;};
+  row.append(dn,now,up);m.appendChild(row);
+  mItem(m,{icon:'✎',label:'Set the song’s key…',desc:'Home key / transpose anchor',onclick:()=>{const k=prompt('Key (e.g. C, G, Am):',SONGS[si].key||'C');if(k!=null){SONGS[si].key=k.trim()||SONGS[si].key;offset=0;render();updateKey();fillSongs();}}});
+  mItem(m,{icon:'↺',label:'Reset to original key',disabled:!offset,onclick:()=>{offset=0;render();updateKey();}});
+});}
+function themeMenu(){openMenu(document.getElementById('btnTheme'),m=>{
+  mHint(m,'Stage colors — tap one to apply');
+  [['black','Dark backgrounds'],['white','Light backgrounds']].forEach(([g,lab])=>{
+    const l=document.createElement('div');l.className='swlab';l.textContent=lab;m.appendChild(l);
+    const box=document.createElement('div');box.className='swatchbox';
+    THEMES.forEach((t,i)=>{if(t.group!==g)return;const c=document.createElement('button');c.className='swatch'+(i===ti?' active':'');c.style.background=t.bg;c.title=t.name;
+      const dot=document.createElement('span');dot.className='dot';dot.style.background=t.chord;const nm=document.createElement('span');nm.style.color=t.lyric;nm.textContent=t.name;
+      c.append(dot,nm);c.onclick=()=>{applyTheme(i);closeMenu();};box.appendChild(c);});
+    m.appendChild(box);});
+});}
+function helpMenu(){openMenu(document.getElementById('btnHelp'),m=>{
+  mHint(m,'What every button does');
+  [['‹ Songs','Back to the player — your setlists and PDFs.'],
+   ['Song menu','Pick which chart to show or edit.'],
+   ['🗂 File','New blank song · Duplicate · Export a backup · Delete.'],
+   ['＋ Add','In Edit, tap a section to set the cursor, then Add drops a Verse / Chorus / Bridge / tab / etc. right there.'],
+   ['♪ Key','Shows the key. Transpose up or down, set the home key, or reset.'],
+   ['🎨 Theme','Choose the on-stage colors (dark or light backgrounds).'],
+   ['✎ Edit / ✓ Done','Switch between reading (pages) and editing (rearrange, add, delete).'],
+   ['? Help','This list.'],
+   ['‹ 1 / 8 ›','Turn pages — or use the foot pedal / arrow keys.'],
+   ['Tap a lyric (Edit)','Drops a chord exactly where you tap.'],
+   ['Tap a chord (Edit)','◀ ▶ nudge · ✎ rename · ✕ delete — or just drag it.'],
+   ['🗑 delete this line','Removes that one line (words, tab, or notation).'],
+   ['↓ page break','Pushes everything after it onto the next page.'],
+   ['▲ ▼ ✕ on a section','Move it up/down, or delete the whole section.'],
+   ['Tap the title','Edit the song name, artist, and key.']
+  ].forEach(([t,d])=>{const r=document.createElement('div');r.className='hrow';const b=document.createElement('b');b.textContent=t;const s=document.createElement('span');s.textContent=d;r.append(b,s);m.appendChild(r);});
+},'help');}
+
+/* ---------- cursor + insert ---------- */
+function setCaret(k){caret=k;document.querySelectorAll('#chart .sec').forEach((el,idx)=>el.classList.toggle('caret',idx===k));const b=document.getElementById('btnAdd');if(b)b.classList.toggle('ready',EDIT&&caret>=0);}
+function autoLabel(base){if(base!=='Verse'&&base!=='Chorus')return base;const n=SONGS[si].sections.filter(s=>(s.label||'').indexOf(base)===0).length+1;return base+' '+n;}
+function addAtCaret(kind,label){
+  if(!EDIT)toggleEdit();
+  const secs=SONGS[si].sections,at=(caret>=0&&caret<secs.length)?caret+1:secs.length;
+  if(kind==='image'){_imgAt=at;document.getElementById('imgFile').click();return;}
+  let sec;
+  if(kind==='instrumental')sec={type:'instrumental',label:label||'Instrumental',text:'| C  | C  | C  | C  |'};
+  else if(kind==='tab')sec={label:label||'Tab',lines:[{tab:DEFAULT_TAB()}]};
+  else sec={label:autoLabel(label),lines:[{text:'(new line — tap to add words, then tap to drop chords)',chords:[]}]};
+  secs.splice(at,0,sec);render();caret=at;requestAnimationFrame(()=>{setCaret(at);const el=document.querySelectorAll('#chart .sec')[at];if(el)el.scrollIntoView({block:'center',behavior:'smooth'});});
+}
+function addLineAtCaret(){if(!EDIT)toggleEdit();const secs=SONGS[si].sections,k=caret;if(k<0||k>=secs.length||secs[k].type==='instrumental'||secs[k].type==='image'){alert('Tap a verse or chorus section first, then add a line.');return;}(secs[k].lines=secs[k].lines||[]).push({text:'(new line)',chords:[]});render();setCaret(k);}
+async function newSong(){const s=blankSong();s.kind='chart';s.ord=SONGS.length;s.createdAt=Date.now();s.updatedAt=Date.now();try{await dbPut('songs',s);}catch(e){}SONGS.push(s);si=SONGS.length-1;screen=0;offset=0;caret=-1;fillSongs();updateDraft();if(!EDIT)toggleEdit();else layout();updateKey();}
+function duplicateSong(){if(!SONGS.length)return;const s=JSON.parse(JSON.stringify(SONGS[si]));s.id=uid();s.title=(s.title||'Song')+' (copy)';s.draft=true;s.kind='chart';s.ord=(SONGS[si].ord||0)+0.1;s.createdAt=Date.now();s.updatedAt=Date.now();SONGS.splice(si+1,0,s);si=si+1;screen=0;offset=0;caret=-1;dbPut('songs',s);fillSongs();layout();updateKey();updateDraft();}
+async function deleteCurrent(){if(!SONGS.length)return;if(!confirm('Delete "'+SONGS[si].title+'" from your charts? This is permanent.'))return;await dbDel('songs',SONGS[si].id);SONGS.splice(si,1);si=Math.max(0,Math.min(si,SONGS.length-1));screen=0;offset=0;caret=-1;fillSongs();layout();updateKey();updateDraft();}
+
+/* ---------- save to setlist ---------- */
+function toast(msg){let t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2800);}
+async function saveToSetlistMenu(){
+  if(!SONGS.length)return;
+  await saveCurrent();   // make sure the edited version is persisted first
+  let lists=[];try{lists=(await dbAll('setlists')).filter(s=>!s.trashed);}catch(e){}
+  lists.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+  openMenu(document.getElementById('btnSaveSet'),m=>{
+    mHint(m,'Add “'+SONGS[si].title+'” to which setlist?');
+    mItem(m,{icon:'✛',label:'New setlist…',desc:'Create one and drop this song in',onclick:createSetlistAndAdd});
+    if(!lists.length){mHint(m,'No setlists yet — make your first one above.');return;}
+    lists.forEach(sl=>{const has=(sl.items||[]).some(it=>it.songId===SONGS[si].id);const n=sl.items?sl.items.length:0;
+      mItem(m,{icon:has?'✓':'＋',label:sl.name,desc:n+' song'+(n===1?'':'s')+(has?' · already in this set':''),onclick:()=>addToSetlist(sl.id)});});
+  });
+}
+async function addToSetlist(slId){
+  const sl=(await dbAll('setlists')).find(s=>s.id===slId);if(!sl)return;const s=SONGS[si];
+  if((sl.items||[]).some(it=>it.songId===s.id)){toast('“'+s.title+'” is already in '+sl.name);return;}
+  (sl.items=sl.items||[]).push({id:uid(),songId:s.id,order:sl.items.length,startPage:1,endPage:s.pageCount||1,performanceNotes:'',overrideKey:'',overrideCapo:'',overrideBpm:''});
+  await dbPut('setlists',sl);
+  toast('✓ Saved “'+s.title+'” to '+sl.name+' — '+sl.items.length+' song'+(sl.items.length===1?'':'s')+' in the set');
+}
+async function createSetlistAndAdd(){
+  const all=await dbAll('setlists');const name=prompt('Name your new setlist:','Set '+(all.length+1));if(name===null)return;
+  const sl={id:uid(),name:name||'Untitled Set',date:new Date().toISOString().slice(0,10),notes:'',items:[]};
+  await dbPut('setlists',sl);await addToSetlist(sl.id);
+}
+
+function toggleEdit(){EDIT=!EDIT;selCh=null;caret=-1;closeChordPop();closeMenu();document.getElementById('stage').classList.toggle('edit',EDIT);document.getElementById('editBtn').classList.toggle('on',EDIT);document.getElementById('editLbl').textContent=EDIT?'Done':'Edit';document.getElementById('pager').style.visibility=EDIT?'hidden':'visible';document.getElementById('btnAdd').classList.remove('ready');if(!EDIT){screen=0;saveCurrent();}layout();}
 function turn(d){if(EDIT)return;screen=Math.max(0,Math.min(screens.length-1,screen+d));render();}
 addEventListener('keydown',e=>{if(EDIT)return;if(e.key==='ArrowRight'||e.key==='PageDown')turn(1);if(e.key==='ArrowLeft'||e.key==='PageUp')turn(-1);});
 let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(layout,120);});

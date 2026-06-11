@@ -4973,10 +4973,6 @@
     "label": "Bridge",
     "lines": [
      {
-      "text": "(different strumming pattern here, listen to the song to pick it up.)",
-      "chords": []
-     },
-     {
       "text": "F# B Eadd9   Eadd9 B F#",
       "chords": []
      },
@@ -6528,10 +6524,6 @@
     "label": "Bridge",
     "lines": [
      {
-      "text": "(different strumming here - listen to the song)",
-      "chords": []
-     },
-     {
       "text": "D  G  Cadd9",
       "chords": []
      },
@@ -7795,64 +7787,6 @@
   "draft": true,
   "sections": [
    {
-    "label": "",
-    "lines": [
-     {
-      "text": "The   Doors",
-      "chords": []
-     },
-     {
-      "text": "Roadhouse        Blues    Chords     by",
-      "chords": []
-     },
-     {
-      "text": "Key: E",
-      "chords": []
-     },
-     {
-      "text": "E      E7#9      A       A7       B7      C7       E7      C#7      D7      D#7",
-      "chords": []
-     },
-     {
-      "text": "BASIC PATTERN 120 bpm",
-      "chords": [
-       {
-        "i": 1,
-        "c": "E9"
-       }
-      ]
-     },
-     {
-      "text": "1      2      3      4",
-      "chords": []
-     },
-     {
-      "text": "3      3      3      3",
-      "chords": []
-     },
-     {
-      "text": "VARIATION 120 bpm",
-      "chords": []
-     },
-     {
-      "text": "1      2      3      4",
-      "chords": []
-     },
-     {
-      "text": "3      3      3      3",
-      "chords": []
-     },
-     {
-      "text": "SONG: Roadhouse Blues",
-      "chords": []
-     },
-     {
-      "text": "ARTIST: The Doors",
-      "chords": []
-     }
-    ]
-   },
-   {
     "label": "Intro",
     "lines": [
      {
@@ -8240,72 +8174,6 @@
   "credit": "Personal performance copy - not for sale or distribution",
   "draft": true,
   "sections": [
-   {
-    "label": "",
-    "lines": [
-     {
-      "text": "Mumford        &  Sons",
-      "chords": []
-     },
-     {
-      "text": "Little  Lion   Man    Chords     by",
-      "chords": []
-     },
-     {
-      "text": "Capo: 5th fret",
-      "chords": []
-     },
-     {
-      "text": "Key: Dm",
-      "chords": []
-     },
-     {
-      "text": "INTRO / VERSE (MUTED PATTERN) 140 bpm",
-      "chords": [
-       {
-        "i": 1,
-        "c": "Am"
-       },
-       {
-        "i": 11,
-        "c": "C"
-       },
-       {
-        "i": 19,
-        "c": "G"
-       },
-       {
-        "i": 28,
-        "c": "F"
-       },
-       {
-        "i": 34,
-        "c": "Fmaj7"
-       }
-      ]
-     },
-     {
-      "text": "1    &   2    &   3    &    4   &",
-      "chords": []
-     },
-     {
-      "text": "INTRO / VERSE (UNMUTED) 140 bpm",
-      "chords": []
-     },
-     {
-      "text": "1    &   2    &   3    &    4   &",
-      "chords": []
-     },
-     {
-      "text": "1ST CHORUS 140 bpm",
-      "chords": []
-     },
-     {
-      "text": "1 2  3 4 5  6 7 8",
-      "chords": []
-     }
-    ]
-   },
    {
     "label": "Intro",
     "lines": [
@@ -8909,663 +8777,6 @@
   ]
  },
  {
-  "id": "27",
-  "title": "27",
-  "artist": "Dave Matthews Band",
-  "key": "",
-  "capo": "",
-  "credit": "Personal performance copy - not for sale or distribution",
-  "draft": true,
-  "sections": [
-   {
-    "label": "",
-    "lines": [
-     {
-      "text": "Dave    Matthews       Band",
-      "chords": []
-     },
-     {
-      "text": "27  Chords     by",
-      "chords": []
-     },
-     {
-      "text": "#27 – Dave Matthews Band",
-      "chords": [
-       {
-        "i": 2,
-        "c": "E"
-       },
-       {
-        "i": 11,
-        "c": "A"
-       },
-       {
-        "i": 19,
-        "c": "G"
-       },
-       {
-        "i": 24,
-        "c": "D"
-       }
-      ]
-     },
-     {
-      "text": "*When you’re strumming in this song, it sounds good to hit harder on the lower-",
-      "chords": []
-     },
-     {
-      "text": "pitched strings but to still have the higher notes in there, just not as loud.",
-      "chords": []
-     },
-     {
-      "text": "This tab is the intro. It can also be played with the first verse or it can be",
-      "chords": []
-     },
-     {
-      "text": "played with the chords written.",
-      "chords": []
-     },
-     {
-      "text": "-------------------------------------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "-------------------------------------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "-4\\2-0-4-----2---0-------------4/2-0-2----4/2---0------------------------|",
-      "chords": []
-     },
-     {
-      "text": "------------------------2--------------------------------2---------------|",
-      "chords": []
-     },
-     {
-      "text": "-------------------------------------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "-------------------------------------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "_____line 1, 3__________       ______lines 2, 4___________",
-      "chords": []
-     },
-     {
-      "text": "I've been high, I've been down                  LINE 1",
-      "chords": [
-       {
-        "i": 10,
-        "c": "E"
-       },
-       {
-        "i": 26,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "my head in the clouds, my hands in the ground   LINE 2",
-      "chords": [
-       {
-        "i": 15,
-        "c": "A"
-       },
-       {
-        "i": 39,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "in the arms of a woman, I find my way home      LINE 3",
-      "chords": [
-       {
-        "i": 17,
-        "c": "E"
-       },
-       {
-        "i": 38,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "in the arms of a woman, I have been lost        LINE 4",
-      "chords": [
-       {
-        "i": 18,
-        "c": "A"
-       },
-       {
-        "i": 38,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "CHORUS",
-      "chords": []
-     },
-     {
-      "text": "when I'm so lost that this losing feels like dying",
-      "chords": [
-       {
-        "i": 13,
-        "c": "G"
-       },
-       {
-        "i": 29,
-        "c": "D"
-       },
-       {
-        "i": 46,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "when I'm so lost that this losing feels like dying",
-      "chords": [
-       {
-        "i": 13,
-        "c": "G"
-       },
-       {
-        "i": 28,
-        "c": "D"
-       },
-       {
-        "i": 46,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "E (hold)       E",
-      "chords": []
-     },
-     {
-      "text": "as a young man, I was afraid",
-      "chords": []
-     },
-     {
-      "text": "of my life, what would I make?",
-      "chords": [
-       {
-        "i": 8,
-        "c": "A"
-       },
-       {
-        "i": 26,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "I will make love, what will I hate?",
-      "chords": [
-       {
-        "i": 13,
-        "c": "E"
-       },
-       {
-        "i": 32,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "what bittersweet road will I choose to the grave?",
-      "chords": [
-       {
-        "i": 16,
-        "c": "A"
-       },
-       {
-        "i": 32,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "CHORUS",
-      "chords": []
-     },
-     {
-      "text": "if I'm so old 'til this oldness has me dying",
-      "chords": [
-       {
-        "i": 11,
-        "c": "G"
-       },
-       {
-        "i": 25,
-        "c": "D"
-       },
-       {
-        "i": 40,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "if I'm so old 'til this oldness has me dying",
-      "chords": [
-       {
-        "i": 11,
-        "c": "G"
-       },
-       {
-        "i": 24,
-        "c": "D"
-       },
-       {
-        "i": 39,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "E (hold)         E",
-      "chords": []
-     },
-     {
-      "text": "I'm sick of you, I'm sick of me",
-      "chords": []
-     },
-     {
-      "text": "I'm sick of war, I'm sick of peace",
-      "chords": [
-       {
-        "i": 13,
-        "c": "A"
-       },
-       {
-        "i": 30,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "I'm sick of sound like I'm sick of silence",
-      "chords": [
-       {
-        "i": 13,
-        "c": "E"
-       },
-       {
-        "i": 37,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "I grow sick of the darkness 'til I'm sick of the light",
-      "chords": [
-       {
-        "i": 20,
-        "c": "A"
-       },
-       {
-        "i": 50,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "CHORUS",
-      "chords": []
-     },
-     {
-      "text": "when I'm so sick that this sickness has me dying",
-      "chords": [
-       {
-        "i": 13,
-        "c": "G"
-       },
-       {
-        "i": 28,
-        "c": "D"
-       },
-       {
-        "i": 44,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "when I'm so sick that this sickness has me dying",
-      "chords": [
-       {
-        "i": 12,
-        "c": "G"
-       },
-       {
-        "i": 28,
-        "c": "D"
-       },
-       {
-        "i": 44,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "BRIDGE:",
-      "chords": []
-     },
-     {
-      "text": "----------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "----------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "---7---6--7-6-3--4--3-------------------------|   2X",
-      "chords": []
-     },
-     {
-      "text": "----------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "---5---4--5-4-5--2--1-------------------------|",
-      "chords": []
-     },
-     {
-      "text": "----------------------------------------------|",
-      "chords": []
-     },
-     {
-      "text": "E (hold)         E",
-      "chords": []
-     },
-     {
-      "text": "once as a boy, I saw what happened",
-      "chords": []
-     },
-     {
-      "text": "I saw them beat him down to the cold, cold ground",
-      "chords": [
-       {
-        "i": 12,
-        "c": "A"
-       },
-       {
-        "i": 33,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "I watched those big boys beat that man down",
-      "chords": [
-       {
-        "i": 17,
-        "c": "E"
-       },
-       {
-        "i": 36,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "I was too weak, too weak to take a stand",
-      "chords": [
-       {
-        "i": 11,
-        "c": "A"
-       },
-       {
-        "i": 29,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "CHORUS:",
-      "chords": []
-     },
-     {
-      "text": "when I'm so weak that this weakness feels like dying",
-      "chords": [
-       {
-        "i": 13,
-        "c": "G"
-       },
-       {
-        "i": 29,
-        "c": "D"
-       },
-       {
-        "i": 47,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "when I'm so weak that this weakness feels like dying",
-      "chords": [
-       {
-        "i": 12,
-        "c": "G"
-       },
-       {
-        "i": 28,
-        "c": "D"
-       },
-       {
-        "i": 48,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "and if I'm old 'til this oldness feels has me dying",
-      "chords": [
-       {
-        "i": 12,
-        "c": "G"
-       },
-       {
-        "i": 26,
-        "c": "D"
-       },
-       {
-        "i": 46,
-        "c": "A"
-       }
-      ]
-     },
-     {
-      "text": "I hope you'll be by me then",
-      "chords": [
-       {
-        "i": 27,
-        "c": "E"
-       },
-       {
-        "i": 27,
-        "c": "E"
-       }
-      ]
-     },
-     {
-      "text": "E (hold)       E (hold)",
-      "chords": []
-     },
-     {
-      "text": "so I will live as I see fit",
-      "chords": []
-     },
-     {
-      "text": "A (hold)                E (hold)",
-      "chords": []
-     },
-     {
-      "text": "and there will be those who will not like it",
-      "chords": []
-     },
-     {
-      "text": "E (hold)          E (hold)",
-      "chords": []
-     },
-     {
-      "text": "in the arms of a woman, I found my way home",
-      "chords": []
-     },
-     {
-      "text": "A (hold)    E (hold)",
-      "chords": []
-     },
-     {
-      "text": "so to the arms of a woman, I will always go",
-      "chords": []
-     },
-     {
-      "text": "G (hold)      D (hold)       A (hold)",
-      "chords": []
-     },
-     {
-      "text": "if I'm old 'til this oldness has me dying",
-      "chords": []
-     },
-     {
-      "text": "E (hold)      E (hold)",
-      "chords": []
-     },
-     {
-      "text": "I hope she'll be by me then",
-      "chords": []
-     },
-     {
-      "text": "G (hold)      D (hold)       A (hold)",
-      "chords": []
-     },
-     {
-      "text": "if I'm old 'til this oldness has me dying",
-      "chords": []
-     }
-    ]
-   }
-  ]
- },
- {
   "id": "broken-window-serenade",
   "title": "Broken Window Serenade",
   "artist": "Whiskey Myers",
@@ -9574,40 +8785,6 @@
   "credit": "Personal performance copy - not for sale or distribution",
   "draft": true,
   "sections": [
-   {
-    "label": "",
-    "lines": [
-     {
-      "text": "Broken     Window       Serenade      Chords     by  Whiskey",
-      "chords": []
-     },
-     {
-      "text": "Myers",
-      "chords": []
-     },
-     {
-      "text": "Key: Em",
-      "chords": []
-     },
-     {
-      "text": "150 bpm",
-      "chords": [
-       {
-        "i": 2,
-        "c": "C"
-       },
-       {
-        "i": 7,
-        "c": "Em"
-       }
-      ]
-     },
-     {
-      "text": "1 &  2 & 3 &  4 &",
-      "chords": []
-     }
-    ]
-   },
    {
     "label": "Intro",
     "lines": [
@@ -10150,56 +9327,6 @@
   "credit": "Personal performance copy - not for sale or distribution",
   "draft": true,
   "sections": [
-   {
-    "label": "",
-    "lines": [
-     {
-      "text": "3Am    Chords     by   Matchbox       Twenty",
-      "chords": []
-     },
-     {
-      "text": "Capo: 1st fret",
-      "chords": []
-     },
-     {
-      "text": "Key: Ab",
-      "chords": []
-     },
-     {
-      "text": "INTRO PART 1 108 bpm",
-      "chords": [
-       {
-        "i": 2,
-        "c": "G"
-       },
-       {
-        "i": 9,
-        "c": "Cadd9"
-       },
-       {
-        "i": 19,
-        "c": "D"
-       },
-       {
-        "i": 20,
-        "c": "Em"
-       }
-      ]
-     },
-     {
-      "text": "1    &   2    &   3    &    4   &    5   &    6    &   7    &    8   &",
-      "chords": []
-     },
-     {
-      "text": "INTRO PART 2, VERSE 108 bpm",
-      "chords": []
-     },
-     {
-      "text": "1    &   2    &   3    &    4   &",
-      "chords": []
-     }
-    ]
-   },
    {
     "label": "Intro",
     "lines": [
@@ -10956,6 +10083,2249 @@
         "c": "Cadd9"
        }
       ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "27",
+  "title": "27",
+  "artist": "Dave Matthews Band",
+  "key": "E",
+  "capo": "",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "draft": true,
+  "sections": [
+   {
+    "label": "Intro",
+    "lines": [
+     {
+      "tab": [
+       "e|-------------------------------------------------------------------------|",
+       "B|-------------------------------------------------------------------------|",
+       "G|-4\\2-0-4-----2---0-------------4/2-0-2----4/2---0------------------------|",
+       "D|------------------------2--------------------------------2---------------|",
+       "A|-------------------------------------------------------------------------|",
+       "E|-------------------------------------------------------------------------|"
+      ]
+     },
+     {
+      "text": "(intro riff - can also be played under Verse 1)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "I've been high, I've been down",
+      "chords": [
+       {
+        "i": 10,
+        "c": "E"
+       },
+       {
+        "i": 26,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "my head in the clouds, my hands in the ground",
+      "chords": [
+       {
+        "i": 15,
+        "c": "A"
+       },
+       {
+        "i": 39,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "in the arms of a woman, I find my way home",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 34,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "in the arms of a woman, I have been lost",
+      "chords": [
+       {
+        "i": 17,
+        "c": "A"
+       },
+       {
+        "i": 36,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "when I'm so lost that this losing feels like dying",
+      "chords": [
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "D"
+       },
+       {
+        "i": 45,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "when I'm so lost that this losing feels like dying",
+      "chords": [
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "D"
+       },
+       {
+        "i": 45,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "as a young man, I was afraid",
+      "chords": [
+       {
+        "i": 5,
+        "c": "E(hold)"
+       },
+       {
+        "i": 22,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "of my life, what would I make?",
+      "chords": [
+       {
+        "i": 6,
+        "c": "A"
+       },
+       {
+        "i": 25,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I will make love, what will I hate?",
+      "chords": [
+       {
+        "i": 7,
+        "c": "E"
+       },
+       {
+        "i": 30,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "what bittersweet road will I choose to the grave?",
+      "chords": [
+       {
+        "i": 17,
+        "c": "A"
+       },
+       {
+        "i": 43,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "if I'm so old 'til this oldness has me dying",
+      "chords": [
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 24,
+        "c": "D"
+       },
+       {
+        "i": 39,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "if I'm so old 'til this oldness has me dying",
+      "chords": [
+       {
+        "i": 10,
+        "c": "G"
+       },
+       {
+        "i": 24,
+        "c": "D"
+       },
+       {
+        "i": 39,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "I'm sick of you, I'm sick of me",
+      "chords": [
+       {
+        "i": 12,
+        "c": "E(hold)"
+       },
+       {
+        "i": 29,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I'm sick of war, I'm sick of peace",
+      "chords": [
+       {
+        "i": 12,
+        "c": "A"
+       },
+       {
+        "i": 29,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I'm sick of sound like I'm sick of silence",
+      "chords": [
+       {
+        "i": 12,
+        "c": "E"
+       },
+       {
+        "i": 35,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I grow sick of the darkness 'til I'm sick of the light",
+      "chords": [
+       {
+        "i": 19,
+        "c": "A"
+       },
+       {
+        "i": 49,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "when I'm so sick that this sickness has me dying",
+      "chords": [
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "D"
+       },
+       {
+        "i": 43,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "when I'm so sick that this sickness has me dying",
+      "chords": [
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "D"
+       },
+       {
+        "i": 43,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge",
+    "lines": [
+     {
+      "tab": [
+       "e|----------------------------------------------|",
+       "B|----------------------------------------------|",
+       "G|---7---6--7-6-3--4--3-------------------------|",
+       "D|----------------------------------------------|",
+       "A|---5---4--5-4-5--2--1-------------------------|",
+       "E|----------------------------------------------|"
+      ]
+     },
+     {
+      "text": "(play 2X)",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 4",
+    "lines": [
+     {
+      "text": "once as a boy, I saw what happened",
+      "chords": [
+       {
+        "i": 10,
+        "c": "E(hold)"
+       },
+       {
+        "i": 26,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I saw them beat him down to the cold, cold ground",
+      "chords": [
+       {
+        "i": 20,
+        "c": "A"
+       },
+       {
+        "i": 43,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I watched those big boys beat that man down",
+      "chords": [
+       {
+        "i": 20,
+        "c": "E"
+       },
+       {
+        "i": 39,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "I was too weak, too weak to take a stand",
+      "chords": [
+       {
+        "i": 10,
+        "c": "A"
+       },
+       {
+        "i": 35,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "when I'm so weak that this weakness feels like dying",
+      "chords": [
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "D"
+       },
+       {
+        "i": 47,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "when I'm so weak that this weakness feels like dying",
+      "chords": [
+       {
+        "i": 12,
+        "c": "G"
+       },
+       {
+        "i": 27,
+        "c": "D"
+       },
+       {
+        "i": 47,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "and if I'm old 'til this oldness feels has me dying",
+      "chords": [
+       {
+        "i": 11,
+        "c": "G"
+       },
+       {
+        "i": 25,
+        "c": "D"
+       },
+       {
+        "i": 46,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I hope you'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       },
+       {
+        "i": 23,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Outro",
+    "lines": [
+     {
+      "text": "so I will live as I see fit",
+      "chords": [
+       {
+        "i": 10,
+        "c": "E(hold)"
+       },
+       {
+        "i": 24,
+        "c": "E(hold)"
+       }
+      ]
+     },
+     {
+      "text": "and there will be those who will not like it",
+      "chords": [
+       {
+        "i": 18,
+        "c": "A(hold)"
+       },
+       {
+        "i": 37,
+        "c": "E(hold)"
+       }
+      ]
+     },
+     {
+      "text": "in the arms of a woman, I found my way home",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E(hold)"
+       },
+       {
+        "i": 35,
+        "c": "E(hold)"
+       }
+      ]
+     },
+     {
+      "text": "so to the arms of a woman, I will always go",
+      "chords": [
+       {
+        "i": 20,
+        "c": "A(hold)"
+       },
+       {
+        "i": 34,
+        "c": "E(hold)"
+       }
+      ]
+     },
+     {
+      "text": "if I'm old 'til this oldness has me dying",
+      "chords": [
+       {
+        "i": 7,
+        "c": "G(hold)"
+       },
+       {
+        "i": 21,
+        "c": "D(hold)"
+       },
+       {
+        "i": 36,
+        "c": "A(hold)"
+       }
+      ]
+     },
+     {
+      "text": "I hope she'll be by me then",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E(hold)"
+       },
+       {
+        "i": 23,
+        "c": "E(hold)"
+       }
+      ]
+     },
+     {
+      "text": "if I'm old 'til this oldness has me dying",
+      "chords": [
+       {
+        "i": 7,
+        "c": "G(hold)"
+       },
+       {
+        "i": 21,
+        "c": "D(hold)"
+       },
+       {
+        "i": 36,
+        "c": "A(hold)"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mustang-sally",
+  "title": "Mustang Sally",
+  "artist": "Wilson Pickett",
+  "key": "C",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "draft": true,
+  "sections": [
+   {
+    "type": "instrumental",
+    "label": "Intro",
+    "text": "C   C7   C   (2x)"
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Mustang Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 8,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Guess you better slow",
+      "chords": [
+       {
+        "i": 17,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Your Mustang down",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 5,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Oh Lord, what I say now",
+      "chords": []
+     },
+     {
+      "text": "Mustang Sally, now baby",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 15,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Oh Lord",
+      "chords": []
+     },
+     {
+      "text": "Guess you better slow",
+      "chords": [
+       {
+        "i": 17,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "Your Mustang down",
+      "chords": [
+       {
+        "i": 5,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "H'uh, oh yeah",
+      "chords": []
+     },
+     {
+      "text": "You been running all over town, now",
+      "chords": [
+       {
+        "i": 9,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Oh, I guess I have to put your flat feet",
+      "chords": []
+     },
+     {
+      "text": "On the ground",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Ha!",
+      "chords": []
+     },
+     {
+      "text": "What I said, now",
+      "chords": []
+     },
+     {
+      "text": "Listen!",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "All you wanna do is ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       },
+       {
+        "i": 32,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "(Ride Sally, ride)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 6,
+        "c": "C7"
+       },
+       {
+        "i": 13,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "All you wanna do is ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       },
+       {
+        "i": 32,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "(Ride Sally, ride)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 6,
+        "c": "C7"
+       },
+       {
+        "i": 13,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "All you wanna do is ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 20,
+        "c": "F7"
+       },
+       {
+        "i": 32,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "(Ride Sally ride) hu'h",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 6,
+        "c": "F7"
+       },
+       {
+        "i": 12,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "All you wanna do is a ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 22,
+        "c": "C"
+       },
+       {
+        "i": 34,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Alright (ride Sally ride)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 14,
+        "c": "C7"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "",
+    "lines": [
+     {
+      "text": "Well, listen",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "One of these early mornings, yeah",
+      "chords": [
+       {
+        "i": 0,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Woow!",
+      "chords": []
+     },
+     {
+      "text": "Gonna be wiping yo weeping eyes",
+      "chords": [
+       {
+        "i": 19,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "H'uh!",
+      "chords": []
+     },
+     {
+      "text": "What I said, now",
+      "chords": []
+     },
+     {
+      "text": "Look-A-here!",
+      "chords": []
+     },
+     {
+      "text": "I bought you a brand new Mustang",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 25,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "A nineteen sixty-five, h'uh!",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 11,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Now you come around",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Signifying, now woman",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 12,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "You don't wanna let me ride",
+      "chords": [
+       {
+        "i": 10,
+        "c": "C"
+       },
+       {
+        "i": 23,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Mustang Sally, now baby",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 15,
+        "c": "F7"
+       }
+      ]
+     },
+     {
+      "text": "Oh Lord",
+      "chords": []
+     },
+     {
+      "text": "Guess you better slow",
+      "chords": [
+       {
+        "i": 17,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "that Mustang down",
+      "chords": [
+       {
+        "i": 5,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "H'uh, oh Lord",
+      "chords": []
+     },
+     {
+      "text": "You been running all over town, now",
+      "chords": [
+       {
+        "i": 9,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Oh, I got to put your flat feet",
+      "chords": []
+     },
+     {
+      "text": "On the ground",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Ha!",
+      "chords": []
+     },
+     {
+      "text": "What I said, now",
+      "chords": []
+     },
+     {
+      "text": "Let me say it one more time now",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "All you wanna do is ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       },
+       {
+        "i": 32,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "(Ride Sally, ride)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 6,
+        "c": "C7"
+       },
+       {
+        "i": 13,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "All you wanna do is ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       },
+       {
+        "i": 32,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "(Ride Sally, ride)",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 6,
+        "c": "C7"
+       },
+       {
+        "i": 13,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "All you wanna do is ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 20,
+        "c": "F7"
+       },
+       {
+        "i": 32,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "(Ride Sally ride) hu'h",
+      "chords": [
+       {
+        "i": 0,
+        "c": "F"
+       },
+       {
+        "i": 6,
+        "c": "F7"
+       },
+       {
+        "i": 12,
+        "c": "F"
+       }
+      ]
+     },
+     {
+      "text": "All you wanna do is a ride around Sally",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C7"
+       },
+       {
+        "i": 22,
+        "c": "C"
+       },
+       {
+        "i": 34,
+        "c": "C7"
+       }
+      ]
+     },
+     {
+      "text": "Alright (ride Sally ride) . . .",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 14,
+        "c": "C7"
+       },
+       {
+        "i": 20,
+        "c": "C"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "never-been-to-spain",
+  "title": "Never Been to Spain",
+  "artist": "Three Dog Night",
+  "key": "A",
+  "credit": "Personal performance copy - not for sale or distribution",
+  "draft": true,
+  "sections": [
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Well, I never been to Spain",
+      "chords": [
+       {
+        "i": 22,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "But I kinda like the music",
+      "chords": [
+       {
+        "i": 21,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "Say, the ladies are insane there",
+      "chords": [
+       {
+        "i": 20,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "And they sure know how to use it",
+      "chords": [
+       {
+        "i": 26,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "They don't abuse it",
+      "chords": [
+       {
+        "i": 11,
+        "c": "B7"
+       }
+      ]
+     },
+     {
+      "text": "Never gonna lose it",
+      "chords": [
+       {
+        "i": 12,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I can't refuse it... hmmmmm...",
+      "chords": [
+       {
+        "i": 8,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Well, I never been to England",
+      "chords": [
+       {
+        "i": 22,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "But I kinda like the Beatles",
+      "chords": [
+       {
+        "i": 21,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "Well, I headed for Las Vegas",
+      "chords": [
+       {
+        "i": 23,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "Only made it out to Needles",
+      "chords": [
+       {
+        "i": 20,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "Can you feel it, must be real it",
+      "chords": [
+       {
+        "i": 8,
+        "c": "B7"
+       },
+       {
+        "i": 25,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "Feels so good, feels so good",
+      "chords": [
+       {
+        "i": 9,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Well, I never been to heaven",
+      "chords": [
+       {
+        "i": 22,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "But I've been to Oklahoma",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "Well, they tell me I was born there",
+      "chords": [
+       {
+        "i": 25,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "But I really don't remember",
+      "chords": [
+       {
+        "i": 19,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "In Oklahoma, not Arizona",
+      "chords": [
+       {
+        "i": 3,
+        "c": "B7"
+       },
+       {
+        "i": 17,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "What does it matter? What does it matter?",
+      "chords": [
+       {
+        "i": 13,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "instrumental",
+    "label": "Solo",
+    "text": "| A | A | E | E |    | A | A | E | E |    | B7 | A | E |"
+   },
+   {
+    "label": "Verse 4",
+    "lines": [
+     {
+      "text": "Woah, I never been to Spain",
+      "chords": [
+       {
+        "i": 22,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "But I kinda like the music",
+      "chords": [
+       {
+        "i": 21,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "Say, the ladies are insane there",
+      "chords": [
+       {
+        "i": 20,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "And they sure know how to use it",
+      "chords": [
+       {
+        "i": 26,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "They don't abuse it",
+      "chords": [
+       {
+        "i": 11,
+        "c": "B7"
+       }
+      ]
+     },
+     {
+      "text": "Never gonna lose it",
+      "chords": [
+       {
+        "i": 12,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "I can't refuse it... Whoa-oo...",
+      "chords": [
+       {
+        "i": 8,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 5",
+    "lines": [
+     {
+      "text": "Well, I never been to heaven",
+      "chords": [
+       {
+        "i": 22,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "But I've been to Oklahoma",
+      "chords": [
+       {
+        "i": 17,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "Well, they tell me I was born there",
+      "chords": [
+       {
+        "i": 25,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "But I really don't remember",
+      "chords": [
+       {
+        "i": 19,
+        "c": "E"
+       }
+      ]
+     },
+     {
+      "text": "In Oklahoma, not Arizona",
+      "chords": [
+       {
+        "i": 3,
+        "c": "B7"
+       },
+       {
+        "i": 17,
+        "c": "A"
+       }
+      ]
+     },
+     {
+      "text": "What does it matter? What does it matter?",
+      "chords": [
+       {
+        "i": 13,
+        "c": "E"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "instrumental",
+    "label": "Solo",
+    "text": "| A | A | E | E |    | A | A | E | E |    | B7 | A | E |"
+   }
+  ]
+ },
+ {
+  "id": "real-world",
+  "title": "Real World",
+  "artist": "Matchbox Twenty",
+  "key": "G",
+  "capo": "3",
+  "credit": "Personal performance copy - not for sale or distribution  -  Capo 3",
+  "draft": true,
+  "sections": [
+   {
+    "type": "instrumental",
+    "label": "Intro",
+    "text": "C   D   C   D   C   D"
+   },
+   {
+    "label": "Verse 1",
+    "lines": [
+     {
+      "text": "Well I wonder what it's like to be the rainmaker",
+      "chords": [
+       {
+        "i": 7,
+        "c": "G"
+       },
+       {
+        "i": 24,
+        "c": "D"
+       },
+       {
+        "i": 35,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "I wonder what it's like to know that I made the rain",
+      "chords": [
+       {
+        "i": 2,
+        "c": "G"
+       },
+       {
+        "i": 19,
+        "c": "D"
+       },
+       {
+        "i": 39,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "I'd store it in boxes with little yellow taps on every one",
+      "chords": [
+       {
+        "i": 4,
+        "c": "G"
+       },
+       {
+        "i": 16,
+        "c": "D"
+       },
+       {
+        "i": 34,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "And you can come and see them when I'm done. When I'm done.",
+      "chords": [
+       {
+        "i": 12,
+        "c": "Em"
+       },
+       {
+        "i": 21,
+        "c": "C"
+       },
+       {
+        "i": 39,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Verse 2",
+    "lines": [
+     {
+      "text": "Well I wonder what it's like to be a superhero",
+      "chords": [
+       {
+        "i": 7,
+        "c": "G"
+       },
+       {
+        "i": 24,
+        "c": "D"
+       },
+       {
+        "i": 35,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "I wonder where I'd go if I could fly around downtown yeah",
+      "chords": [
+       {
+        "i": 2,
+        "c": "G"
+       },
+       {
+        "i": 19,
+        "c": "D"
+       },
+       {
+        "i": 37,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "From some other place I'd get this funky high on yellow sun",
+      "chords": [
+       {
+        "i": 16,
+        "c": "G"
+       },
+       {
+        "i": 35,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "Boy, I bet my friends would all be stunned. They're stunned. Yeah ye yeah",
+      "chords": [
+       {
+        "i": 7,
+        "c": "Em"
+       },
+       {
+        "i": 35,
+        "c": "C"
+       },
+       {
+        "i": 61,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Straight up what did you hope to learn about here?",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 25,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 45,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "If I was someone else, would this all fall apart?",
+      "chords": [
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 9,
+        "c": "D"
+       },
+       {
+        "i": 38,
+        "c": "C"
+       },
+       {
+        "i": 43,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Strange, where were you when we started this gig?",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 15,
+        "c": "D"
+       },
+       {
+        "i": 32,
+        "c": "C"
+       },
+       {
+        "i": 45,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I wish the real world would just stop hassling me.",
+      "chords": [
+       {
+        "i": 2,
+        "c": "C"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 47,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "And you. And you.",
+      "chords": []
+     }
+    ]
+   },
+   {
+    "type": "instrumental",
+    "label": "Instrumental",
+    "text": "G   D   Em   C    G   D   Em   C"
+   },
+   {
+    "label": "Verse 3",
+    "lines": [
+     {
+      "text": "Well, I wonder what it's like to be the head honcho.",
+      "chords": [
+       {
+        "i": 8,
+        "c": "G"
+       },
+       {
+        "i": 25,
+        "c": "D"
+       },
+       {
+        "i": 36,
+        "c": "Em"
+       }
+      ]
+     },
+     {
+      "text": "I wonder what I'd do if they all did just what I said (Just what I said)",
+      "chords": [
+       {
+        "i": 2,
+        "c": "G"
+       },
+       {
+        "i": 18,
+        "c": "D"
+       },
+       {
+        "i": 29,
+        "c": "Em"
+       },
+       {
+        "i": 49,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Well I'd shout out an order, I think we're out of this, man, get me some",
+      "chords": [
+       {
+        "i": 9,
+        "c": "G"
+       },
+       {
+        "i": 22,
+        "c": "D"
+       },
+       {
+        "i": 43,
+        "c": "Em"
+       },
+       {
+        "i": 61,
+        "c": "C"
+       }
+      ]
+     },
+     {
+      "text": "Boy, don't make me wanna change my tone. My tone. Yeahhh yeah",
+      "chords": [
+       {
+        "i": 11,
+        "c": "Em"
+       },
+       {
+        "i": 25,
+        "c": "C"
+       },
+       {
+        "i": 35,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Straight up what did you hope to learn about here?",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 25,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 45,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "If I was someone else, would this all fall apart?",
+      "chords": [
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 9,
+        "c": "D"
+       },
+       {
+        "i": 38,
+        "c": "C"
+       },
+       {
+        "i": 43,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Strange, where were you when we started this gig?",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 15,
+        "c": "D"
+       },
+       {
+        "i": 32,
+        "c": "C"
+       },
+       {
+        "i": 45,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I wish the real world would just stop hassling me.",
+      "chords": [
+       {
+        "i": 2,
+        "c": "C"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 47,
+        "c": "G"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Bridge",
+    "lines": [
+     {
+      "text": "Please don't change, please don't break, cause the only thing that seems",
+      "chords": [
+       {
+        "i": 0,
+        "c": "Em"
+       },
+       {
+        "i": 34,
+        "c": "G"
+       },
+       {
+        "i": 51,
+        "c": "Em"
+       },
+       {
+        "i": 67,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "to work at all is you. Please don't change at all for me. To you. And",
+      "chords": [
+       {
+        "i": 3,
+        "c": "Em"
+       },
+       {
+        "i": 18,
+        "c": "G"
+       },
+       {
+        "i": 36,
+        "c": "C"
+       },
+       {
+        "i": 54,
+        "c": "D"
+       }
+      ]
+     },
+     {
+      "text": "you. To me, yeah yeah.",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 8,
+        "c": "D"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "instrumental",
+    "label": "Interlude",
+    "text": "G   D   Em   C    G   D   Em   C    C   D   C   D"
+   },
+   {
+    "label": "Chorus",
+    "lines": [
+     {
+      "text": "Straight up what did you hope to learn about here?",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 25,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 45,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "If I was someone else, would this all fall apart?",
+      "chords": [
+       {
+        "i": 5,
+        "c": "C"
+       },
+       {
+        "i": 9,
+        "c": "D"
+       },
+       {
+        "i": 38,
+        "c": "C"
+       },
+       {
+        "i": 43,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "Strange, where were you when we started this gig?",
+      "chords": [
+       {
+        "i": 0,
+        "c": "C"
+       },
+       {
+        "i": 15,
+        "c": "D"
+       },
+       {
+        "i": 32,
+        "c": "C"
+       },
+       {
+        "i": 45,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I wish the real world would just stop hassling me.",
+      "chords": [
+       {
+        "i": 2,
+        "c": "C"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 47,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I wish the real world would just stop hassling me.",
+      "chords": [
+       {
+        "i": 2,
+        "c": "C"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 47,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "I wish the real world would just stop hassling me.",
+      "chords": [
+       {
+        "i": 2,
+        "c": "C"
+       },
+       {
+        "i": 11,
+        "c": "D"
+       },
+       {
+        "i": 33,
+        "c": "C"
+       },
+       {
+        "i": 47,
+        "c": "G"
+       }
+      ]
+     },
+     {
+      "text": "And you. Yeah, me.",
+      "chords": []
      }
     ]
    }
