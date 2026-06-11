@@ -36,6 +36,7 @@
   .noteblk{margin:9px 0;overflow:auto;} .noteblk svg{display:block;}
   .ins{display:none;} .edit .ins{display:block;text-align:left;margin:2px 0 6px;} .ins button{font-size:11px;height:22px;opacity:.65;padding:0 7px;}
   .ins button.del{opacity:1;color:#ff6b6b;border-color:rgba(255,107,107,.6);font-weight:800;}
+  .ins button.addln{opacity:1;color:var(--chord);border-color:var(--chord);font-weight:800;}
   .pbrk{text-align:center;color:var(--label);opacity:.7;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-top:1px dashed var(--label);border-bottom:1px dashed var(--label);padding:5px 0;margin:8px 0;}
   .line.delhi,.tabblk.delhi,.noteblk.delhi{outline:2px solid #ff6b6b;outline-offset:2px;border-radius:5px;background:rgba(255,107,107,.08);}
   .edit .sec{border:1px dashed rgba(127,127,127,.35);border-radius:10px;padding:8px 10px;margin:10px 0;}
@@ -184,6 +185,18 @@ async function init(){
     const isJunk=s=>(s.sections||[]).some(sec=>(sec.lines||[]).some(l=>/\bLINE \d|�|this tab is|chords?\s+by|^\s*(SONG|ARTIST|KEY|TUNING|DIFFICULTY|CAPO)\s*:|\d+\s*bpm|basic pattern|muted pattern/i.test((l&&l.text)||'')));
     for(let i=0;i<SONGS.length;i++){ const cur=SONGS[i],sd=seedById.get(cur.id); if(!sd||cur.userEdited) continue;
       if(isJunk(cur)&&!isJunk(sd)){ const fx=JSON.parse(JSON.stringify(sd)); fx.kind="chart"; fx.id=cur.id; fx.ord=cur.ord; fx.createdAt=cur.createdAt||Date.now(); fx.updatedAt=Date.now(); await dbPut("songs",fx); SONGS[i]=fx; } }
+    // one-time: collapse the duplicate "Shine" (concert-pitch F#) into the Capo-4 version the user plays
+    if(SONGS.some(s=>s.id==='shine')&&SONGS.some(s=>s.id==='shine-mondo-cozmo')){
+      try{ const sls=await dbAll('setlists'); for(const sl of sls){ let ch=false; (sl.items||[]).forEach(it=>{ if(it.songId==='shine'){ it.songId='shine-mondo-cozmo'; ch=true; } }); if(ch) await dbPut('setlists',sl); } }catch(e){}
+      try{ await dbDel('songs','shine'); }catch(e){} SONGS=SONGS.filter(s=>s.id!=='shine');
+    }
+    // one-time: repair Mary Jane's (garbled "I dig you" line) + add the harmonica solo tab
+    { const mj=SONGS.find(s=>s.id==='mary-jane-s-last-dance'),seedMj=seedById.get('mary-jane-s-last-dance');
+      if(mj){ let dirty=false;
+        (mj.sections||[]).forEach(sec=>(sec.lines||[]).forEach(ln=>{ if(ln.text==="on, keep movin' on"){ ln.text='She said, "I dig you, baby, but I got to keep movin\' on, uh, keep movin\' on"'; ln.chords=[{i:0,c:"Dsus2"}]; dirty=true; } }));
+        if(seedMj&&!mj.harpV1){ if(!(mj.sections||[]).some(x=>/harmonica/i.test(x.label||''))){ const harp=(seedMj.sections||[]).find(x=>/harmonica/i.test(x.label||'')); if(harp){ const at=mj.sections.findIndex(x=>/^solo$/i.test(x.label||'')); mj.sections.splice(at>=0?at+1:mj.sections.length,0,JSON.parse(JSON.stringify(harp))); } } mj.harpV1=true; dirty=true; }
+        if(dirty) try{ await dbPut('songs',mj); }catch(e){}
+      } }
   }catch(e){ if(!SONGS.length) return showErr('Could not seed songs — '+e); }
   const sel=document.getElementById('song');
   fillSongs();
@@ -334,7 +347,8 @@ function renderTab(ln,fs,k,li){
 function insStrip(k,li,ln){const d=document.createElement('div');d.className='ins';
   const mk=(t,fn,cls)=>{const b=document.createElement('button');b.className='b'+(cls?' '+cls:'');b.textContent=t;b.onclick=fn;return b;};
   const delLine=()=>{if(!confirm('Delete this line?'))return;const sec=SONGS[si].sections[k];sec.lines.splice(li,1);if(!sec.lines.length&&sec.type!=='image'&&sec.type!=='instrumental')SONGS[si].sections.splice(k,1);render();};
-  d.append(mk('+ tab here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{tab:DEFAULT_TAB()});render();}),
+  d.append(mk('✚ add line',()=>{const v=prompt('Add a new line here — type the words (or leave blank to fill in later):','');if(v!=null){SONGS[si].sections[k].lines.splice(li+1,0,{text:v||'(new line — tap to add words)',chords:[]});render();}},'addln'),
+           mk('+ tab here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{tab:DEFAULT_TAB()});render();}),
            mk('+ notation here',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{notation:DEFAULT_NOTATION});render();}),
            mk('↓ page break',()=>{SONGS[si].sections[k].lines.splice(li+1,0,{pageBreak:true});render();}));
   if(ln&&ln.text!=null&&!ln.tab&&ln.notation==null)

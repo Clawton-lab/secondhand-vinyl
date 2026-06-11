@@ -26,6 +26,7 @@
   --text:#e9ecf1;
   --text-dim:#9aa1ac;
   --accent:#cdd4de;        /* silver accent */
+  --gold:#f0c24a;          /* PDF gold */
   --ember:#c2cad6;         /* cool silver edge glow */
   --glow:rgba(185,200,222,0.32);
   --rail-top:11%;
@@ -243,7 +244,7 @@ body{position:fixed;inset:0;overscroll-behavior:none;touch-action:none;}
 .overlay.show{display:flex;}
 .panel{margin:auto;width:min(94%,920px);max-height:92%;display:flex;flex-direction:column;border-radius:16px;overflow:hidden;
   border:1px solid var(--edge-light);box-shadow:0 24px 70px rgba(0,0,0,0.8),inset 0 1px 0 rgba(255,255,255,0.15);}
-.drawer{margin:0 auto 0 0;height:100%;width:min(92%,440px);border-radius:0 16px 16px 0;}
+.drawer{margin:0 auto 0 0;height:100%;width:min(96%,720px);border-radius:0 16px 16px 0;}
 .panel-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--chrome-shadow);}
 .panel-head h2{margin:0;font-family:var(--display);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:clamp(16px,2.6vh,22px);
   background:linear-gradient(180deg,#fff,#9aa2ab);-webkit-background-clip:text;background-clip:text;color:transparent;}
@@ -257,8 +258,10 @@ body{position:fixed;inset:0;overscroll-behavior:none;touch-action:none;}
 .row.active{border-color:var(--silver);box-shadow:inset 0 0 12px var(--glow),inset 0 1px 0 rgba(255,255,255,0.12);}
 .row .grip{cursor:grab;color:var(--silver-lo);font-size:20px;padding:0 4px;touch-action:none;}
 .row .info{flex:1 1 auto;min-width:0;}
-.row .info .t{font-family:var(--display);font-size:clamp(14px,2vh,18px);letter-spacing:.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.row .info .s{font-size:12px;color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.row .info .t{font-family:var(--display);font-size:clamp(15px,2.1vh,20px);letter-spacing:.4px;white-space:normal;overflow-wrap:break-word;line-height:1.18;}
+.row .info .s{font-size:12.5px;color:var(--text-dim);white-space:normal;overflow-wrap:break-word;line-height:1.25;margin-top:2px;}
+.row .info .t.k-tpl{color:var(--silver-hi);}   /* templates = silver */
+.row .info .t.k-pdf{color:var(--gold);}         /* PDFs = gold */
 .row .acts{display:flex;gap:6px;flex:0 0 auto;}
 .mini{font-family:var(--display);font-size:16px;color:var(--silver);background:linear-gradient(180deg,#2e333a,#1a1d21);border:1px solid #3a3f46;
   border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
@@ -452,7 +455,7 @@ body.locked #lockBadge{display:flex;}
       </div>
       <div class="section-h">Your Setlists</div>
       <div id="setlistList"></div>
-      <div class="section-h">Songs in Active Setlist</div>
+      <div class="section-h" id="activeSetHead">Songs in Active Setlist</div>
       <div id="activeItems"></div>
       <div class="btn-row"><button class="btn-lg" onclick="App.openAddToSetlist()">＋ Add Songs</button></div>
     </div>
@@ -1250,7 +1253,7 @@ const App = (() => {
       '<div class="acts"><button class="mini" title="Add to setlist">＋</button>'+
       '<button class="mini" title="Edit">✎</button><button class="mini" title="Play">▶</button>'+
       '<button class="mini danger" title="Delete chart">🗑</button></div>';
-    row.querySelector(".t").textContent=(s.kind==="chart"?"♪ ":"")+s.title;
+    { const _t=row.querySelector(".t"); _t.textContent=(s.kind==="chart"?"♪ ":"")+s.title; _t.classList.add(s.kind==="chart"?"k-tpl":"k-pdf"); }
     row.querySelector(".s").textContent = s.setlistFork ? ["set edit",s.fromSet&&("from "+s.fromSet),s.key&&("Key "+s.key)].filter(Boolean).join(" · ")
       : s.kind==="chart" ? ["editable template",s.artist,s.key&&("Key "+s.key)].filter(Boolean).join(" · ")
       : [s.artist,s.key&&("Key "+s.key),s.bpm&&(s.bpm+" bpm"),s.pageCount+"p"].filter(Boolean).join(" · ");
@@ -1276,7 +1279,7 @@ const App = (() => {
     addable.slice().sort((a,b)=>a.title.localeCompare(b.title)).forEach(s=>{
       const row=document.createElement("div"); row.className="row";
       row.innerHTML='<div class="info"><div class="t"></div><div class="s"></div></div><div class="acts"><button class="mini add">＋ Add</button><button class="mini danger" title="Delete chart">🗑</button></div>';
-      row.querySelector(".t").textContent=(s.kind==="chart"?"♪ ":"")+s.title;
+      { const _t=row.querySelector(".t"); _t.textContent=(s.kind==="chart"?"♪ ":"")+s.title; _t.classList.add(s.kind==="chart"?"k-tpl":"k-pdf"); }
       row.querySelector(".s").textContent=s.kind==="chart"?["template",s.artist].filter(Boolean).join(" · "):[s.artist,s.pageCount+"p"].filter(Boolean).join(" · ");
       const bAdd=row.querySelector(".mini.add"); bAdd.style.width="auto"; bAdd.style.padding="0 12px";
       bAdd.onclick=()=>addSongToSetlist(s.id);
@@ -1325,6 +1328,7 @@ const App = (() => {
   function openTrash(){ renderTrash(); open("ovTrash"); }
   function renderActiveItems(){
     const box=$("activeItems"); box.innerHTML=""; const sl=activeSetlist();
+    { const head=$("activeSetHead"); if(head) head.textContent = sl ? ('▶  '+sl.name+'    ·    '+sl.items.length+' song'+(sl.items.length===1?'':'s')) : 'Songs in Active Setlist'; }
     if(!sl){ box.innerHTML='<div class="empty-list">No active setlist.</div>'; return; }
     if(!sl.items.length){ box.innerHTML='<div class="empty-list">Empty — add songs below.</div>'; return; }
     sl.items.forEach((it,idx)=>{
@@ -1335,7 +1339,7 @@ const App = (() => {
         '<div class="acts"><button class="mini" title="Up">▲</button><button class="mini" title="Down">▼</button>'+
         (s.kind==="chart"?'<button class="mini" title="Edit set copy">✎</button>':'')+
         '<button class="mini" title="Duplicate">⧉</button><button class="mini" title="Remove">✕</button><button class="mini" title="Jump">▶</button></div>';
-      row.querySelector(".t").textContent=(idx+1)+". "+s.title;
+      { const _t=row.querySelector(".t"); _t.textContent=(idx+1)+". "+s.title; _t.classList.add(s.kind==="chart"?"k-tpl":"k-pdf"); }
       row.querySelector(".s").textContent=[s.artist, s.setlistFork?"set edit":(s.kind==="chart"?"template":("pp "+(it.startPage||1)+"-"+(it.endPage||s.pageCount)))].filter(Boolean).join(" · ");
       row.querySelector('[title="Up"]').onclick=()=>moveItem(it.id,-1);
       row.querySelector('[title="Down"]').onclick=()=>moveItem(it.id,1);
